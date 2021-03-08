@@ -1,1 +1,212 @@
-calvin19.html
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="reveal.js/dist/reset.css">
+    <link rel="stylesheet" href="reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="reveal.js/dist/theme/simple.css" id="theme">
+    <!--<link rel="stylesheet" href="dist/main.css">-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+    <style>
+    #banner {position: relative; top: 75px}
+    .w3-third {display: flex; align-items: center;}
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="r-fit-text">UK BioBank Papers</h1>
+          <h2>NIST Lab</h2>
+          <h3>Sofía Fernández Lozano</h3>
+          <div id="banner" class="w3-row-padding w3-white w3-round-xxlarge">
+            <div class="w3-third">
+              <img src="imgs/nist_logo.png" alt="NIST">
+            </div>
+            <div class="w3-third w3-red w3-round-xxlarge">
+              <img src="imgs/mcgill-logo.svg" alt="McGill">
+            </div>
+            <div class="w3-third">
+              <img src="imgs/neuro_logo.png" alt="Neuro">
+            </div>
+          </div>
+        </section>
+        <section>
+          <img src="imgs/calvin19/titlepage.png" alt="titlepage.png">
+        </section>
+        <section>
+          <h2> Purpose </h2>
+          <ol>
+            <li>
+              Assess whether any associations between baseline cognitive
+              and incident dementia may be accounted for by
+              constitutional/modifiable risk factors;
+            </li>
+            <li>
+              and, whether cognitive scores add anything to prediction
+              models of the disease.
+            </li>
+          </ol>
+        </section>
+        <section>
+          <h2>Sample (UKBB)</h2>
+          <ul>
+            <li>502,617 (age: 40-69; across UK; 2006-2010)</li>
+            <li>488,363 (blood samples for genotyping)</li>
+            <li>1,051 cases of incident dementia</li>
+            <ul>
+              <li>352 AD</li>
+              <li>169 VaD</li>
+            </ul>
+            <li>385,336 (591 dementia) main analytic sample</li>
+            <li>65,824 (112 dementia) genetic sample</li>
+            <li>130,212 (115 dementia) all-cognitive sample</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="r-fit-text">Ascertainment of incident dementia</h2>
+          <p>Dementia was identified from:</p>
+          <ul>
+            <li>ICD (9&amp;10) codes of hospital inpatient admission data (1996 - Feb 2016)</li>
+            <li>ICD10 codes on death certificates (Apr 2006 - Feb 2016)</li>
+          </ul>
+          <p>*Cases were selected if the date of first recorded Dx occurred at
+          least three years after baseline assessment</p>
+        </section>
+        <section>
+          <h2 class="r-fit-text">Assessment of cognitive function</h2>
+          <p>Brief computer-administered cognitive battery of four
+          test for fluid cognitive abilities:</p>
+          <ul>
+            <li>Processing speed (reaction time task)</li>
+            <li>Visual episodic memory (visual pairs memory task)</li>
+            <li>Prospective memory (prospective memory task)</li>
+            <li>Fluid &amp; crystallized abilities (verbal-numerical reasoning task)</li>
+          </ul>
+        </section>
+        <section>
+          <img class="r-stretch" src="imgs/calvin19/table1.png" alt="Cognitive tests">
+        </section>
+        <section>
+          <img class="r-stretch" src="imgs/calvin19/table2_1.png" alt="Constitutional factors">
+        </section>
+        <section>
+          <img class="r-stretch" src="imgs/calvin19/table2_2.png" alt="Modifiable factors">
+        </section>
+        <section>
+          <h2>Models</h2>
+          <ol>
+            <li>Univariate age- and sex-adjusted logistic regression models
+              (cognitive, constitutional and modifiable risk factors)</li>
+            <li>Model1 - age, sex, education and 1/4 cognitive tests</li>
+            <li>Model2 - added constitutional risk factors</li>
+            <li>Model3 - added modifiable risk factors</li>
+            <li>*Models were repeated to include participants with missing
+              data on covariates with &gt;5% missingness</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Association of risk factors for dementia</h2>
+        </section>
+        <section>
+          <img class="r-stretch" src="imgs/calvin19/table3.png" alt="OR risk factors">
+        </section>
+        <section>
+          <h2>Prediction by baseline cognitive performance</h2>
+        </section>
+        <section>
+          <img class="r-stretch" src="imgs/calvin19/table4.png" alt="Univariate prediction">
+        </section>
+        <section>
+          <ul>
+            <li>Effect sizes for total dementia risk according to reaction time and
+              visual memory were similar for the main sample and the sample with
+              incomplete cases</li>
+            <li>No obvious difference between OR for dementia D× within three to five
+              years of cognitive testing and those made six to eight years later</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="r-fit-text">Adjustment for risk factors</h2>
+          <ul>
+            <li>This was conducted on <em>all-cause</em> dementia</li>
+            <li>Adjusting for risk factors didn't affect the associations between
+              cognitive tasks and dementia risk, which remained statistically
+              significant in fully-adjusted models</li>
+          </ul>
+        </section>
+        <section>
+          <img class="r-stretch" src="imgs/calvin19/table5.png" alt="Multivariate predictions">
+        </section>
+        <section>
+          <h2 class="r-fit-text">Discriminative accuracy of models</h2>
+          <h3 class="r-fit-text">with and without cognitive variables</h3>
+        </section>
+        <section>
+          <img class="r-stretch" src="imgs/calvin19/fig1.png" alt="ROC curves">
+        </section>
+        <section>
+          <h3>Comparison to previous studies</h3>
+          <ul>
+            <li>Reproduced ROC curves adding the four cognitive tests to a basic model
+              including age, sex, and education (N=160,903; 177)</li>
+            <li>AUC went from 0.763 (95% CI: 0.729, 0.796) to 0.821 (0.790, 0.853),
+              &chi;2 = 31.9, P &lt;.001</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Strenghts</h2>
+          <ul>
+            <li>Large scale of cohort &amp; rich data set</li>
+            <li>Age range covering mid to late adulthood</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Limitations</h2>
+          <ul>
+            <li>Referral bias</li>
+            <li>Electronic health linkage without primary care data may have led
+              to underdetection of dementia</li>
+            <li>Low-to-moderate test-retest reliability of cognitive tests</li>
+            <li>Missing data from participants with lower cognitive ability and/or
+              poorer health were likely to have reduced sensitivity due to selective attrition</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Main conclusions</h2>
+          <ul>
+            <li>Even a brief cognitive test battery has predictive power at the population level</li>
+            <li>AD was defined by a relatively stronger association with APOE4 and VaD
+              risk by slower processing speed and greater vascular risk factors</li>
+            <li>None of the modifiable risk factors but depression increased risk for AD; several did for VaD</li>
+            <li>Modifiable risk factors had almost no impact on the performance of the prediction models that included cognitive and genetic factors</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="reveal.js/dist/reveal.js"></script>
+    <script src="reveal.js/plugin/notes/notes.js"></script>
+    <script src="reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        margin: 0.03,
+        slideNumber: true,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
+</html>
