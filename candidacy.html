@@ -211,6 +211,18 @@
                 <p>HI could accurately predict conversion from MCI to AD</p>
               </div>
             </div>
+            <aside class="notes">
+              bilateral HVI obtained from baseline and one-year
+              follow-up structural MRI, cognitive tests, and genetic and
+              demographic information to train a Random Forest classifier in a
+              sample of 164 MCI subjects categorized into two groups
+              [progressive (n = 86) or stable (n = 78)]
+              Receiver operating characteristic (ROC) curves for the cases of
+              using all 16 features (solid line, AUC 0.83);
+              excluding longitudinal data (dashed line, AUC 0.77);
+              excluding features related to HVI (dotted line, AUC 0.77);
+              and including only HVI related features (dash-dot line, AUC 0.74).
+            </aside>
           </section>
           <section>
             <h2 class="r-fit-text">Hippocampal-to-Ventricle Ratio</h2>
@@ -253,7 +265,26 @@
                 decline than other HC volume methods in large cohorts of
                 patients with MCI and mild AD (ADNI, AIBL, HABS).
               </li>
-              <li class="w3-xlarge fragment">
+            </ol>
+          </section>
+          <section data-auto-animate>
+            <h2>Hypotheses</h2>
+            <ol class="w3-ul">
+              <li class="w3-xlarge">
+                The calculation of HVR, can be reliably done using automatic
+                methods of segmentation.
+              </li>
+              <li class="w3-xlarge">
+                HVR will show stronger relationships with memory and age than
+                conventional HC volume measures in a large cohort of healthy
+                controls (UKBB).
+              </li>
+              <li class="w3-xlarge">
+                HVR will show better prediction capabilities of cognitive
+                decline than other HC volume methods in large cohorts of
+                patients with MCI and mild AD (ADNI, AIBL, HABS).
+              </li>
+              <li class="w3-xlarge">
                 There will be significant differences in HVR spatiotemporal curves
                 between:
               </li>
@@ -449,40 +480,72 @@
               </div>
               <div class="w3-half">
                 <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-                  <li>Monte Carlo Cross-Validation (MCCV)</li>
+                  <li>Monte Carlo Cross-Validation (MCCV): 5 rounds</li>
                   <li>Template library: n=20</li>
                 </ul>
               </div>
             </div>
           </section>
           <section>
-            <h3>3D Fully Convolutional Network</h3>
+            <h3>Non-local Patch-based</h3>
             <div class="w3-row-padding w3-stretch">
               <div class="w3-half">
                 <figure>
-                  <img src="imgs/comps/networkSpecs.png" alt="Deep-Learning"
-                  style="width:100%; max-width:900px">
+                  <img src="imgs/acm1/nlpbs.png" alt="non-local patch"
+                  style="width:100%; max-width:450px">
                   <figcaption>
-                    <a href="https://doi.org/10.1002/hbm.24803"
+                    <a href="https://doi.org/10.1016/j.neuroimage.2010.09.018"
                       class="w3-medium" style="color:gray">
-                      Novosad, et al., 2020
+                      Coup&eacute;, et al., 2011
                     </a>
                   </figcaption>
                 </figure>
               </div>
               <div class="w3-half">
                 <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-                  <li>Linear-registration-derived spatial priors</li>
-                  <li>Data augmentation: random elastic deformations</li>
-                  <li>Regularization: Dropout and early-stopping</li>
-                  <li>Parameter optimization: RMSProp</li>
-                  <li>Loss: Categorical cross-entropy</li>
+                  <li>MCCV: 5 rounds</li>
+                  <li>Training library: n=20</li>
+                  <li>Patch size: 7x7x7 voxels</li>
+                  <li>Search box: 15x15x15 voxels</li>
                 </ul>
               </div>
             </div>
           </section>
           <section data-auto-animate>
             <h3>3D Fully Convolutional Network</h3>
+            <figure>
+              <img src="imgs/comps/networkSpecs.png" alt="Deep-Learning"
+              style="width:100%; max-width:900px">
+              <figcaption>
+                <a href="https://doi.org/10.1002/hbm.24803"
+                  class="w3-medium" style="color:gray">
+                  Novosad, et al., 2020
+                </a>
+              </figcaption>
+            </figure>
+          </section>
+          <section data-auto-animate>
+            <h3>3D Fully Convolutional Network</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Linear-registration-derived spatial priors</li>
+              <li>Data augmentation: random elastic deformations</li>
+              <li>Regularization: Dropout and early-stopping</li>
+              <li>Parameter optimization: RMSProp</li>
+              <li>Loss: Categorical cross-entropy</li>
+              <li>Independent test set: 20% hold-out</li>
+            </ul>
+            <aside class="notes">
+              We therefore make use of whole spatial coordinate patches:
+              given an input patch centered on spatial coordinate (x,y,z)
+              in image space, we extract three additional patches (with the
+              same spatial dimensions as the input patch) centered on spatial
+              coordinate (x,y,z) from each of three “coordinate images.”
+              For example, for the x-coordinate image, the value at spatial
+              coordinate (x,y,z)is simply x, and similar for the y- and
+              z-coordinate images. The three spatial coordinate patches are
+              then concatenated with the image intensity patch,
+              forming a multichannel input
+            </aside>
           </section>
           <section>
             <h3>Performance comparison</h3>
@@ -491,6 +554,9 @@
               <li>Modified Hausdorff distance</li>
             </ul>
             <aside class="notes">
+              MHD = max(h(A,R), h(R,A)) where h(A,R) is the mean distance of
+              the set of minimum distances between each labeled voxel in A
+              and its nearest labeled voxel in R; h (R,A) is computed similarly
             </aside>
           </section>
         </section>
@@ -524,9 +590,13 @@
               </li>
               <li>
                 Relationship of different measures of HC volume vs memory<br>
-                <span class="w3-xlarge">
-                  Numeric memory, verbal-numeric reasoning, raw- &amp;
-                  log- visual memory errors and prospective memory</li>
+                <ul class="w3-ul w3-xlarge">
+                  <li>Numeric memory</li>
+                  <li>Verbal-numeric reasoning</li>
+                  <li>Raw- &amp; log- visual memory errors</li>
+                  <li>Prospective memory</li>
+                </ul>
+              </li>
             </ul>
           </section>
           <section data-auto-animate>
@@ -564,11 +634,12 @@
           <section data-auto-animate>
             <h2>AIM 4</h2>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>Group-based trajectory model</li>
-              <ol class="w3-ol w3-xlarge" style="padding: 0px 30px">
-                <li>Cognitive decline</li>
-                <li>HC atrophy</li>
-              </ol>
+              <li>Group-based trajectory model<br>
+                <ol class="w3-ol w3-xlarge" style="padding: 0px 30px">
+                  <li>Cognitive decline</li>
+                  <li>HC atrophy</li>
+                </ol>
+              </li>
               <li>Multinomial logistic regression as a predictive model
               for trajectory subgroup assignment</li>
             </ul>
@@ -588,15 +659,17 @@
                     HVR as covariate</span>
                 </li>
               </ol>
-              <p>Both models will control for A&beta; APOE4,
+              <hr>
+              <p class="w3-xlarge">Both models will control for A&beta; APOE4,
               sociodemographic information and baseline metrics</p>
               </div>
               <div class="w3-half">
                 <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
                   <li>Cognitive function:<br>
-                    <span class="w3-xlarge">
-                      Mini-mental State Examination (MMSE) &amp;
-                      Clinical Dementia Rating (CDR)
+                    <ul class="w3-ul w3-xlarge">
+                      <li>Mini-mental State Examination (MMSE)</li>
+                      <li>Clinical Dementia Rating (CDR)</li>
+                    </ul>
                   </li>
                   <li>Memory:<br>
                     <span class="w3-xlarge">
@@ -641,14 +714,15 @@
           <section data-auto-animate>
             <h2>AIM 5</h2>
             <p>Use group trajectories as input of ensemble classifier to
-              predict categorical diagnosis at different timepoints:
-              2, 3 &amp; 5y</p>
+            predict categorical diagnosis at different timepoints:<br>
+              <span class="w3-xlarge">2y, 3y &amp; 5y</span></p>
           </section>
           <section data-auto-animate>
             <h2>RandomForest classifier</h2>
             <ul class="w3-ol w3-xxlarge" style="padding: 0px 30px">
               <li>
-                Sociodemographic information (age, sex, education, and socioeconomic status)
+                Sociodemographic information<br>
+                <span class="w3-xlarge">age, sex, education, and socioeconomic status</span>
               </li>
               <li>
                 Baseline measures<br>
@@ -666,9 +740,10 @@
               Performance will be externally validated on the AIBL cohort
               using overall accuracy and Balanced Classification Accuracy (BCA)
             </p>
+          </section>
         </section>
         <section>
-          <h1>Tentative Timeline</h1>
+          <h1 class="r-fit-text">Tentative Timeline</h1>
           <img src='imgs/comps/timeline.png' alt="Timeline">
         </section>
         <section>
