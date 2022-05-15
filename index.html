@@ -6,8 +6,8 @@
 
     <title>reveal.js</title>
 
-    <link rel="stylesheet" href="reveal.js/dist/reset.css">
-    <link rel="stylesheet" href="reveal.js/dist/reveal.css">
+      <link rel="stylesheet" href="reveal.js/dist/reset.css">
+      <link rel="stylesheet" href="reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="reveal.js/dist/theme/simple.css" id="theme">
     <!--<link rel="stylesheet" href="dist/main.css">-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,6 +17,7 @@
     <style>
     #banner {position: relative; top: 75px}
     .w3-third {display: flex; align-items: center;}
+    .reveal .slide-number {font-size: 24pt; color: #900}
     </style>
   </head>
   <body>
@@ -203,7 +204,7 @@
       Reveal.initialize({
         hash: true,
         margin: 0.03,
-        slideNumber: true,
+        slideNumber: 'c/t',
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
       });
