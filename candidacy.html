@@ -18,6 +18,8 @@
     #banner {position: relative; top: 75px}
     .banner {height: 45px; width: auto;}
     .w3-col {display: flex; align-items: center; justify-content: center;}
+    .reveal .slide-number {font-size: 24pt; color: #fff;
+      position: relative; left: 10px}
     </style>
   </head>
   <body>
@@ -839,7 +841,7 @@
       Reveal.initialize({
         hash: true,
         margin: 0.03,
-        slideNumber: true,
+        slideNumber: "c/t",
         totalTime: 1800,
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
