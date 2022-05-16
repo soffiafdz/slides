@@ -18,8 +18,7 @@
     #banner {position: relative; top: 75px}
     .banner {height: 45px; width: auto;}
     .w3-col {display: flex; align-items: center; justify-content: center;}
-    .reveal .slide-number {font-size: 24pt; color: #fff;
-      position: relative}
+    .reveal .slide-number {font-size: 24pt; color: #fff}
     </style>
   </head>
   <body>
@@ -48,6 +47,10 @@
           </section>
           <section>
             <h2>Alzheimer's Disease</h2> </section>
+            <aside class="notes">
+              Cognitive decline in this project relates specifically to MCI as
+              in the context of it being a preliminary stage of AD.
+            </aside>
           <section>
             <div class="w3-row-padding w3-stretch">
               <div class="w3-half">
@@ -71,7 +74,7 @@
           <section>
             <h2 class="w3-xxxlarge">Pathological Nature</h2>
             <figure>
-              <img src="imgs/comps/pathologicalEvolution.png" alt="pathologyEvolution" style="width:100%; max-width:700px">
+              <img src="imgs/comps/pathologicalEvolution.png" alt="pathologyEvolution" style="width:100%; max-width:1000px">
               <figcaption>
                 <a href="https://doi.org/10.1038/nrdp.2015.56"
                   class="w3-medium" style="color:gray">
@@ -81,17 +84,22 @@
             <aside class="notes">
               The neuropathology of AD is characterized by:
               (1) deposition and accumulation of β-amyloid (Aβ) peptides,
-              or amyloid plaques between the neuronal extracellular space,
+              or amyloid/senile plaques between the neuronal extracellular space,
+                -Starts basal portions of cortex;
+                -Asocc areas;
+                -All areas including sensory and motor core fields.
               (2) formation of neuronal intracellular neurofibrillary tangles
               of hyperphosphorylated tau protein,
-              (3) neuronal loss, and
-              (4) neuroinflammation (Miziak et al., 2021).
+                -Braak Stages I,II: transentorhinal
+                -Braak Stages III,IV: limbic
+                -Braak Stages V,VI: isocortical
+              (3) neuronal loss, and (4) neuroinflammation (Miziak et al., 2021).
             </aside>
           </section>
           <section>
             <h2 class="w3-xxxlarge">Biological affliction precedes symptoms by decades</h2>
             <figure>
-              <img src="imgs/acm1/nature1.png" alt="biomarkers" style="width:100%; max-width:700px">
+              <img src="imgs/acm1/nature1.png" alt="biomarkers" style="width:100%; max-width:900px">
               <figcaption>
                 <a href="https://doi.org/10.1038/s41380-020-0721-9"
                   class="w3-medium" style="color:gray">
@@ -108,6 +116,18 @@
               The exact proportion is dependent on age and genetic background
               of the study cohort, but ranges from approximately 20 to 40%
               (Sperling et al., 2011).
+
+              1) (CSF) and plasma Aβ42/Aβ40 ratio.
+              2) CSF and plasma tau increases, as a neuronal response to the AB changes.
+              3) AB PET turns positive.
+              4) Microglia react and secrete soluble triggering receptor
+              expressed on myeloid cells 2 (sTREM2),
+              maximum in MCI stage declines in dementia phase.
+              5) CSF neurogranin (Ng): early marker of synaptic dysfunction; increases  w/amyloid PET.
+              6) Tau PET +: neurodegeneration and synaptic dysfunction biomarkers
+              (CSF and serum/plama neurofilament light [NfL],
+              hippocampal volume, and SV2A- and fluorodeoxyglucose [FDG] PET).
+              7) Astrocytic biomarkers: YKL-40 and glial fibrillary acidic protein [GFAP].
             </aside>
           </section>
           <section data-auto-animate>
@@ -134,7 +154,7 @@
               </div>
             </div>
             <aside class="notes">
-              the hippocampus performs an important role in several cognitive
+              Hippocampus performs an important role in several cognitive
               processes like memory and perception (Voss et al., 2017;
               Zeidman &amp; Maguire, 2016).
               Due to its affection in both normal and pathological aging
@@ -145,7 +165,7 @@
             <div class="w3-row-padding w3-stretch">
               <div class="w3-half">
                 <figure>
-                  <img src="imgs/acm1/alz-brain.png" alt="AD_brain">
+                  <img src="imgs/comps/alz-brain.png" alt="AD_brain">
                   <figcaption>
                     <a href="https://www.alz.org/" class="w3-medium"
                       style="color:gray;"> Alzheimer's Association</a>
@@ -160,7 +180,7 @@
                     Viable proxy for structural and functional integrity
                   </li>
                   <li>
-                    25% of 18-24y subjects presented hippocampi as small as the
+                    25% of youth present hippocampi as small as an
                     average older adult (60-75y)
                     <a href="https://doi.org/10.1016/j.neuroimage.2006.09.041"
                       class="w3-medium"
@@ -168,12 +188,15 @@
                   </li>
               </div>
             </div>
+            <aside class="notes">
+              25% of 18-24y subjects presented hippocampi as small as the
+              average older adult (60-75y)
           </section>
           <section data-auto-animate>
             <h3>Hippocampal normative values</h3>
             <figure>
               <img src="imgs/acm1/nobis19_1.png" alt="Hc-trajectories1"
-              style="width:100%; max-width:750px">
+              style="width:100%; max-width:800px">
               <figcaption>
                 <a href="https://doi.org/10.1016/j.nicl.2019.101904"
                   class="w3-medium" style="color:gray">
@@ -196,8 +219,8 @@
           <section data-auto-animate>
             <h3>Hippocampal normative values</h3>
             <figure>
-              <img src="imgs/acm1/nobis19_2.png" alt="Hc-trajectories2"
-              style="width:100%; max-width:750px">
+              <img src="imgs/comps/nomogramsHC.png" alt="Hc-variability"
+              style="width:100%; max-width:800px">
               <figcaption>
                 <a href="https://doi.org/10.1016/j.nicl.2019.101904"
                   class="w3-medium" style="color:gray">
@@ -206,29 +229,39 @@
               </figcaption>
             </figure>
             <aside class="notes">
-              A key finding of the current study is a significant acceleration
-              in the rate of hippocampal volume loss in middle age,
-              more pronounced in females than in males.
             </aside>
           </section>
           <section data-auto-animate>
-            <h2 class="r-fit-text">Hippocampal (volumetric) Integrity</h2>
-            <ul class="w3-ul" style="list-style-type: none;">
-              <li class="w3-xlarge">
-                Defined as the fraction of tissue found in the region expected
-                to encompass a normal HC
-              </li>
-              <li class="w3-xlarge">
-                Probabilistic algorithm based on registrations to a priori training data
-              </li>
-              <li class="w3-xlarge">
-                <a href="https://doi.org/10.3233/JAD-150780"
-                  style="color:gray">Ardekani et al. (2016) </a>
-              </li>
-            </ul>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <figure>
+                  <img src="imgs/comps/HI.png" alt="HI">
+                  <figcaption>
+                    <a href="https://doi.org/10.3233/JAD-150780"
+                      style="color:gray">Ardekani et al. (2016) </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="w3-half">
+                <h2 class="r-fit-text">Hippocampal (volumetric) Integrity</h2>
+                <hr>
+                <ul class="w3-ul" style="list-style-type: none;">
+                  <li class="w3-xlarge">
+                    Defined as the fraction of tissue found in the region expected
+                    to encompass a normal HC
+                  </li>
+                  <li class="w3-xlarge">
+                    Probabilistic algorithm based on registrations to a priori training data
+                  </li>
+                  <li class="w3-xlarge">
+                    <a href="https://doi.org/10.3233/JAD-150780"
+                      style="color:gray">Ardekani et al. (2016) </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
           <section data-auto-animate>
-            <h2 class="r-fit-text">Hippocampal (volumetric) Integrity</h2>
             <div class="w3-row-padding w3-stretch">
               <div class="w3-half">
                 <figure>
@@ -240,40 +273,59 @@
                 </figure>
               </div>
               <div class="w3-half">
-                <p>HI could accurately predict conversion from MCI to AD</p>
+                <h2 class="r-fit-text">Hippocampal (volumetric) Integrity</h2>
+                <hr>
+                <ul class="w3-ul" style="list-style-type: none;">
+                  <li class="w3-xlarge">
+                    HI could accurately predict conversion from MCI to AD
+                  </li>
+                  <li class="w3-xlarge">
+                    Bilateral HVI: baseline and 1y FU
+                  </li>
+                  <li class="w3-xlarge">
+                    RandomForest: N = 164; 16 features
+                    <ul class="w3-ul w3-large">
+                      <li>Structural MRI</li>
+                      <li>Cognitive tests</li>
+                      <li>Genetic and demographic info</li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
             </div>
             <aside class="notes">
-              bilateral HVI obtained from baseline and one-year
-              follow-up structural MRI, cognitive tests, and genetic and
-              demographic information to train a Random Forest classifier in a
-              sample of 164 MCI subjects categorized into two groups
-              [progressive (n = 86) or stable (n = 78)]
-              Receiver operating characteristic (ROC) curves for the cases of
-              using all 16 features (solid line, AUC 0.83);
-              excluding longitudinal data (dashed line, AUC 0.77);
-              excluding features related to HVI (dotted line, AUC 0.77);
-              and including only HVI related features (dash-dot line, AUC 0.74).
             </aside>
           </section>
           <section>
-            <h2 class="r-fit-text">Hippocampal-to-Ventricle Ratio</h2>
-            <ul class="w3-ul" style="list-style-type: none;">
-              <li class="w3-xlarge">
-                Ventricular enlargement is a marker of brain atrophy
-              </li>
-              <li class="w3-xlarge">
-                <a href="https://doi.org/10.1016/j.neuroimage.2019.116108"
-                  style="color:gray">Schoemaker, et al (2019) </a>
-                used manual segmentation to compute the ratio between
-                prehippocampal CSF and hippocampal volume
-              </li>
-              <li class="w3-xlarge fragment">
-                It showed significantly stronger negative associations with
-                age and was a better predictor of memory compared to standard
-                hippocampal volume
-              </li>
-            </ul>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <figure>
+                  <img src="imgs/comps/HVR.png" alt="HVR">
+                  <figcaption>
+                    <a href="https://doi.org/10.1016/j.neuroimage.2019.116108"
+                      style="color:gray">Schoemaker, et al (2019) </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="w3-half">
+                <h2 class="r-fit-text">Hippocampal-to-Ventricle Ratio</h2>
+                <hr>
+                <ul class="w3-ul" style="list-style-type: none;">
+                  <li class="w3-xlarge">
+                    Ventricular enlargement is a marker of brain atrophy
+                  </li>
+                  <li class="w3-xlarge">
+                    used manual segmentation to compute the ratio between
+                    prehippocampal CSF and hippocampal volume
+                  </li>
+                  <li class="w3-xlarge fragment">
+                    It showed significantly stronger negative associations with
+                    age and was a better predictor of memory compared to standard
+                    hippocampal volume
+                  </li>
+                </ul>
+              </div>
+            </div>
             <aside class="notes">
               50+88 CN people 66/65 +/- 4.96/6.42yo
               Memory: Cue Recall Procedure / Rey Auditory Verbal Learning Task
@@ -345,7 +397,7 @@
               </li>
               <li>Alzheimer's disease neuroimaging initiative (ADNI)<br>
                 <span class="w3-xlarge">
-                  Clinical, imaging, genetic and biospecimen data:
+                  Clinical, imaging, genetic and biospecimen data:<br>
                   normal aging (~430-880), early/late MCI (~425-835), to AD (~200-335).</span>
               </li>
               <li>Harvard Aging Brain Study (HABS)<br>
@@ -436,10 +488,6 @@
           </section>
           <section data-auto-animate>
             <h2>Benchmark Tests</h2>
-            <img src="imgs/comps/table_times.png" alt="qraterTimes" style="width:100%; max-width:600px">
-          </section>
-          <section data-auto-animate>
-            <h2>Benchmark Tests</h2>
             <img src="imgs/comps/time_rating.png" alt="qraterTimes2" style="width:100%; max-width:600px">
           </section>
           <section data-auto-animate>
@@ -505,7 +553,7 @@
                 <figure>
                   <img src="imgs/comps/multiatlaslabelfusion.jpg"
                     alt="labelfusion"
-                    style="width:100%; max-width:300px">
+                    style="width:100%; max-width:500px">
                   <figcaption>
                     <a href="https://doi.org/10.1016/j.neuroimage.2010.04.193"
                       class="w3-medium" style="color:gray">
@@ -528,7 +576,7 @@
               <div class="w3-half">
                 <figure>
                   <img src="imgs/acm1/nlpbs.png" alt="non-local patch"
-                  style="width:100%; max-width:450px">
+                  style="width:100%; max-width:500px">
                   <figcaption>
                     <a href="https://doi.org/10.1016/j.neuroimage.2010.09.018"
                       class="w3-medium" style="color:gray">
@@ -550,9 +598,9 @@
           <section data-auto-animate>
             <h3>3D Fully Convolutional Network</h3>
             <figure>
-              <img src="imgs/comps/networkSpecs.png" alt="Deep-LearningTable"
-              style="width:100%; max-width:1000px">
               <img src="imgs/comps/networkArch.png" alt="Deep-LearningArch"
+              style="width:100%; max-width:900px">
+              <img src="imgs/comps/networkSpecs.png" alt="Deep-LearningTable"
               style="width:100%; max-width:1000px">
               <figcaption>
                 <a href="https://doi.org/10.1002/hbm.24803"
