@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="reveal.js/dist/reset.css">
+    <link rel="stylesheet" href="reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="reveal.js/dist/theme/simple.css" id="theme">
+    <!--<link rel="stylesheet" href="dist/main.css">-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+    <style>
+    #banner {position: relative; top: 75px}
+    .banner {height: 45px; width: auto;}
+    .w3-col {display: flex; align-items: center; justify-content: center;}
+    .reveal .slide-number {font-size: 24pt; color: #fff}
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2 style="font-size: 1.5em">Candidacy Exam</h2>
+          <h1 class="r-fit-text">Hippocampal-Volume-Ratio as a Predictor of Cognitive Decline</h1>
+          <h3>Extra slides</h3>
+          <h2 style="font-size: 0.8em">Integrated Program in Neuroscience</h2>
+          <h2 style="font-size: 1em">Sofía Fernández Lozano</h2>
+          <div id="banner" class="w3-row-padding w3-white w3-round-xxlarge w3-stretch">
+            <div class="w3-col" style="width:40%">
+              <img class="banner" src="imgs/nist_logo.png" alt="NIST">
+            </div>
+            <div class="w3-col w3-red w3-round-xxlarge" style="width:20%">
+              <img class="banner" src="imgs/mcgill-logo.svg" alt="McGill">
+            </div>
+            <div class="w3-col" style="width:40%">
+              <img class="banner" src="imgs/neuro_logo.png" alt="Neuro">
+            </div>
+          </div>
+        </section>
+        <section>
+          <section>
+            <h1>Segmentation methods</h1>
+          </section>
+          <section>
+            <h3>MALF</h3>
+                <ol class="w3-ol">
+                  <li>Selection of <em>n</em> most similar templates from template library</li>
+                  <li>ANIMAL segmentation is performed on each template</li>
+                  <li>Final label is determined based on majority voting</li>
+                </ol>
+          </section>
+          <section>
+            <h3>Non-local Patch-based Segmentation</h3>
+                <ol class="w3-ol">
+                  <li>Initialization mask around structure of interest</li>
+                  <li>Subject selection with sum of square differences</li>
+                  <li>Definition of search volume around voxel of interest</li>
+                  <li>Patch preselection using structural similarity measure</li>
+                  <li>Nonlocal means weighted label fusion</li>
+                </ol>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h1>K-Fold CV vs MCCV</h1>
+          </section>
+          <section data-auto-animate>
+            <h3>K-Fold CV vs MCCV</h3>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <img src="imgs/comps/kfcv.png" alt="KFCV"
+                style="width:100%; max-width:600px">
+              </div>
+              <div class="w3-half">
+                <img src="imgs/comps/mccv.png" alt="MCCV"
+                style="width:100%; max-width:600px">
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h1>GAMLSS Model</h1>
+          </section>
+          <section data-auto-animate>
+            <h3>GAMLSS Model</h3>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <ul class="w3-ul" style="list-style-type: none;">
+                  <li class="w3-large">
+                    Generalized additive models for location,
+                    scale and shape (GAMLSS) are semi-parametric regression
+                    type models.
+                  </li>
+                  <li class="w3-large">
+                    The exponential family distribution assumption for the
+                    response variable (y) is relaxed and replaced by a general
+                    distribution family, including highly skew and/or kurtotic
+                    continuous and discrete distributions.
+                  </li>
+                </ul>
+              </div>
+              <div class="w3-half">
+                \[y_i \\
+                \textrm{for} i = 1,2,...,n \\
+                f(y_i\vert\boldsymbol{\theta}^i) \\
+                \begin{aligned}
+                \boldsymbol{\theta}^i = (\theta_{1i},\theta_{2i},\theta_{3i},\theta_{4i})
+                = (\mu_i, \sigma_i, \nu_i, \tau_i)
+                \end{aligned}\]
+              </div>
+            </div>
+            <aside class="notes">
+              They are parametric, in that they require a parametric
+              distribution assumption for the response variable,
+              and “semi” in the sense that the modelling of the parameters of
+              the distribution, as functions of explanatory variables,
+              may involve using non-parametric smoothing functions.
+              <br>A GAMLSS model assumes independent observations
+              yi for i = 1, 2, . . . , n with probability (density) function
+              a vector of four distribution parameters, each of which can be a
+              function to the explanatory variables.
+              <br>The first two population distribution parameters are usually
+              characterized as location and scale parameters, while the
+              remaining parameter(s), if any, are characterized as shape
+              parameters, e.g., skewness and kurtosis parameters
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h1>Cognitive Tests</h1>
+          </section>
+          <section data-auto-animate>
+            <h3>Cognitive Tests</h3>
+            <h4>Clinical Cohorts</h4>
+                <img src="imgs/comps/cognitiveTests.png" alt="CognitiveTests"
+                style="width:100%; max-width:500px">
+          </section>
+          <section data-auto-animate>
+            <h3>Cognitive Tests</h3>
+            <h4>UKBB</h4>
+                <img src="imgs/comps/ukbbCognitive.png" alt="CognitiveTestsUKBB"
+                style="width:100%; max-width:500px">
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="reveal.js/dist/reveal.js"></script>
+    <script src="reveal.js/plugin/notes/notes.js"></script>
+    <script src="reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="reveal.js/plugin/math/math.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        margin: 0.03,
+        slideNumber: "c/t",
+        totalTime: 1800,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+      });
+    </script>
+  </body>
+</html>
