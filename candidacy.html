@@ -86,7 +86,7 @@
               The neuropathology of AD is characterized by:
               <br>(1) deposition and accumulation of β-amyloid (Aβ) peptides,
               or amyloid/senile plaques between the neuronal extracellular space,
-              <br>-Starts basal portions of cortex om the medial-temporal-lobe;
+              <br>-Starts basal portions of cortex on the medial-temporal-lobe;
               <br>-Asocciation areas;
               <br>-All areas including sensory and motor core fields.
               <br>(2) formation of neuronal intracellular neurofibrillary tangles
@@ -280,7 +280,7 @@
                 <hr>
                 <ul class="w3-ul" style="list-style-type: none;">
                   <li class="w3-xlarge">
-                    HI could accurately predict conversion from MCI to AD
+                    HVI could accurately predict conversion from MCI to AD
                   </li>
                   <li class="w3-xlarge">
                     Bilateral HVI: baseline and 1y FU
@@ -323,7 +323,7 @@
                     prehippocampal CSF and hippocampal volume
                   </li>
                   <li class="w3-xlarge fragment">
-                    It showed significantly stronger negative associations with
+                    HVR showed significantly stronger negative associations with
                     age and was a better predictor of memory compared to standard
                     hippocampal volume
                   </li>
@@ -455,7 +455,7 @@
                 data ready.
               </li>
               <li>
-                Conventional approach is slow, error-prone and makes
+                Conventional QC approach is slow, error-prone and makes
                 collaboration difficult
               </li>
               <li>
@@ -471,28 +471,83 @@
           </section>
           <section data-auto-animate>
             <h2>Qrater</h2>
-            <img src="imgs/comps/qrater.png" alt="qrater" style="width:100%; max-width:600px">
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <img src="imgs/comps/qrater.png" alt="qrater"
+                style="width:100%; max-width:900px">
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li>Docker containerized</li>
+                  <li>Centralized and accessible by SSH</li>
+                  <li>MySQL database built-in</li>
+                  <li>Feature-rich</li>
+                </ul>
+              </div>
+            </div>
           </section>
           <section data-auto-animate>
             <h2>Qrater</h2>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>Docker containerized</li>
-              <li>Centralized and accessible by SSH</li>
-              <li>MySQL database built-in</li>
-              <li>Feature-rich</li>
-            </ul>
+              <img src="imgs/comps/qrater.png" alt="qrater"
+              style="width:100%; max-width:900px">
           </section>
           <section data-auto-animate>
             <h2>Benchmark Tests</h2>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>Raw unprocessed T1w brain images</li>
-              <li>T1w brain images non-linearly registered to standard template</li>
-              <li>Output of experimental skull extraction pipeline</li>
-            </ul>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <img src="imgs/comps/raw.jpg" alt="qrater"
+                style="width:100%; max-width:900px">
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li><b>Raw unprocessed T1w brain images</b></li>
+                  <li>T1w brain images non-linearly registered to standard template</li>
+                  <li>Output of experimental skull extraction pipeline</li>
+                </ul>
+              </div>
+            </div>
           </section>
+          <section data-auto-animate>
+            <h2>Benchmark Tests</h2>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <img src="imgs/comps/registration.jpg" alt="qrater"
+                style="width:100%; max-width:900px">
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li>Raw unprocessed T1w brain images</li>
+                  <li><b>T1w brain images non-linearly registered to standard template</b></li>
+                  <li>Output of experimental skull extraction pipeline</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>Benchmark Tests</h2>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <img src="imgs/comps/redskull.jpg" alt="qrater"
+                style="width:100%; max-width:900px">
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li>Raw unprocessed T1w brain images</li>
+                  <li>T1w brain images non-linearly registered to standard template</li>
+                  <li><b>Output of experimental skull extraction pipeline</b></li>
+                </ul>
+              </div>
+            </div>
           <section data-auto-animate>
             <h2>Benchmark Tests</h2>
             <img src="imgs/comps/time_rating.png" alt="qraterTimes2" style="width:100%; max-width:600px">
+            <aside class="notes">
+              Raw: Pass 14s; Fail 72s; Pass 23s; Warn 97s; Fail 8s
+              <br>Registration: Pass 14s; Warn 19s; Fail 5s
+              <br>Skull: F/P 4s; Warn 12s
+              <br>Clear fail takes less time. Pass needs to check for no artifacts.
+              Warning takes most of the time.
+            </aside>
           </section>
           <section data-auto-animate>
             <h2>Benchmark Tests</h2>
@@ -507,6 +562,9 @@
                   Agreement with experienced rater: 66-93% (mean 79.2%)
                 </span>
               </li>
+            <aside class="notes">
+              Even with the high speeds, we got good consistency between raters
+            </aside>
           </section>
           <section>
             <h2>Currently in use...</h2>
@@ -516,6 +574,10 @@
               <li>89,628 images</li>
               <li>38,460 ratings</li>
             </ul>
+            <aside class="notes">
+              Curated acquisition of almost all of ADNI3, and Manuscript on the
+              words, to be submitted in the summer.
+            </aside>
           </section>
         </section>
         <section>
@@ -601,21 +663,6 @@
           </section>
           <section data-auto-animate>
             <h3>3D Fully Convolutional Network</h3>
-            <figure>
-              <img src="imgs/comps/networkArch.png" alt="Deep-LearningArch"
-              style="width:100%; max-width:900px">
-              <img src="imgs/comps/networkSpecs.png" alt="Deep-LearningTable"
-              style="width:100%; max-width:1000px">
-              <figcaption>
-                <a href="https://doi.org/10.1002/hbm.24803"
-                  class="w3-medium" style="color:gray">
-                  Novosad, et al., 2020
-                </a>
-              </figcaption>
-            </figure>
-          </section>
-          <section data-auto-animate>
-            <h3>3D Fully Convolutional Network</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>Linear-registration-derived spatial priors</li>
               <li>Data augmentation: random elastic deformations</li>
@@ -635,6 +682,23 @@
               z-coordinate images. The three spatial coordinate patches are
               then concatenated with the image intensity patch,
               forming a multichannel input
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>3D Fully Convolutional Network</h3>
+            <figure>
+              <img src="imgs/comps/networkArch.png" alt="Deep-LearningArch"
+              style="width:100%; max-width:900px">
+              <img src="imgs/comps/networkSpecs.png" alt="Deep-LearningTable"
+              style="width:100%; max-width:1000px">
+              <figcaption>
+                <a href="https://doi.org/10.1002/hbm.24803"
+                  class="w3-medium" style="color:gray">
+                  Novosad, et al., 2020
+                </a>
+              </figcaption>
+            </figure>
+            <aside class="notes">
             </aside>
           </section>
           <section>
@@ -879,6 +943,109 @@
             </aside>
           </section>
         </section>
+        <section>
+          <section>
+            <h1>Segmentation methods</h1>
+          </section>
+          <section>
+            <h3>MALF</h3>
+                <ol class="w3-ol">
+                  <li>Selection of <em>n</em> most similar templates from template library</li>
+                  <li>ANIMAL segmentation is performed on each template</li>
+                  <li>Final label is determined based on majority voting</li>
+                </ol>
+          </section>
+          <section>
+            <h3>Non-local Patch-based Segmentation</h3>
+                <ol class="w3-ol">
+                  <li>Initialization mask around structure of interest</li>
+                  <li>Subject selection with sum of square differences</li>
+                  <li>Definition of search volume around voxel of interest</li>
+                  <li>Patch preselection using structural similarity measure</li>
+                  <li>Nonlocal means weighted label fusion</li>
+                </ol>
+          </section>
+        <section>
+          <section data-auto-animate>
+            <h1>K-Fold CV vs MCCV</h1>
+          </section>
+          <section data-auto-animate>
+            <h3>K-Fold CV vs MCCV</h3>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <img src="imgs/comps/kfcv.png" alt="KFCV"
+                style="width:100%; max-width:600px">
+              </div>
+              <div class="w3-half">
+                <img src="imgs/comps/mccv.png" alt="MCCV"
+                style="width:100%; max-width:600px">
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h1>GAMLSS Model</h1>
+          </section>
+          <section data-auto-animate>
+            <h3>GAMLSS Model</h3>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <ul class="w3-ul" style="list-style-type: none;">
+                  <li>
+                    Generalized additive models for location,
+                    scale and shape (GAMLSS) are semi-parametric regression
+                    type models.
+                  </li>
+                  <li>
+                    The exponential family distribution assumption for the
+                    response variable (y) is relaxed and replaced by a general
+                    distribution family, including highly skew and/or kurtotic
+                    continuous and discrete distributions.
+                  </li>
+                </ul>
+              </div>
+              <div class="w3-half">
+                \[y_i \textrm{for} i = 1,2,...,n \\
+                f(y_i\vert\boldsymbol{\theta}^i)) \\
+                \boldsymbol{\theta}^i = (\theta_{1i},\theta_{2i},\theta_{3i},\theta_{4i})
+                = (\mu_i, \sigma_i, \nu_i, \tau_i)\]
+              </div>
+            </div>
+            <aside class="notes">
+              They are parametric, in that they require a parametric
+              distribution assumption for the response variable,
+              and “semi” in the sense that the modelling of the parameters of
+              the distribution, as functions of explanatory variables,
+              may involve using non-parametric smoothing functions.
+              <br>A GAMLSS model assumes independent observations
+              yi for i = 1, 2, . . . , n with probability (density) function
+              a vector of four distribution parameters, each of which can be a
+              function to the explanatory variables.
+              <br>The first two population distribution parameters are usually
+              characterized as location and scale parameters, while the
+              remaining parameter(s), if any, are characterized as shape
+              parameters, e.g., skewness and kurtosis parameters
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h1>Cognitive Tests</h1>
+          </section>
+          <section data-auto-animate>
+            <h3>Cognitive Tests</h3>
+            <h4>Clinical Cohorts</h4>
+                <img src="imgs/comps/cognitiveTests.png" alt="CognitiveTests"
+                style="width:100%; max-width:500px">
+          </section>
+          <section data-auto-animate>
+            <h3>Cognitive Tests</h3>
+            <h4>UKBB</h4>
+                <img src="imgs/comps/ukbbCognitive.png" alt="CognitiveTestsUKBB"
+                style="width:100%; max-width:500px">
+          </section>
+        </section>
       </div>
     </div>
 
@@ -886,6 +1053,7 @@
     <script src="reveal.js/plugin/notes/notes.js"></script>
     <script src="reveal.js/plugin/markdown/markdown.js"></script>
     <script src="reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="reveal.js/plugin/math/math.js"></script>
     <script>
       // More info about initialization & config:
       // - https://revealjs.com/initialization/
@@ -896,7 +1064,7 @@
         slideNumber: "c/t",
         totalTime: 1800,
         // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
       });
     </script>
   </body>
