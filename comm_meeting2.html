@@ -1,0 +1,897 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="reveal.js/dist/reset.css">
+    <link rel="stylesheet" href="reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="reveal.js/dist/theme/simple.css" id="theme">
+    <!--<link rel="stylesheet" href="dist/main.css">-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+    <style>
+    #banner {position: relative; top: 75px}
+    .banner {height: 45px; width: auto;}
+    .w3-col {display: flex; align-items: center; justify-content: center;}
+    .reveal .slide-number {font-size: 24pt; color: #fff}
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2 style="font-size: 1.5em">2nd Committee Meeting</h2>
+          <h1 class="r-fit-text">Hippocampal-Volume-Ratio as a Predictor of Cognitive Decline</h1>
+          <h2 style="font-size: 0.8em">Integrated Program in Neuroscience</h2>
+          <h2 style="font-size: 1em">Sofía Fernández Lozano</h2>
+          <div id="banner" class="w3-row-padding w3-white w3-round-xxlarge w3-stretch">
+            <div class="w3-col" style="width:40%">
+              <img class="banner" src="imgs/nist_logo.png" alt="NIST">
+            </div>
+            <div class="w3-col w3-red w3-round-xxlarge" style="width:20%">
+              <img class="banner" src="imgs/mcgill-logo.svg" alt="McGill">
+            </div>
+            <div class="w3-col" style="width:40%">
+              <img class="banner" src="imgs/neuro_logo.png" alt="Neuro">
+            </div>
+          </div>
+        </section>
+        <section>
+          <section>
+            <h1>Background and Related Work</h1>
+          </section>
+          <section>
+            <h2>Alzheimer's Disease</h2>
+            <aside class="notes">
+              Cognitive decline in this project relates specifically to MCI as
+              in the context of it being a preliminary stage of AD.<br>
+              Alzheimer’s disease (AD) is a chronic, progressive and ultimately
+              fatal neurological disorder in which the brain progressively and
+              irreversibly deteriorates, affecting the quality of life of both
+              the patient their close family members and caregivers.
+            </aside>
+          </section>
+          <section>
+            <h2 class="w3-xxxlarge">Pathological Nature</h2>
+            <figure>
+              <img src="imgs/comps/pathologicalEvolution.png" alt="pathologyEvolution" style="width:100%; max-width:1000px">
+              <figcaption>
+                <a href="https://doi.org/10.1038/nrdp.2015.56"
+                  class="w3-medium" style="color:gray">
+                  Masters, et al., 2015 </a>
+              </figcaption>
+            </figure>
+            <aside class="notes">
+              The neuropathology of AD is characterized by:
+              <br>(1) deposition and accumulation of β-amyloid (Aβ) peptides,
+              or amyloid/senile plaques between the neuronal extracellular space,
+              <br>-Starts basal portions of cortex on the medial-temporal-lobe;
+              <br>-Asocciation areas;
+              <br>-All areas including sensory and motor core fields.
+              <br>(2) formation of neuronal intracellular neurofibrillary tangles
+              of hyperphosphorylated tau protein,
+              <br>-Braak Stages I,II: transentorhinal
+              <br>-Braak Stages III,IV: limbic
+              <br>-Braak Stages V,VI: isocortical
+              <br>(3) neuronal loss, and (4) neuroinflammation (Miziak et al., 2021).
+            </aside>
+          </section>
+          <section>
+            <h2 class="w3-xxxlarge">Biological affliction precedes symptoms by decades</h2>
+            <figure>
+              <img src="imgs/acm1/nature1.png" alt="biomarkers" style="width:100%; max-width:900px">
+              <figcaption>
+                <a href="https://doi.org/10.1038/s41380-020-0721-9"
+                  class="w3-medium" style="color:gray">
+                  Zetterberg &amp; Bendlin, 2021 </a>
+              </figcaption>
+            </figure>
+            <aside class="notes">
+              The first accumulation of Aꞵ in the brain can occur one to two
+              decades before the first appearance of clinical symptoms
+              (Pluta et al., 2020).
+              Both CSF/PET amyloid and postmortem studies suggest
+              that a substantial proportion of cognitively normal subjects
+              present evidence of Aβ accumulation.
+              The exact proportion is dependent on age and genetic background
+              of the study cohort, but ranges from approximately 20 to 40%
+              (Sperling et al., 2011).
+
+              <br>1) (CSF) and plasma Aβ42/Aβ40 ratio.
+              <br>2) CSF and plasma tau increases, as a neuronal response to the AB changes.
+              <br>3) AB PET turns positive.
+              <br>4) Microglia react and secrete soluble triggering receptor
+              expressed on myeloid cells 2 (sTREM2),
+              maximum in MCI stage declines in dementia phase.
+              <br>5) CSF neurogranin (Ng): early marker of synaptic dysfunction; increases  w/amyloid PET.
+              <br>6) Tau PET +: neurodegeneration and synaptic dysfunction biomarkers
+              (CSF and serum/plama neurofilament light [NfL],
+              hippocampal volume, and SV2A- and fluorodeoxyglucose [FDG] PET).
+              <br>7) Astrocytic biomarkers: YKL-40 and glial fibrillary acidic protein [GFAP].
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <figure>
+                  <img src="imgs/comps/alz-brain.png" alt="AD_brain">
+                  <figcaption>
+                    <a href="https://www.alz.org/" class="w3-medium"
+                      style="color:gray;"> Alzheimer's Association</a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="w3-half">
+                <h2>Hippocampus</h2>
+                <hr>
+                <ul class="w3-ul" style="list-style-type: none;">
+                  <li>
+                    Viable proxy for structural and functional integrity
+                  </li>
+                  <li class="fragment">
+                    High variability in volume across populations
+                  </li>
+              </div>
+            </div>
+            <aside class="notes">
+              Hippocampus performs an important role in several cognitive
+              processes like memory and perception (Voss et al., 2017;
+              Zeidman &amp; Maguire, 2016).
+              Due to its affection in both normal and pathological aging
+              (Adler et al., 2018),
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <figure>
+                  <img src="imgs/comps/alz-brain.png" alt="AD_brain">
+                  <figcaption>
+                    <a href="https://www.alz.org/" class="w3-medium"
+                      style="color:gray;"> Alzheimer's Association</a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="w3-half">
+                <h2>Hippocampus</h2>
+                <hr>
+                <ul class="w3-ul" style="list-style-type: none;">
+                  <li>
+                    Viable proxy for structural and functional integrity
+                  </li>
+                  <li>
+                    25% of youth present hippocampi as small as an
+                    average older adult (60-75y)
+                    <a href="https://doi.org/10.1016/j.neuroimage.2006.09.041"
+                      class="w3-medium"
+                      style="color:gray;">Lupien et al., 2007</a>
+                  </li>
+              </div>
+            </div>
+            <aside class="notes">
+              25% of 18-24y subjects presented hippocampi as small as the
+              average older adult (60-75y)
+          </section>
+          <section data-auto-animate>
+            <h3>Hippocampal normative values</h3>
+            <figure>
+              <img src="imgs/acm1/nobis19_1.png" alt="Hc-trajectories1"
+              style="width:100%; max-width:800px">
+              <figcaption>
+                <a href="https://doi.org/10.1016/j.nicl.2019.101904"
+                  class="w3-medium" style="color:gray">
+                  Nobis, et al., 2019
+                </a>
+              </figcaption>
+            </figure>
+            <aside class="notes">
+              Using the data of 19,793 participants in the UK Biobank to
+              extract normative values for hippocampal and total gray matter
+              volume as a function of age (Nobis et al., 2019)
+              Trajectory of hippocampal volume with age.
+              Dashed lines indicate points of maximum ratio.
+              A. Mean bilateral hippocampal volume including standard errors
+              as a function of age, corrected for head size.
+              B. Mean total grey matter volume including standard errors as a
+              function of age, corrected for head size.
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Hippocampal normative values</h3>
+            <figure>
+              <img src="imgs/comps/nomogramsHC.png" alt="Hc-variability"
+              style="width:100%; max-width:700px">
+              <figcaption>
+                <a href="https://doi.org/10.1016/j.nicl.2019.101904"
+                  class="w3-medium" style="color:gray">
+                  Nobis, et al., 2019
+                </a>
+              </figcaption>
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h2>Hippocampal volume measures</h2>
+            <ul class="w3-ul" style="list-style-type: none;">
+              <li class="w3-xlarge">
+                Raw hippocampal volume
+              </li>
+              <li class="w3-xlarge fragment">
+                Hippocampal volume normalized with intracranial volume
+              </li>
+            </ol>
+          </section>
+          <section data-auto-animate>
+            <h2>Hippocampal volume measures</h2>
+            <ul class="w3-ul" style="list-style-type: none;">
+              <li class="w3-xlarge">
+                Raw hippocampal volume
+              </li>
+              <li class="w3-xlarge">
+                Hippocampal volume normalized with Intracranial volume
+              </li>
+              <li class="w3-xlarge">
+                Hippocampal occupancy
+                <a href="https://doi.org/10.1212/WNL.0b013e3182343314"
+                  class="w3-medium"
+                  style="color:gray">Heister et al. (2011) </a>
+              </li>
+              <li class="w3-xlarge">
+                Hippocampal (volumetric) integrity
+                <a href="https://doi.org/10.3233/JAD-150780"
+                  class="w3-medium"
+                  style="color:gray">Ardekani et al. (2016) </a>
+              </li>
+              <li class="w3-xlarge">
+                Hippocampal-to-ventricle ratio
+                <a href="https://doi.org/10.1016/j.neuroimage.2019.116108"
+                  class="w3-medium"
+                  style="color:gray">Schoemaker, et al (2019) </a>
+              </li>
+              <li class="w3-xlarge">
+                Hippocampal-amygdalo-ventricular atrophy score
+                <a href="https://doi.org/10.1002/hbm.25850"
+                  class="w3-medium"
+                  style="color:gray">Coup&eacute; et al. (2022) </a>
+              </li>
+            </ol>
+            <aside class="notes">
+              Defined as the fraction of tissue found in the region expected
+              to encompass a normal HC<br>
+              Probabilistic algorithm based on registrations to a priori training data
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <figure>
+                  <img src="imgs/comps/HVR.png" alt="HVR">
+                  <figcaption>
+                    <a href="https://doi.org/10.1016/j.neuroimage.2019.116108"
+                      class="w3-medium"
+                      style="color:gray">Schoemaker, et al (2019) </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="w3-half">
+                <h2>Hippocampal volume measures</h2>
+                <ul class="w3-ul" style="list-style-type: none;">
+                  <li class="w3-xlarge">
+                    Raw hippocampal volume
+                  </li>
+                  <li class="w3-xlarge">
+                    Hippocampal volume normalized with Intracranial volume
+                  </li>
+                  <li class="w3-xlarge">
+                    Hippocampal occupancy
+                    <a href="https://doi.org/10.1212/WNL.0b013e3182343314"
+                      class="w3-medium"
+                      style="color:gray">Heister et al. (2011) </a>
+                  </li>
+                  <li class="w3-xlarge">
+                    Hippocampal (volumetric) integrity
+                    <a href="https://doi.org/10.3233/JAD-150780"
+                      class="w3-medium"
+                      style="color:gray">Ardekani et al. (2016) </a>
+                  </li>
+                  <li class="w3-xlarge">
+                    <b>Hippocampal-to-ventricle ratio</b>
+                    <a href="https://doi.org/10.1016/j.neuroimage.2019.116108"
+                      class="w3-medium"
+                      style="color:gray">Schoemaker, et al (2019) </a>
+                  </li>
+                  <li class="w3-xlarge">
+                    Hippocampal-amygdalo-ventricular atrophy score
+                    <a href="https://doi.org/10.1002/hbm.25850"
+                      class="w3-medium"
+                      style="color:gray">Coup&eacute; et al. (2022) </a>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <aside class="notes">
+              Ventricular enlargement is a marker of brain atrophy
+              <br>Used manual segmentation to compute the ratio between
+              prehippocampal CSF and hippocampal volume
+              <br>HVR showed significantly stronger negative associations with
+              age and was a better predictor of memory compared to standard
+              hippocampal volume
+              <br>50+88 CN people 66/65 +/- 4.96/6.42yo
+              <br>Memory: Cue Recall Procedure / Rey Auditory Verbal Learning Task
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h2>Hypotheses</h2>
+          </section>
+          <section data-auto-animate>
+            <h2>Hypotheses</h2>
+            <ol class="w3-ul">
+              <li class="w3-xlarge">
+                The calculation of HVR, can be reliably done using automatic
+                methods of segmentation.
+              </li>
+              <li class="w3-xlarge">
+                HVR will show stronger relationships with memory and age than
+                conventional HC volume measures in a large cohort of healthy
+                controls (UKBB).
+              </li>
+              <li class="w3-xlarge">
+                HVR will show better prediction capabilities of cognitive
+                decline than other HC volume methods in large cohorts of
+                patients with MCI and mild AD (ADNI, AIBL, HABS).
+              </li>
+              <li class="w3-xlarge">
+                There will be significant differences in HVR spatiotemporal curves
+                between:
+              </li>
+              <ul class="w3-ul w3-large">
+                <li>Dementia-progressors v No-cognitive-decline;</li>
+                <li>Amyloid+ v Amyloid-;</li>
+                <li>APOE4+ v APOE4-.</li>
+              </ul>
+            </ol>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h1>Data</h1>
+          </section>
+          <section data-auto-animate>
+            <h1 class="w3-jumbo">Data</h1>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>UK Biobank<br>
+                <span class="w3-xlarge">
+                  MRI data acquired on 43k subjects (40-69yo); 3k second scans.</span>
+              </li>
+              <li>Alzheimer's disease neuroimaging initiative (ADNI)<br>
+                <span class="w3-xlarge">
+                  Clinical, imaging, genetic and biospecimen data:<br>
+                  normal aging (~430-880), early/late MCI (~425-835), to AD (~200-335).</span>
+              </li>
+              <li>Harvard Aging Brain Study (HABS)<br>
+                <span class="w3-xlarge">
+                  290 participants, 62-90 yo, followed up to 5y.</span>
+              </li>
+              <li>Health &amp; Aging Brain Study: Health Disparities<br>
+                <span class="w3-xlarge">
+                  3000 participants over 50 yo: 1000 Mexican americans,
+                  1000 African Americans &amp; 1000 non-hispanic whites.</span>
+              </li>
+              <li>Australian Imaging, Biomarker &amp;
+                Lifestyle Flagship Study of Aging (AIBL)<br>
+                <span class="w3-xlarge">
+                  211 participants with AD, 133 with MCI; and 768 healthy
+                  individuals.</span>
+              </li>
+            </ul>
+            <aside class="notes">
+              ADNI3:
+              Normal Controls (135-500 new; ~295-330 rollover from ADNI2)
+              (MCI) (150-515 new; ~275-320 rollover)
+              (AD) (85-185 new; ~130-150 rollover)
+              HABS: All deemeed non-clinically impaired at baseline.
+              Yearly follow-up; Imaging: baseline, 3 and 5 years.
+            </aside>
+          </section>
+        </section>
+        <section>
+          <h1>Research Progress</h1>
+        </section>
+        <section>
+          <section>
+            <h2>AIM 1</h2>
+            <p>Develop an open-source tool to facilitate quality control (QC)
+            of MRI</p>
+          </section>
+          <section>
+            <h2>Qrater</h2>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <img src="imgs/comps/qrater.png" alt="qrater"
+                style="width:100%; max-width:900px">
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li>Docker containerized</li>
+                  <li>Centralized and accessible by SSH</li>
+                  <li>MySQL database built-in</li>
+                  <li>Feature-rich</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Benchmark Tests</h2>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <img src="imgs/comps/raw.jpg" alt="qrater"
+                style="width:100%; max-width:900px">
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li><b>Raw unprocessed T1w brain images</b></li>
+                  <li>T1w brain images linearly registered to standard template</li>
+                  <li>Output of experimental skull extraction pipeline</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>Benchmark Tests</h2>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <img src="imgs/comps/registration.jpg" alt="qrater"
+                style="width:100%; max-width:900px">
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li>Raw unprocessed T1w brain images</li>
+                  <li><b>T1w brain images linearly registered to standard template</b></li>
+                  <li>Output of experimental skull extraction pipeline</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>Benchmark Tests</h2>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <img src="imgs/comps/redskull.jpg" alt="qrater"
+                style="width:100%; max-width:900px">
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li>Raw unprocessed T1w brain images</li>
+                  <li>T1w brain images linearly registered to standard template</li>
+                  <li><b>Output of experimental skull extraction pipeline</b></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>Benchmark Tests</h2>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Raw MRI data (N=99; 9 raters)<br>
+                <span class="w3-xlarge">
+                  Agreement with experienced rater: 59-86% (mean 77%)
+                </span>
+              </li>
+              <li>Linear-registered MRI data (N=99; 8 raters)<br>
+                <span class="w3-xlarge">
+                  Agreement with experienced rater: 73-92% (mean 84.75%)
+                </span>
+              </li>
+              <li>Skull extracted images (N=1,746; 2 raters)<br>
+                <span class="w3-xlarge">
+                  Kappa value of 0.83 as inter-rater agreement
+                </span>
+              </li>
+            <aside class="notes">
+              Even with the high speeds, we got good consistency between raters
+            </aside>
+          </section>
+          <section>
+            <h2>Currently in use...</h2>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>14 registered users</li>
+              <li>36 uploaded datasets</li>
+              <li>89,628 images</li>
+              <li>38,460 ratings</li>
+            </ul>
+            <aside class="notes">
+              Curated acquisition of almost all of ADNI3, and Manuscript on the
+              works, to be submitted in the summer.
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h2>AIM 2</h2>
+            <p>Compare different segmentatation techniques and select the most
+            appropriate one for automatic calculation of HVR</p>
+          </section>
+          <section data-auto-animate>
+            <h2>AIM 2</h2>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Available  labels from
+                <a href="https://doi.org/10.1016/j.neuroimage.2019.116108"
+                   style="color: gray;">Schoemaker, et al.</a>. N = 80.</li>
+              <li>
+                Compare the performance of different segmentation techniques:
+              </li>
+              <ul class="w3-ul w3-xlarge" style="padding: 0px 30px">
+                <li>Multi-atlas label fusion;
+                  <a href="https://doi.org/10.1016/j.neuroimage.2010.04.193"
+                     class="w3-large" style="color:gray">
+                    Collins &amp; Pruessner, 2010;
+                  </a></li>
+                <li>Non-local Patch-based segmentation;
+                  <a href="https://doi.org/10.1016/j.neuroimage.2010.09.018"
+                    class="w3-large" style="color:gray">
+                      Coup&eacute;, et al., 2011 </a></li>
+                <li>Convolutional Neural Network;
+                  <a href="https://doi.org/10.1002/hbm.24803"
+                    class="w3-medium" style="color:gray">
+                    Novosad, et al., 2020 </a></li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h3>Performance comparison</h3>
+            <figure>
+              <img src="imgs/acm2/segmentations_results_hcvc_examplesub.png"
+                   alt="Dice of segmentations"
+              style="width:100%; max-width:900px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h2>Application on clinical data</h2>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <img src="imgs/acm2/table1_aaic23.png" alt="table of failures"
+                style="width:100%; max-width:400px">
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li>Three segmentation models were applied unto ADNI data</li>
+                  <li>Baseline T1w images for CN, MCI, AD</li>
+                  <li>Raw HC volume, HC volume normalized with ICV
+                    and HVR</li>
+                  <li>Robust effect sizes using bootstrap were calculated.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>Dx effect sizes</h3>
+            <figure>
+              <img src="imgs/acm2/effect_sizes_hc_hvr2.png"
+                   alt="Dx effect sizes"
+              style="width:100%; max-width:900px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h3>Conversion effect sizes</h3>
+            <figure>
+              <img src="imgs/acm2/effect_sizes_hc_hvr_conversion.png"
+                   alt="Conversion effect sizes"
+              style="width:100%; max-width:900px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h2>AIM 3</h2>
+            <p>Obtain normative values of HC volume and HVR</p>
+          </section>
+          <section data-auto-animate>
+            <h2>AIM 3</h2>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>
+                Validate HVR
+                <span class="w3-xlarge">
+                  UK Biobank: MRI data of 43K healthy subjects aged 40-69
+                </span>
+              </li>
+              <li class="fragment">
+                Analyze the effects of sex and gender in normal variation of HVR
+              </li>
+              <li class="fragment">
+                Provide normative values (percentile tables) of HC volume and HVR
+              </li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h2>AIM 3</h2>
+            <h4>Progress:</h4>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>
+                UK Biobank: MRI data of 43K healthy subjects aged 40-69
+              </li>
+              <li>
+                39,677 preprocessed T1w images
+              </li>
+              <li>
+                35,351 passed automatic QC and were segmented using CNN from AIM2
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Schoemaker, et al. replication</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>
+                Relationship of different measures of HC volume vs age
+              </li>
+              <li>
+                Relationship of different measures of HC volume vs memory<br>
+                <ul class="w3-ul w3-xlarge">
+                  <li>Numeric memory test</li>
+                  <li>Pairs-matching test</li>
+                  <li>Paired-associate learning test</li>
+                  <li>Prospective memory test</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h3>Schoemaker, et al. replication</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>
+                Preliminary results were obtained using baseline ADNI data from AIM2
+              </li>
+              <li>
+                Relationship of different measures of HC volume vs age
+              </li>
+              <li>
+                Relationship of different measures of HC volume vs memory<br>
+              </li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h3>Relationship of different measures of HC volume vs age</h3>
+            <figure>
+              <img src="imgs/acm2/correlations_hc_hvr_age_z.png"
+                   alt="HC vs Age"
+              style="width:100%; max-width:900px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Relationship of different measures of HC volume vs cognition</h3>
+            <figure>
+              <img src="imgs/acm2/correlations_hc_hvr_cogtests_z.png"
+                   alt="HC vs Cognition"
+              style="width:100%; max-width:900px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Relationship of different measures of HC volume vs Memory</h3>
+            <figure>
+              <img src="imgs/acm2/correlations_hc_hvr_memtests_z.png"
+                   alt="HC vs Memory"
+              style="width:100%; max-width:900px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h3>GAMLSS: Normative data</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Generalized additive models for location, scale and shape</li>
+              <li>Model growth trajectories of the HC/HVR and estimate non-linear
+                age-related trends stratified by sex.
+              </li>
+              <li>Create an integrated measure of normative deviation by
+                computing the Mahalanobis distance across centile scores</li>
+            </ul>
+            <aside class="notes">
+              robust and flexible framework for modelling non-linear growth
+              trajectories recommended by the World Health Organization24
+              Calculation of individualized centile information for any new
+              observation.
+              Assess with BIC and bootstrap resampling methods.
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h2>AIM 4</h2>
+            <p>Model the spatiotemporal curves of cognitive function and HVR
+            at the stages preceding AD</p>
+          </section>
+          <section data-auto-animate>
+            <h2>AIM 4</h2>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Group-based trajectory model<br>
+                <ol class="w3-ol w3-xlarge" style="padding: 0px 30px">
+                  <li>Cognitive decline</li>
+                  <li>HC atrophy</li>
+                </ol>
+              </li>
+              <li>Multinomial logistic regression as a predictive model
+              for trajectory subgroup assignment</li>
+            </ul>
+            <aside class="notes">
+              Group-based trajectory models are a specialized application of finite mixture models.
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>GBTM</h3>
+            <hr>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+              <ol class="w3-ol w3-xxlarge" style="padding: 0px 30px">
+                <li>HVR progression by time<br>
+                  <span class="w3-xlarge">
+                    general cognitive function and memory as covariates</span>
+                </li>
+                <li>Memory changes<br>
+                  <span class="w3-xlarge">
+                    HVR as covariate</span>
+                </li>
+              </ol>
+              <hr>
+              <p class="w3-xlarge">Both models will control for A&beta; APOE4,
+              sociodemographic information and baseline metrics</p>
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li>Cognitive function:<br>
+                    <ul class="w3-ul w3-xlarge">
+                      <li>Mini-mental State Examination (MMSE)</li>
+                      <li>Clinical Dementia Rating (CDR)</li>
+                    </ul>
+                  </li>
+                  <li>Memory:<br>
+                    <span class="w3-xlarge">
+                      Logical Memory I and II subsets
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h3>GBTM</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Number of subgroups:<br>
+                <span class="w3-xlarge">
+                  Bayesian Information Criterion (BIC) &amp;
+                  Sample-size Adjusted BIC (SABIC).</span>
+              </li>
+              <li>Validation:<br>
+                <span class="w3-xlarge">
+                  Bootstrap resampling: 95% confidence intervals</span>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Predictive model</h3>
+            <hr>
+            <p>Fit multivariate multinomial logistic regression models to find
+            the risk of a specific patient to belong to the different subgroups.</p>
+          </section>
+          <section>
+            <h3>External validation</h3>
+            <hr>
+            <p>Both GBTM and predictive models will be validated on the 290 subjects
+            from HABS as an independent dataset.</p>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h2>AIM 5</h2>
+            <p>Evalute HVR's predicting performance for AD progression</p>
+          </section>
+          <section data-auto-animate>
+            <h2>AIM 5</h2>
+            <p>Use group trajectories as input of ensemble classifier to
+            predict categorical diagnosis at different timepoints:<br>
+              <span class="w3-xlarge">2y, 3y &amp; 5y</span></p>
+          </section>
+          <section data-auto-animate>
+            <h2>RandomForest classifier</h2>
+            <ul class="w3-ol w3-xxlarge" style="padding: 0px 30px">
+              <li>
+                Sociodemographic information<br>
+                <span class="w3-xlarge">age, sex, education, and socioeconomic status</span>
+              </li>
+              <li>
+                Baseline measures<br>
+                <span class="w3-xlarge">HVR, MMSE, Logical memory I &amp; II</span>
+              </li>
+              <li>
+                Predicted values by group trajectory<br>
+                <span class="w3-xlarge">HVR, MMSE, Logical memory I &amp; II</span>
+              </li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h2>RandomForest classifier</h2>
+            <p>
+              Performance will be externally validated on the AIBL cohort
+              using overall accuracy and Balanced Classification Accuracy (BCA)
+            </p>
+          </section>
+        </section>
+        <section>
+          <h1 class="r-fit-text">Tentative Timeline</h1>
+          <img src='imgs/comps/timeline.png' alt="Timeline">
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h1>Contributions</h1>
+          </section>
+          <section data-auto-animate>
+            <h1 class="w3-jumbo">Contributions</h1>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Open-source Imaging QC software</li>
+              <li class="fragment">
+                Tool for automatic HVR calculation from MRI</li>
+              <li class="fragment">
+                Validation of HVR as proxy of HC atrophy</li>
+              <li class="fragment">
+                Normative Percentile Tables of HC volume and HVR</li>
+              <li class="fragment">
+                More effective identification of the early stages of AD</li>
+            </ul>
+            <aside class="notes">
+              Qrater, an open-source web-application free to use and available
+              to download to facilitate Quality Control evaluation of any kind
+              of imaging task in a simple to use and collaborative way.
+              A tool for the automatic tissue segmentation of the hippocampus
+              and its surrounding temporal horn of the lateral ventricle.
+              Given the role of the hippocampus in healthy and pathological
+              aging, this tool will prove useful for the studies of other
+              types of neurodegenerative diseases.
+              A new standardized metric for hippocampal volume proved to be
+              more capable of capturing its atrophy.
+              Normative centile tables stratified by sex of raw hippocampal
+              volume and HVR that will provide valuable information regarding
+              normal variations of these measures.
+              The finding of the distinct possible disease progression
+              trajectories in AD and a set of prediction models able to
+              identify the risk of a new patient belonging to one of these
+              classes.
+            </aside>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="reveal.js/dist/reveal.js"></script>
+    <script src="reveal.js/plugin/notes/notes.js"></script>
+    <script src="reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="reveal.js/plugin/math/math.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        margin: 0.03,
+        slideNumber: "c/t",
+        totalTime: 1800,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+      });
+    </script>
+  </body>
+</html>
