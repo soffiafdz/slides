@@ -217,18 +217,18 @@
             </aside>
           </section>
           <section data-auto-animate>
-            <h2>Hippocampal volume measures</h2>
+            <h3>Hippocampal measures</h3>
             <ul class="w3-ul" style="list-style-type: none;">
               <li class="w3-xlarge">
                 Raw hippocampal volume
               </li>
-              <li class="w3-xlarge fragment">
+              <li class="w3-xlarge">
                 Hippocampal volume normalized with intracranial volume
               </li>
             </ol>
           </section>
           <section data-auto-animate>
-            <h2>Hippocampal volume measures</h2>
+            <h3>Hippocampal measures</h3>
             <ul class="w3-ul" style="list-style-type: none;">
               <li class="w3-xlarge">
                 Raw hippocampal volume
@@ -365,7 +365,6 @@
             <h1>Data</h1>
           </section>
           <section data-auto-animate>
-            <h1 class="w3-jumbo">Data</h1>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>UK Biobank<br>
                 <span class="w3-xlarge">
@@ -373,8 +372,7 @@
               </li>
               <li>Alzheimer's disease neuroimaging initiative (ADNI)<br>
                 <span class="w3-xlarge">
-                  Clinical, imaging, genetic and biospecimen data:<br>
-                  normal aging (~430-880), early/late MCI (~425-835), to AD (~200-335).</span>
+                  Normal aging (~430-880), early/late MCI (~425-835), to AD (~200-335).</span>
               </li>
               <li>Harvard Aging Brain Study (HABS)<br>
                 <span class="w3-xlarge">
@@ -382,8 +380,8 @@
               </li>
               <li>Health &amp; Aging Brain Study: Health Disparities<br>
                 <span class="w3-xlarge">
-                  3000 participants over 50 yo: 1000 Mexican americans,
-                  1000 African Americans &amp; 1000 non-hispanic whites.</span>
+                  3K participants over 50 yo: 1K Mexican-americans,
+                  1K African-americans &amp; 1K non-hispanic whites.</span>
               </li>
               <li>Australian Imaging, Biomarker &amp;
                 Lifestyle Flagship Study of Aging (AIBL)<br>
@@ -428,7 +426,7 @@
               </div>
             </div>
           </section>
-          <section>
+          <section data-auto-animate>
             <h2>Benchmark Tests</h2>
             <div class="w3-row-padding w3-stretch">
               <div class="w3-half">
@@ -476,8 +474,8 @@
               </div>
             </div>
           </section>
-          <section data-auto-animate>
-            <h2>Benchmark Tests</h2>
+          <section>
+            <h2>Results</h2>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>Raw MRI data (N=99; 9 raters)<br>
                 <span class="w3-xlarge">
@@ -523,7 +521,7 @@
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>Available  labels from
                 <a href="https://doi.org/10.1016/j.neuroimage.2019.116108"
-                   style="color: gray;">Schoemaker, et al.</a>. N = 80.</li>
+                   style="color: gray;">Schoemaker, et al.</a>: N = 80.</li>
               <li>
                 Compare the performance of different segmentation techniques:
               </li>
@@ -538,9 +536,9 @@
                     class="w3-large" style="color:gray">
                       Coup&eacute;, et al., 2011 </a></li>
                 <li>Convolutional Neural Network;
-                  <a href="https://doi.org/10.1002/hbm.24803"
+                  <a href="https://doi.org/10.1007/978-3-031-08999-2_27"
                     class="w3-medium" style="color:gray">
-                    Novosad, et al., 2020 </a></li>
+                    Fonov, et al., 2022 </a></li>
               </ul>
             </ul>
           </section>
@@ -563,14 +561,17 @@
               </div>
               <div class="w3-half">
                 <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-                  <li>Three segmentation models were applied unto ADNI data</li>
-                  <li>Baseline T1w images for CN, MCI, AD</li>
-                  <li>Raw HC volume, HC volume normalized with ICV
+                  <li>ADNI: Baseline T1w images for CN, MCI, AD</li>
+                  <li>HC volume, HC volume normalized with ICV,
                     and HVR</li>
-                  <li>Robust effect sizes using bootstrap were calculated.</li>
+                  <li>Robust effect sizes (bootstrap)</li>
                 </ul>
               </div>
             </div>
+            <aside class="notes">
+              Total: CN=502; MCI=815; AD=324<br>
+            Effect sizes: Cohen's D; 5,000 bootstrap simulations
+            </aside>
           </section>
           <section>
             <h3>Dx effect sizes</h3>
@@ -580,6 +581,8 @@
               style="width:100%; max-width:900px">
             </figure>
             <aside class="notes">
+              Significant difference in the separation between AD with MCI and CN
+              only on MALF.
             </aside>
           </section>
           <section>
@@ -607,10 +610,10 @@
                   UK Biobank: MRI data of 43K healthy subjects aged 40-69
                 </span>
               </li>
-              <li class="fragment">
+              <li>
                 Analyze the effects of sex and gender in normal variation of HVR
               </li>
-              <li class="fragment">
+              <li>
                 Provide normative values (percentile tables) of HC volume and HVR
               </li>
             </ul>
@@ -630,20 +633,14 @@
               </li>
             </ul>
           </section>
-          <section>
+          <section data-auto-animate>
             <h3>Schoemaker, et al. replication</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>
                 Relationship of different measures of HC volume vs age
               </li>
               <li>
-                Relationship of different measures of HC volume vs memory<br>
-                <ul class="w3-ul w3-xlarge">
-                  <li>Numeric memory test</li>
-                  <li>Pairs-matching test</li>
-                  <li>Paired-associate learning test</li>
-                  <li>Prospective memory test</li>
-                </ul>
+                Relationship of different measures of HC volume vs memory
               </li>
             </ul>
           </section>
@@ -657,38 +654,49 @@
                 Relationship of different measures of HC volume vs age
               </li>
               <li>
-                Relationship of different measures of HC volume vs memory<br>
+                Relationship of different measures of HC volume vs memory
+              </li>
+              <li class="fragment">
+                Relationship of different measures of HC volume vs cognition
               </li>
             </ul>
           </section>
-          <section data-auto-animate>
-            <h3>Relationship of different measures of HC volume vs age</h3>
+          <section>
+            <h3>HC measures vs age</h3>
             <figure>
               <img src="imgs/acm2/correlations_hc_hvr_age_z.png"
                    alt="HC vs Age"
               style="width:100%; max-width:900px">
             </figure>
             <aside class="notes">
+              HCvol/ICV vs HVR: statistically significant for three Dx.
             </aside>
           </section>
-          <section data-auto-animate>
-            <h3>Relationship of different measures of HC volume vs cognition</h3>
+          <section>
+            <h3>HC measures vs cognition</h3>
             <figure>
               <img src="imgs/acm2/correlations_hc_hvr_cogtests_z.png"
                    alt="HC vs Cognition"
               style="width:100%; max-width:900px">
             </figure>
             <aside class="notes">
+              1000 bootstrap simulations: none is statistically significant
             </aside>
           </section>
-          <section data-auto-animate>
-            <h3>Relationship of different measures of HC volume vs Memory</h3>
+          <section>
+            <h3>HC measures vs Memory</h3>
             <figure>
               <img src="imgs/acm2/correlations_hc_hvr_memtests_z.png"
                    alt="HC vs Memory"
-              style="width:100%; max-width:900px">
+              style="width:100%; max-width:1000px">
             </figure>
             <aside class="notes">
+              HCvol == HCvol/ICV;
+              Changes are on HVR:
+              <br>Slight increase for AD and CN on immediate.
+              <br>Learning is the same
+              <br>Positive correlation in forgetting for AD; decrease in MCI
+              <br>Perc forgetting: =AD; -MCI +CN
             </aside>
           </section>
           <section>
