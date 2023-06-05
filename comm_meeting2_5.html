@@ -721,7 +721,7 @@
             <h4>Sex differences and clinical neurodegeneration</h4>
             <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
               <li>Amyloid+ subjects:<br>
-                <span class="w3-large">CN, MCI, AD</span></li>
+                <span class="w3-large">CN = 131; MCI = 348; AD = 185</span></li>
               <li>Standardized effect size estimates and robust CIs</li>
               <ul class="w3-ul w3-large" style="list-style-type:none;">
                 <li><b>CIs</b>:<br>bias-corrected and accelerated (BCa) bootstrap method<br>
@@ -789,7 +789,7 @@
             <h4>Disease modeling</h4>
             <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
               <li>Amyloid+ subjects:<br>
-                <span class="w3-large">CN, MCI, AD</span></li>
+                <span class="w3-large">CN = 131; MCI = 346; AD = 179</span></li>
               <li>Modeling of Unnormalized/normalized HCvol</li>
               <ul class="w3-ul w3-large" style="list-style-type:none;">
                 <li>Linear (OLS) and Nonlinear (GAM) models</li>
@@ -798,8 +798,10 @@
                 <li>80/20 train/test split; 3reps 5F-CV</li>
                 <li>HCvol: Z-scored with info from training set</li>
               </ul>
-              <li style="font-size:75%">\[HC_{z}\simLeft|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]</li>
             </ul>
+            <p class="w3-large" style="font-size: 75%">
+              \[HC_{z}~Left|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
+            </p>
             <aside class="notes">
               Cog = MiniMentalStatusExamination,
               Alzheimer'sDiseaseAssessmentScale13,
@@ -812,7 +814,7 @@
             <p class="w3-large" style="font-size: 75%">
               \[HC_{z}~Left|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
             </p>
-            <table class="table-small">
+            <table style="font-size: 14px">
               <tr>
                 <th rowspan=2>Measure</th><th rowspan=2>Model</th><th colspan=3>5F-CV</th><th colspan=3>Testing dataset</th>
               </tr>
@@ -859,17 +861,19 @@
                 <li>Naive Bayes</li>
               </ul>
               <li>80/20 train/test split; 3reps 5F-CV</li>
-              <li style="font-size:75%">\[Progression\simHC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]</li>
             </ul>
+            <p class="w3-large" style="font-size: 75%">
+              \[Progression\simHC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
+            </p>
             <aside class="notes">
             </aside>
           </section>
           <section>
             <h4>Dementia conversion prediction</h4>
             <p class="w3-large" style="font-size: 75%">
-              \[Progression~HC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
+              \[Progression\simHC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
             </p>
-            <table class="table-small">
+            <table style="font-size: 14px">
               <tr>
                 <td rowspan=2></td> <th colspan=3>AdaBoost</th> <th colspan=3>NaiveBayes</th> <th colspan=3>SVM</th>
               </tr>
@@ -909,7 +913,7 @@
             <h4>Longitudinal stability of HC volume</h4>
             <div class="w3-row-padding w3-stretch">
               <div class="w3-half">
-                <h3>Clinical sample</h3>
+                <h4>Clinical sample</h4>
                 <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
                   <li>ADNI:</li>
                   <ul class="w3-ul w3-large" style="list-style-type:none;">
@@ -920,7 +924,7 @@
                 </ul>
               </div>
               <div class="w3-half">
-                <h3>1-Subject sample</h3>
+                <h4>1-Subject sample</h4>
                 <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
                   <li>SIMON dataset:</li>
                   <ul class="w3-ul w3-large" style="list-style-type:none;">
@@ -939,13 +943,8 @@
           <section data-auto-animate>
             <h4>Longitudinal stability of HC volume: Clinical</h4>
             <h5>Within-subject Effect size</h5>
-            <p style="font-size: 80%">
-            \[
-            d_{within-subject, j} &amp; = \frac{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})}
-            {\sqrt{\sum_i=1}^{n_j}(HC_{1,i}-HC_{2,i})^2/(n_j-1)}\\
-            j = {CN, MCI, AD}
-            \]
-            </p>
+            <p style="font-size: 80%">\[d_{within-subject,j}&amp;=\frac{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})}{\sqrt{\sum_i=1}^{n_j}(HC_{1,i}-HC_{2,i})^2/(n_j-1)}\\
+            j = {CN, MCI, AD}\] </p>
           </section>
           <section data-auto-animate>
             <h4>Longitudinal stability of HC volume: Clinical</h4>
@@ -971,15 +970,18 @@
           <section data-auto-animate>
             <h4>Longitudinal stability of HC volume: 1-Subject</h4>
             <h5>Mixed effect models</h5>
-            <ul class="w3-ul w3-large" style="list-style-type:none;">
-              <li>\[Time\simHC_l+HC_r+(1|Scanner)\]</li>
-              <li class="w3-medium">Akaike Information Criterio (AIC) &amp; Bayesian Information Criterio (BIC)</li>
-              <li>\[HC_z\simTime+(1|Scanner)+(1|Session)\]</li>
-              <li class="w3-medium">Variability of residuals</li>
-            </ul>
-            <aside class="notes">
-              HC Z-scored and average of two sides
-            </aside>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <p class="w3-large">\[Time\simHC_l+HC_r+(1|Scanner)\]</p>
+                <p class="w3-medium">Akaike Information Criterio (AIC) &amp; Bayesian Information Criterio (BIC)</p>
+              </div>
+            </div>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <p class="w3-large">\[Time\simHC_l+HC_r+(1|Scanner)\]</p>
+                <p class="w3-medium">Variability of residuals</p>
+              </div>
+            </div>
           </section>
           <section data-auto-animate>
             <h4>Longitudinal stability of HC volume: 1-Subject</h4>
