@@ -710,7 +710,7 @@
           <section>
             <h3>Comparisons</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>Sex difference and clinical HC degeneration</li>
+              <li>Sex differences and clinical HC degeneration</li>
               <li>Disease modeling</li>
               <li>Dementia conversion prediction</li>
               <li>Healthy and clinical longitudinal stability</li>
@@ -726,6 +726,7 @@
                 2,000 resamples</li>
                 <li>Sex differences: Cohen's d (weighted comparison of means)</li>
                 <li>Neurodegeneration: Glass' &Delta;</li>
+              </ul>
             </ul>
             <aside class="notes">
               Amyloid positivity:<br>
@@ -779,6 +780,150 @@
                    alt="Clinical differences"
               style="width:100%; max-width:1100px">
             </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h4>Disease modeling</h4>
+            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+              <li>Amyloid+ subjects: CN, MCI, AD</li>
+              <li>Modeling of Unnormalized/normalized HCvol</li>
+              <ul class="w3-ul w3-large" style="list-style-type:none;">
+                <li>Linear (OLS) and Nonlinear (GAM) models</li>
+                <li>80/20 train/test split; 3reps 5F-CV</li>
+                <li>HCvol:Zscored with info from training set</li>
+              </ul>
+              <li>\[HC_{Zscored}~Left|Right+Dx+Age+Sex+Educ+Cog.PC1+MEM.PC1+APOE_4\]</li>
+            </ul>
+            <aside class="notes">
+              Cog = MiniMentalStatusExamination,
+              Alzheimer'sDiseaseAssessmentScale13,
+              ClinicalDementiaRating-SumBoxes<br>
+              Mem = ReyAuditoryVerbalLearningTest: Immediate, learning, forgetting
+            </aside>
+          </section>
+          <section>
+            <h4>ADNI Baseline: Amyloid+</h4>
+            <p style="font-size: 80%">
+              \[HC_{Zscored}~Left|Right+Dx+Age+Sex+Educ+Cog.PC1+MEM.PC1+APOE_4\]
+            </p>
+            <table>
+              <tr>
+                <th rowspan=2>Measure</th><th rowspan=2>Model</th><th colspan=3>5F-CV</th><th colspan=3>Testing dataset</th>
+              </tr>
+              <tr>
+                <th>R2</th> <th>RMSE</th> <th>MAE</th> <th>R2</th> <th>RMSE</th> <th>MAE</th>
+              </tr>
+              <tr>
+                <th rowspan=2>HC<sub>vol</sub></th> <th>OLS</th> <td>0.379</td> <td>0.789</td> <td>0.626</td> <td>0.359</td> <td>0.846</td> <td>0.666</td>
+              </tr>
+              <tr>
+                <th>GAM</th> <td>0.377</td> <td>0.791</td> <td>0.627</td> <td>0.359</td> <td>0.846</td> <td>0.664</td>
+              </tr>
+              <tr>
+                <th rowspan=2>HC<sub>icv</sub></th> <th>OLS</th> <td>0.389</td> <td>0.782</td> <td>0.621</td> <td>0.383</td> <td>0.818</td> <td>0.632</td>
+              </tr>
+              <tr>
+                <th>GAM</th> <td>0.400</td> <td>0.776</td> <td>0.616</td> <td>0.378</td> <td>0.822</td> <td>0.629</td>
+              </tr>
+              <tr>
+                <th rowspan=2>HC<sub>stx</sub></th> <th>OLS</th> <td>0.391</td> <td>0.782</td> <td>0.621</td> <td>0.413</td> <td>0.817</td> <td>0.631</td>
+              </tr>
+              <tr>
+                <th>GAM</th> <td>0.403</td> <td>0.773</td> <td>0.612</td> <td>0.406</td> <td>0.767</td> <td>0.604</td>
+              </tr>
+              <tr>
+                <th rowspan=2>HVR</th> <th>OLS</th> <td><b>0.441</b></td> <td><b>0.749</b></td> <td><b>0.601</b></td> <td>0.494</td> <td>0.767</td> <td>0.604</td>
+              </tr>
+              <tr>
+                <th>GAM</th> <td>0.438</td> <td>0.750</td> <td>0.602</td> <td><b>0.498</b></td> <td><b>0.763</b></td> <td><b>0.602</b></td>
+              </tr>
+            </table>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h4>Dementia conversion prediction</h4>
+            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+              <li>Amyloid+ subjects: sMCI &amp; pMCI (3 years)</li>
+                <!--<span class="w3-large">(3 years)</span>-->
+              <li>Classification models:</li>
+              <ul class="w3-ul w3-large" style="list-style-type:none;">
+                <li>AdaBoost</li>
+                <li>Support Vector Machine</li>
+                <li>Naive Bayes</li>
+              </ul>
+              <li>80/20 train/test split; 3reps 5F-CV</li>
+              <li>\[Progression~HC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]</li>
+            </ul>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <p style="font-size: 80%">
+              \[Progression~HC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
+            </p>
+            <table>
+              <tr>
+                <td rowspan=2></td> <th colspan=3>AdaBoost</th> <th colspan=3>NaiveBayes</th> <th colspan=3>SVM</th>
+              </tr>
+              <tr>
+                <th>ROC</th> <th>Sens</th> <th>Spec</th>
+                <th>ROC</th> <th>Sens</th> <th>Spec</th>
+                <th>ROC</th> <th>Sens</th> <th>Spec</th>
+              </tr>
+              <tr>
+                <th>Base</th> <td>0.897</td> <td>0.787</td> <td>0.885</td>
+                <td>0.920</td> <td>0.809</td> <td>0.808</td>
+                <td>0.934</td> <td>0.660</td> <td><b>0.962</b></td>
+              </tr>
+              <tr>
+                <th>HC<sub>vol</sub></th> <td><b>0.913</b></td> <td>0.809</td> <td>0.885</td>
+                <td><b>0.936</b></td> <td>0.851</td> <td>0.846</td>
+                <td>0.927</td> <td>0.702</td> <td><b>0.962</b></td>
+              </tr>
+              <tr>
+                <th>HC<sub>icv</sub></th> <td>0.900</td> <td><b>0.830</b></td> <td>0.885</td>
+                <td>0.931</td> <td>0.851</td> <td><b>0.885</b></td>
+                <td><b>0.946</b></td> <td>0.745</td> <td><b>0.962</b></td>
+              </tr>
+              <tr>
+                <th>HC<sub>stx</sub></th> <td>0.911</td> <td>0.809</td> <td><b>0.923</b></td>
+                <td>0.935</td> <td><b>0.872</b></td> <td>0.808</td>
+                <td>0.943</td> <td><b>0.787</b></td> <td><b>0.962</b></td>
+              </tr>
+              <tr>
+                <th>HVR</th> <td>0.897</td> <td><b>0.830</b></td> <td>0.846</td>
+                <td>0.931</td> <td><b>0.872</b></td> <td>0.808</td>
+                <td>0.945</td> <td>0.681</td> <td><b>0.962</b></td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h4>Longitudinal stability of HC volume</h4>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <h5>Clinical sample</h5>
+                <ul class="w3-ul w3-xxlarge" style="padding: 0px 30px">
+                  <li>ADNI:</li>
+                  <ul class="w3-ul w3-large" style="padding: 0px 30px">
+                    <li>100 CN; 100 MCI; 100 AD</li>
+                    <li>Follow-up: 300-500 days later; same Teslage</li>
+                  </ul>
+                  <li>Standardized effect size estimations</li>
+                </ul>
+              </div>
+              <div class="w3-half">
+                <h5>1-Subject sample</h5>
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li>SIMON dataset:</li>
+                  <ul class="w3-ul w3-large" style="padding: 0px 30px">
+                    <li>93 MRI scans; 73 timepoints</li>
+                  </ul>
+                  <li>Mixed effect models</li>
+                </ul>
+              </div>
+            </div>
             <aside class="notes">
             </aside>
           </section>
