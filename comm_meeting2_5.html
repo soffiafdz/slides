@@ -800,7 +800,7 @@
               </ul>
             </ul>
             <p class="w3-large" style="font-size: 75%">
-              \[HC_{z}~Left|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
+              \[HC_{z}\simLeft|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
             </p>
             <aside class="notes">
               Cog = MiniMentalStatusExamination,
@@ -812,9 +812,9 @@
           <section data-auto-animate>
             <h4>Disease modeling</h4>
             <p class="w3-large" style="font-size: 75%">
-              \[HC_{z}~Left|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
+              \[HC_{z}\simLeft|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
             </p>
-            <table style="font-size: 14px">
+            <table style="font-size: 18px">
               <tr>
                 <th rowspan=2>Measure</th><th rowspan=2>Model</th><th colspan=3>5F-CV</th><th colspan=3>Testing dataset</th>
               </tr>
@@ -863,7 +863,10 @@
               <li>80/20 train/test split; 3reps 5F-CV</li>
             </ul>
             <p class="w3-large" style="font-size: 75%">
-              \[Progression\simHC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
+              \[HC_{z} \sim Left|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
+            </p>
+            <p class="w3-large" style="font-size: 75%">
+              \[Progression \sim HC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
             </p>
             <aside class="notes">
             </aside>
@@ -873,7 +876,7 @@
             <p class="w3-large" style="font-size: 75%">
               \[Progression\simHC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
             </p>
-            <table style="font-size: 14px">
+            <table style="font-size: 18px">
               <tr>
                 <td rowspan=2></td> <th colspan=3>AdaBoost</th> <th colspan=3>NaiveBayes</th> <th colspan=3>SVM</th>
               </tr>
@@ -943,8 +946,12 @@
           <section data-auto-animate>
             <h4>Longitudinal stability of HC volume: Clinical</h4>
             <h5>Within-subject Effect size</h5>
-            <p style="font-size: 80%">\[d_{within-subject,j}&amp;=\frac{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})}{\sqrt{\sum_i=1}^{n_j}(HC_{1,i}-HC_{2,i})^2/(n_j-1)}\\
-            j = {CN, MCI, AD}\] </p>
+            <p style="font-size: 80%">
+              \[\begin{aligned}
+              d_{within-subject,j} &amp; = \frac{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})}{\sqrt{\sum_i=1}^{n_j}(HC_{1,i}-HC_{2,i})^2/(n_j-1)}\\
+            j &amp;= {CN, MCI, AD} \\
+            \end{aligned} \]
+            </p>
           </section>
           <section data-auto-animate>
             <h4>Longitudinal stability of HC volume: Clinical</h4>
@@ -964,7 +971,7 @@
             <figure>
               <img src="imgs/acm2_5/simon_hc-measures_time.png"
                    alt="Simon: hc by time"
-              style="width:100%; max-width:1100px">
+              style="width:100%; max-width:900px">
             </figure>
           </section>
           <section data-auto-animate>
@@ -972,20 +979,18 @@
             <h5>Mixed effect models</h5>
             <div class="w3-row-padding w3-stretch">
               <div class="w3-half">
-                <p class="w3-large">\[Time\simHC_l+HC_r+(1|Scanner)\]</p>
+                <p class="w3-large">\[Time \sim HC_l+HC_r+(1|Scanner)\]</p>
                 <p class="w3-medium">Akaike Information Criterio (AIC) &amp; Bayesian Information Criterio (BIC)</p>
               </div>
-            </div>
-            <div class="w3-row-padding w3-stretch">
               <div class="w3-half">
-                <p class="w3-large">\[Time\simHC_l+HC_r+(1|Scanner)\]</p>
+                <p class="w3-large">\[Time \simHC_l+HC_r+(1|Scanner)\]</p>
                 <p class="w3-medium">Variability of residuals</p>
               </div>
             </div>
           </section>
           <section data-auto-animate>
             <h4>Longitudinal stability of HC volume: 1-Subject</h4>
-            <table>
+            <table style="font-size: 18px">
               <tr>
                 <th>Measure</th> <th>DF</th> <th>AIC</th> <th>BIC</th>
               </tr>
