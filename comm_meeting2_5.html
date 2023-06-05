@@ -585,7 +585,7 @@
             <figure>
               <img src="imgs/acm2_5/manual-labels_segm_kappa_figure.png"
                    alt="Dice of segmentations"
-              style="width:100%; max-width:900px">
+              style="width:100%; max-width:1000px">
             </figure>
             <aside class="notes">
             </aside>
@@ -594,7 +594,7 @@
             <figure>
               <img src="imgs/acm2_5/manual-labels_segm-corr_hcvc.png"
                    alt="Correlations of segmentations"
-              style="width:100%; max-width:900px">
+              style="width:100%; max-width:1000px">
             </figure>
             <aside class="notes">
             </aside>
@@ -603,7 +603,7 @@
             <figure>
               <img src="imgs/acm2_5/manual-labels_segm-bland-altman_hcvc.png"
                    alt="Bland-altman plots of segmentations"
-              style="width:100%; max-width:900px">
+              style="width:100%; max-width:1000px">
             </figure>
             <aside class="notes">
             </aside>
@@ -658,7 +658,7 @@
             <figure>
               <img src="imgs/acm2_5/adni-bl_similarity_sex.png"
                    alt="Similarity between sex"
-              style="width:100%; max-width:900px">
+              style="width:100%; max-width:1000px">
             </figure>
             <aside class="notes">
             </aside>
@@ -668,7 +668,7 @@
             <figure>
               <img src="imgs/acm2_5/adni-bl_similarity_dx.png"
                    alt="Similarity between DX"
-              style="width:100%; max-width:900px">
+              style="width:100%; max-width:1000px">
             </figure>
             <aside class="notes">
             </aside>
@@ -735,57 +735,49 @@
             </aside>
           </section>
           <section data-auto-animate>
-            <h5>Sex differences</h5>
-            <div class="w3-row-padding w3-stretch">
-              <div class="w3-half">
-                \[\begin{aligned}
-                d &amp; = \frac{M_A-M_B}{s} \\
-                s &amp; = \sqrt{(SS_A + SS_B)/(n_A + n_B - 2)} \\
-                c &amp; = \sum_{j=1}^{n}\lambda_j M_j : \sum_{j=1}^{n} \lambda_j = 0 \\
-                \end{aligned} \]
-              </div>
-              <div class="w3-half">
-                \[\begin{aligned}
-                d_c &amp; = \frac{c}{s} \\
-                \Delta &amp; = \frac{c}{\sigma_{control}} \\
-                \end{aligned} \]
-              </div>
-            </div>
+            <h4>Sex differences</h4>
+            <p style="font-size: 80%">
+              \[\begin{aligned}
+              d &amp; = \frac{M_A-M_B}{s} \\
+              s &amp; = \sqrt{(SS_A + SS_B)/(n_A + n_B - 2)} \\
+              c &amp; = \sum_{j=1}^{n}\lambda_j M_j : \sum_{j=1}^{n} \lambda_j = 0 \\
+              d_c &amp; = \frac{c}{s} \\
+              \end{aligned} \]
+            </p>
+            <p style="font-size: 80%">
+              \[\lambda_{Males:CN}=\lambda_{Males:MCI}=\lambda_{Males:AD}=0.33 \\
+              \lambda_{Females:CN}=\lambda_{Females:MCI}=\lambda_{Females:AD}=-0.33
+            </p>
           </section>
-          <section>
-            <h5>Sex differences</h5>
+          <section data-auto-animate>
+            <h4>Sex differences</h4>
             <figure>
               <img src="imgs/acm2_5/adni-bl_effect-sizes_sex.png"
                    alt="Sex differences"
-              style="width:110%; max-width:1000px">
+              style="width:100%; max-width:1100px">
             </figure>
             <aside class="notes">
             </aside>
           </section>
           <section data-auto-animate>
-            <h5>Standardized effect size estimates</h5>
-            <div class="w3-row-padding w3-stretch">
-              <div class="w3-half">
-                \[\begin{aligned}
-                d &amp; = \frac{M_A-M_B}{s} \\
-                s &amp; = \sqrt{(SS_A + SS_B)/(n_A + n_B - 2)} \\
-                c &amp; = \sum_{j=1}^{n}\lambda_j M_j : \sum_{j=1}^{n} \lambda_j = 0 \\
-                \end{aligned} \]
-              </div>
-              <div class="w3-half">
-                \[\begin{aligned}
-                d_c &amp; = \frac{c}{s} \\
-                \Delta &amp; = \frac{c}{\sigma_{control}} \\
-                \end{aligned} \]
-              </div>
-            </div>
+            <h4>Clinical differences</h4>
+            <p style="font-size: 80%">
+            \[\begin{aligned}
+            d &amp; = \frac{M_A-M_B}{s} \\
+            c &amp; = \sum_{j=1}^{n}\lambda_j M_j : \sum_{j=1}^{n} \lambda_j = 0 \\
+            \Delta &amp; = \frac{c}{\sigma_{control}} \\
+            \end{aligned} \]
+            </p>
+            <p style="font-size: 80%">
+              \[\lambda_{CN}=1;\lambda_{MCI}=-0.33;\lambda_{AD}=-0.66
+            </p>
           </section>
-          <section>
-            <h5>Sex differences</h5>
+          <section data-auto-animate>
+            <h4>Clinical differences</h4>
             <figure>
-              <img src="imgs/acm2_5/adni-bl_effect-sizes_sex.png"
-                   alt="Sex differences"
-              style="width:110%; max-width:1000px">
+              <img src="imgs/acm2_5/adni-bl_effect-sizes_dx.png"
+                   alt="Clinical differences"
+              style="width:100%; max-width:1100px">
             </figure>
             <aside class="notes">
             </aside>
