@@ -371,753 +371,753 @@
         <section>
           <h1>Research Progress</h1>
         </section>
-        <!--<section>-->
-          <!--<section>-->
-            <!--<h2>AIM 1</h2>-->
-            <!--<p>Develop an open-source tool to facilitate quality control (QC)-->
-            <!--of MRI</p>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h2>Qrater</h2>-->
-            <!--<div class="w3-row-padding w3-stretch">-->
-              <!--<div class="w3-half">-->
-                <!--<img src="imgs/comps/qrater.png" alt="qrater"-->
-                <!--style="width:100%; max-width:900px">-->
-              <!--</div>-->
-              <!--<div class="w3-half">-->
-                <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
-                  <!--<li>Docker containerized</li>-->
-                  <!--<li>Centralized and accessible by SSH</li>-->
-                  <!--<li>MySQL database built-in</li>-->
-                  <!--<li>Feature-rich</li>-->
-                <!--</ul>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h2>Results</h2>-->
-            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
-              <!--<li>Raw MRI data (N=99; 9 raters)<br>-->
-                <!--<span class="w3-xlarge">-->
-                  <!--Agreement with experienced rater: 59-86% (mean 77%)-->
-                  <!--<br>-->
-                  <!--Qrater vs Traditional QC: comparable speeds-->
-                <!--</span>-->
-              <!--</li>-->
-              <!--<li>Linear-registered MRI data (N=99; 8 raters)<br>-->
-                <!--<span class="w3-xlarge">-->
-                  <!--Agreement with experienced rater: 73-92% (mean 84.75%)-->
-                  <!--<br>-->
-                  <!--Qrater vs Traditional QC: 2-3x faster-->
-                <!--</span>-->
-              <!--</li>-->
-              <!--<li>Skull extracted images (N=1,746; 2 raters)<br>-->
-                <!--<span class="w3-xlarge">-->
-                  <!--Kappa value of 0.83 as inter-rater agreement-->
-                  <!--<br>-->
-                  <!--Qrater vs Traditional QC: 20x faster-->
-                <!--</span>-->
-              <!--</li>-->
-            <!--<aside class="notes">-->
-              <!--Even with the high speeds, we got good consistency between raters-->
-              <!--<br>Raw: expert - 99 v 90 in 63 min; trainee - 99 v 79 in 98 min-->
-              <!--<br>Lreg: expert - 99 v 43 in 36 min; trainee - 99 v 30 in 37 min-->
-              <!--<br>Skull: 1 min traditional vs 3 s qrater-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h2>Currently in use...</h2>-->
-            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
-              <!--<li>14 registered users</li>-->
-              <!--<li>36 uploaded datasets</li>-->
-              <!--<li>89,628 images</li>-->
-              <!--<li>38,460 ratings</li>-->
-            <!--</ul>-->
-            <!--<aside class="notes">-->
-              <!--Curated acquisition of almost all of ADNI3, and Manuscript on the-->
-              <!--works, to be submitted in the summer.-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h2>Manuscript</h2>-->
-            <!--<p>Manuscript is submitted and under review in Aperture Neuro.</p>-->
-          <!--</section>-->
-        <!--</section>-->
-        <!--<section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h2>AIM 2</h2>-->
-            <!--<p>Compare different segmentatation techniques and select the most-->
-            <!--appropriate one for automatic calculation of HVR</p>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h2>AIM 2</h2>-->
-            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
-              <!--<li>Available  labels from-->
-                <!--<a href="https://doi.org/10.1016/j.neuroimage.2019.116108"-->
-                   <!--style="color: gray;">Schoemaker, et al.</a> N = 80.</li>-->
-              <!--<li>-->
-                <!--Compare the performance of different segmentation techniques:-->
-              <!--</li>-->
-              <!--<ul class="w3-ul w3-xlarge" style="padding: 0px 30px">-->
-                <!--<li>Multi-atlas label fusion;-->
-                  <!--<a href="https://doi.org/10.1016/j.neuroimage.2010.04.193"-->
-                     <!--class="w3-large" style="color:gray">-->
-                    <!--Collins &amp; Pruessner, 2010;-->
-                  <!--</a></li>-->
-                <!--<li>Non-local Patch-based segmentation;-->
-                  <!--<a href="https://doi.org/10.1016/j.neuroimage.2010.09.018"-->
-                    <!--class="w3-large" style="color:gray">-->
-                      <!--Coup&eacute;, et al., 2011 </a></li>-->
-                <!--<li>Convolutional Neural Network;-->
-                  <!--<a href="https://doi.org/10.1007/978-3-031-08999-2_27"-->
-                    <!--class="w3-medium" style="color:gray">-->
-                    <!--Fonov, et al., 2022 </a></li>-->
-                <!--<li>FreeSurfer v.4.3, v.5.1, and v.6.0;-->
-                  <!--<a href="https://doi.org/10.1016/S0896-6273(02)00569-X"-->
-                    <!--class="w3-medium" style="color:gray">-->
-                    <!--Fischl, et al., 2002 </a></li>-->
-              <!--</ul>-->
-            <!--</ul>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h2>Performance comparison</h2>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h3>Dice Kappa on manual segmantations</h3>-->
-            <!--<figure>-->
-              <!--<img src="imgs/acm2_5/manual-labels_segm_kappa_figure.png"-->
-                   <!--alt="Dice of segmentations"-->
-              <!--style="width:100%; max-width:1000px">-->
-            <!--</figure>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h3>Correlations of calculated HC volume</h3>-->
-            <!--<figure>-->
-              <!--<img src="imgs/acm2_5/manual-labels_segm-corr_hcvc.png"-->
-                   <!--alt="Correlations of segmentations"-->
-              <!--style="width:100%; max-width:1000px">-->
-            <!--</figure>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h3>Bland-altman plots</h3>-->
-            <!--<figure>-->
-              <!--<img src="imgs/acm2_5/manual-labels_segm-bland-altman_hcvc.png"-->
-                   <!--alt="Bland-altman plots of segmentations"-->
-              <!--style="width:100%; max-width:1000px">-->
-            <!--</figure>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h2>Application on ADNI data</h2>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h3>ADNI: HC segmentations of ADNI Baseline data</h3>-->
-            <!--<h4>Failures/Unreported data*</h4>-->
-            <!--<table>-->
-              <!--<tr>-->
-                <!--<th></th>-->
-                <!--<th>CN (N=501)</th>-->
-                <!--<th>MCI (N=819)</th>-->
-                <!--<th>AD (N=321)</th>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>CNN</th>-->
-                <!--<td>0</td>-->
-                <!--<td>1</td>-->
-                <!--<td>1</td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>NLPB</th>-->
-                <!--<td>2</td>-->
-                <!--<td>9</td>-->
-                <!--<td>3</td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>MALF</th>-->
-                <!--<td>3</td>-->
-                <!--<td>8</td>-->
-                <!--<td>13</td>-->
-              <!--<tr>-->
-                <!--<th>FS (v6)</th>-->
-                <!--<td>8</td>-->
-                <!--<td>9</td>-->
-                <!--<td>8</td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>FS (ADNI)*</th>-->
-                <!--<td>47</td>-->
-                <!--<td>122</td>-->
-                <!--<td>58</td>-->
-              <!--</tr>-->
-            <!--</table>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h3>Similarity & effect sizes</h3>-->
-            <!--<h4>HCv</h4>-->
-            <!--<figure>-->
-              <!--<img src="imgs/acm2_5/adni-bl_similarity_sex.png"-->
-                   <!--alt="Similarity between sex"-->
-              <!--style="width:100%; max-width:1000px">-->
-            <!--</figure>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h3>Similarity & effect sizes</h3>-->
-            <!--<h4>HVR</h4>-->
-            <!--<figure>-->
-              <!--<img src="imgs/acm2_5/adni-bl_similarity_sex.png"-->
-                   <!--alt="Similarity between sex"-->
-              <!--style="width:100%; max-width:1000px">-->
-            <!--</figure>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h3>Correlations with age, RAVLT & ADAS13</h3>-->
-            <!--<figure>-->
-              <!--<img src="imgs/acm2_5/adni-bl_similarity_sex.png"-->
-                   <!--alt="Similarity between sex"-->
-              <!--style="width:100%; max-width:1000px">-->
-            <!--</figure>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h2>Manuscript</h2>-->
-            <!--<p>Manuscript is (about to be) submitted to Brain.</p>-->
-          <!--</section>-->
-        <!--</section>-->
-        <!--<section>-->
-          <!--<section>-->
-            <!--<h2>AIM 3</h2>-->
-            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
-              <!--<li>Explore the complex relationship of AD biomakers' effect-->
-              <!--on cognitive decline</li>-->
-              <!--<ul class="w3-ul w3-large" style="list-style-type:none;">-->
-                <!--<li>Beta-amyloid: PET [18F]AZD4694</li>-->
-                <!--<li>Tau: PET [18F]MK6240</li>-->
-                <!--<li>Neurodegeneration: HVR obtained from T1w MRI</li>-->
-                <!--<li>Vascular disease: WMH obtained from FLAIR MRI</li>-->
-              <!--</ul>-->
-            <!--</ul>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h3>Mediation analysis</h3>-->
-            <!--<ul class="w3-ul w3-xlarge" style="list-style-type:none;">-->
-              <!--<li>Sex differences and clinical HC degeneration</li>-->
-              <!--<li>Disease modeling</li>-->
-              <!--<li>Dementia conversion prediction</li>-->
-              <!--<li>Healthy and clinical longitudinal stability</li>-->
-            <!--</ul>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h4>Sex differences and clinical neurodegeneration</h4>-->
-            <!--<ul class="w3-ul w3-xlarge" style="list-style-type:none;">-->
-              <!--<li>Amyloid+ subjects:<br>-->
-                <!--<span class="w3-large">CN = 131; MCI = 348; AD = 185</span></li>-->
-              <!--<li>Standardized effect size estimates and robust CIs</li>-->
-              <!--<ul class="w3-ul w3-large" style="list-style-type:none;">-->
-                <!--<li><b>CIs</b>:<br>bias-corrected and accelerated (BCa) bootstrap method<br>-->
-                <!--2,000 resamples</li>-->
-                <!--<li><b>Sex differences</b>:<br>Cohen's d (weighted comparison of means)</li>-->
-                <!--<li><b>Neurodegeneration</b>:<br>Glass' &Delta;</li>-->
-              <!--</ul>-->
-            <!--</ul>-->
-            <!--<aside class="notes">-->
-              <!--Amyloid positivity:<br>-->
-              <!--1) standardized uptake value ratio (SUVR) &gt; 1.11 on AV45 PET<br>-->
-              <!--2) SUVR of &gt; 1.2 using Pittsburgh compound-B PET<br>-->
-              <!--3) a CSF Aß1-42 &le; 980 pg/ml.-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Sex differences</h4>-->
-            <!--<p style="font-size: 65%">-->
-              <!--\[\begin{aligned}-->
-              <!--d &amp; = \frac{M_A-M_B}{s} \\-->
-              <!--s &amp; = \sqrt{(SS_A + SS_B)/(n_A + n_B - 2)} \\-->
-              <!--c &amp; = \sum_{j=1}^{n_j}\lambda_j M_j : \sum_{j=1}^{n_j} \lambda_j = 0 \\-->
-              <!--d_c &amp; = \frac{c}{s} \\-->
-              <!--\end{aligned} \]-->
-            <!--</p>-->
-            <!--<p style="font-size: 75%">-->
-              <!--\[\lambda_{Males:CN}=\lambda_{Males:MCI}=\lambda_{Males:AD}=0.33 \\-->
-              <!--\lambda_{Females:CN}=\lambda_{Females:MCI}=\lambda_{Females:AD}=-0.33\]-->
-            <!--</p>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Sex differences</h4>-->
-            <!--<figure>-->
-              <!--<img src="imgs/acm2_5/adni-bl_effect-sizes_sex.png"-->
-                   <!--alt="Sex differences"-->
-              <!--style="width:100%; max-width:1100px">-->
-            <!--</figure>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Clinical differences</h4>-->
-            <!--<p style="font-size: 65%">-->
-            <!--\[\begin{aligned}-->
-            <!--d &amp; = \frac{M_A-M_B}{s} \\-->
-            <!--c &amp; = \sum_{j=1}^{n_j}\lambda_j M_j : \sum_{j=1}^{n_j} \lambda_j = 0 \\-->
-            <!--\Delta &amp; = \frac{c}{\sigma_{control}} \\-->
-            <!--\end{aligned} \]-->
-            <!--</p>-->
-            <!--<p style="font-size: 75%">-->
-              <!--\[\lambda_{CN}=1;\lambda_{MCI}=-0.33;\lambda_{AD}=-0.66\]-->
-            <!--</p>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Clinical differences</h4>-->
-            <!--<figure>-->
-              <!--<img src="imgs/acm2_5/adni-bl_effect-sizes_dx.png"-->
-                   <!--alt="Clinical differences"-->
-              <!--style="width:100%; max-width:1100px">-->
-            <!--</figure>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Disease modeling</h4>-->
-            <!--<ul class="w3-ul w3-xlarge" style="list-style-type:none;">-->
-              <!--<li>Amyloid+ subjects:<br>-->
-                <!--<span class="w3-large">CN = 131; MCI = 346; AD = 179</span></li>-->
-              <!--<li>Modeling of Unnormalized/normalized HCvol</li>-->
-              <!--<ul class="w3-ul w3-large" style="list-style-type:none;">-->
-                <!--<li>Linear (OLS) and Nonlinear (GAM) models</li>-->
-                <!--<li>Cognitive tests: MMSE, CDR-SB, ADAS13</li>-->
-                <!--<li>Memory test: RAVLT - Immediate, Learning, Forgetting </li>-->
-                <!--<li>80/20 train/test split; 3reps 5F-CV</li>-->
-                <!--<li>HCvol: Z-scored with info from training set</li>-->
-              <!--</ul>-->
-            <!--</ul>-->
-            <!--<p class="w3-large" style="font-size: 75%">-->
-              <!--\[HC_{z} \sim Left|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]-->
-            <!--</p>-->
-            <!--<aside class="notes">-->
-              <!--Cog = MiniMentalStatusExamination,-->
-              <!--Alzheimer'sDiseaseAssessmentScale13,-->
-              <!--ClinicalDementiaRating-SumBoxes<br>-->
-              <!--Mem = ReyAuditoryVerbalLearningTest: Immediate, learning, forgetting-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Disease modeling</h4>-->
-            <!--<p class="w3-large" style="font-size: 75%">-->
-              <!--\[HC_{z} \sim Left|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]-->
-            <!--</p>-->
-            <!--<table style="font-size: 21px">-->
-              <!--<tr>-->
-                <!--<th rowspan=2>Measure</th><th rowspan=2>Model</th><th colspan=3>5F-CV</th><th colspan=3>Testing dataset</th>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>R2</th> <th>RMSE</th> <th>MAE</th> <th>R2</th> <th>RMSE</th> <th>MAE</th>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th rowspan=2>HC<sub>vol</sub></th> <th>OLS</th> <td>0.379</td> <td>0.789</td> <td>0.626</td> <td>0.359</td> <td>0.846</td> <td>0.666</td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>GAM</th> <td>0.377</td> <td>0.791</td> <td>0.627</td> <td>0.359</td> <td>0.846</td> <td>0.664</td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th rowspan=2>HC<sub>icv</sub></th> <th>OLS</th> <td>0.389</td> <td>0.782</td> <td>0.621</td> <td>0.383</td> <td>0.818</td> <td>0.632</td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>GAM</th> <td>0.400</td> <td>0.776</td> <td>0.616</td> <td>0.378</td> <td>0.822</td> <td>0.629</td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th rowspan=2>HC<sub>stx</sub></th> <th>OLS</th> <td>0.391</td> <td>0.782</td> <td>0.621</td> <td>0.413</td> <td>0.817</td> <td>0.631</td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>GAM</th> <td>0.403</td> <td>0.773</td> <td>0.612</td> <td>0.406</td> <td>0.767</td> <td>0.604</td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th rowspan=2>HVR</th> <th>OLS</th> <td><b>0.441</b></td> <td><b>0.749</b></td> <td><b>0.601</b></td> <td>0.494</td> <td>0.767</td> <td>0.604</td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>GAM</th> <td>0.438</td> <td>0.750</td> <td>0.602</td> <td><b>0.498</b></td> <td><b>0.763</b></td> <td><b>0.602</b></td>-->
-              <!--</tr>-->
-            <!--</table>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Dementia conversion prediction</h4>-->
-            <!--<ul class="w3-ul w3-xlarge" style="list-style-type:none;">-->
-              <!--<li>Amyloid+ subjects: sMCI = 134 &amp; pMCI = 237 (3 years)</li>-->
-                <!--[><span class="w3-large">(3 years)</span><]-->
-              <!--<li>Classification models:</li>-->
-              <!--<ul class="w3-ul w3-large" style="list-style-type:none;">-->
-                <!--<li>AdaBoost</li>-->
-                <!--<li>Support Vector Machine</li>-->
-                <!--<li>Naive Bayes</li>-->
-              <!--</ul>-->
-              <!--<li>80/20 train/test split; 3reps 5F-CV</li>-->
-            <!--</ul>-->
-            <!--<p class="w3-large" style="font-size: 75%">-->
-              <!--\[Progression \sim HC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]-->
-            <!--</p>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h4>Dementia conversion prediction</h4>-->
-            <!--<p class="w3-large" style="font-size: 75%">-->
-              <!--\[Progression \sim HC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]-->
-            <!--</p>-->
-            <!--<table style="font-size: 21px">-->
-              <!--<tr>-->
-                <!--<td rowspan=2></td> <th colspan=3>AdaBoost</th> <th colspan=3>NaiveBayes</th> <th colspan=3>SVM</th>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>ROC</th> <th>Sens</th> <th>Spec</th>-->
-                <!--<th>ROC</th> <th>Sens</th> <th>Spec</th>-->
-                <!--<th>ROC</th> <th>Sens</th> <th>Spec</th>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>Base</th> <td>0.897</td> <td>0.787</td> <td>0.885</td>-->
-                <!--<td>0.920</td> <td>0.809</td> <td>0.808</td>-->
-                <!--<td>0.934</td> <td>0.660</td> <td><b>0.962</b></td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>HC<sub>vol</sub></th> <td><b>0.913</b></td> <td>0.809</td> <td>0.885</td>-->
-                <!--<td><b>0.936</b></td> <td>0.851</td> <td>0.846</td>-->
-                <!--<td>0.927</td> <td>0.702</td> <td><b>0.962</b></td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>HC<sub>icv</sub></th> <td>0.900</td> <td><b>0.830</b></td> <td>0.885</td>-->
-                <!--<td>0.931</td> <td>0.851</td> <td><b>0.885</b></td>-->
-                <!--<td><b>0.946</b></td> <td>0.745</td> <td><b>0.962</b></td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>HC<sub>stx</sub></th> <td>0.911</td> <td>0.809</td> <td><b>0.923</b></td>-->
-                <!--<td>0.935</td> <td><b>0.872</b></td> <td>0.808</td>-->
-                <!--<td>0.943</td> <td><b>0.787</b></td> <td><b>0.962</b></td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>HVR</th> <td>0.897</td> <td><b>0.830</b></td> <td>0.846</td>-->
-                <!--<td>0.931</td> <td><b>0.872</b></td> <td>0.808</td>-->
-                <!--<td>0.945</td> <td>0.681</td> <td><b>0.962</b></td>-->
-              <!--</tr>-->
-            <!--</table>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Longitudinal stability of HC volume</h4>-->
-            <!--<div class="w3-row-padding w3-stretch">-->
-              <!--<div class="w3-half">-->
-                <!--<h4>Clinical sample</h4>-->
-                <!--<ul class="w3-ul w3-xlarge" style="list-style-type:none;">-->
-                  <!--<li>ADNI:</li>-->
-                  <!--<ul class="w3-ul w3-large" style="list-style-type:none;">-->
-                    <!--<li>100 CN; 100 MCI; 100 AD</li>-->
-                    <!--<li>Follow-up: 300-500 days later; same Teslage</li>-->
-                  <!--</ul>-->
-                  <!--<li>Standardized effect size estimates</li>-->
-                <!--</ul>-->
-              <!--</div>-->
-              <!--<div class="w3-half">-->
-                <!--<h4>1-Subject sample</h4>-->
-                <!--<ul class="w3-ul w3-xlarge" style="list-style-type:none;">-->
-                  <!--<li>SIMON dataset:</li>-->
-                  <!--<ul class="w3-ul w3-large" style="list-style-type:none;">-->
-                    <!--<li>93 MRI scans; 73 timepoints</li>-->
-                  <!--</ul>-->
-                  <!--<li>Mixed effect models</li>-->
-                <!--</ul>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Longitudinal stability of HC volume: Clinical</h4>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Longitudinal stability of HC volume: Clinical</h4>-->
-            <!--<h4>Within-subject Effect size</h4>-->
-            <!--<p style="font-size: 80%">-->
-            <!--\[ d_{within,j} = \frac{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})}{\sqrt{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})^2/(n_j-1)}} \\-->
-            <!--j = \{ CN, MCI, AD \} \]-->
-            <!--[>\[d_{within,j} = \frac{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})}{\sqrt{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})^{2}/(n_{j}-1)}<]-->
-            <!--[>j = \{CN, MCI, AD\} \]<]-->
-            <!--</p>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Longitudinal stability of HC volume: Clinical</h4>-->
-            <!--<figure>-->
-              <!--<img src="imgs/acm2_5/adni-s2_effsizes.png"-->
-                   <!--alt="Effectsizes 1-year"-->
-              <!--style="width:100%; max-width:1100px">-->
-            <!--</figure>-->
-            <!--<aside class="notes">-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Longitudinal stability of HC volume: 1-Subject</h4>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Longitudinal stability of HC volume: 1-Subject</h4>-->
-            <!--<figure>-->
-              <!--<img src="imgs/acm2_5/simon_hc-measures_time.png"-->
-                   <!--alt="Simon: hc by time"-->
-              <!--style="width:90%; max-width:900px">-->
-            <!--</figure>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Longitudinal stability of HC volume: 1-Subject</h4>-->
-            <!--<h4>Mixed effect models</h4>-->
-            <!--<div class="w3-row-padding w3-stretch">-->
-              <!--<div class="w3-half">-->
-                <!--<p class="w3-large">\[Time \sim HC_l+HC_r+(1|Scanner)\]</p>-->
-                <!--<p class="w3-medium">Akaike Information Criterio (AIC) &amp; Bayesian Information Criterio (BIC)</p>-->
-              <!--</div>-->
-              <!--<div class="w3-half">-->
-                <!--<p class="w3-large">\[HC_z \sim Time+(1|Scanner)+(1|Session)\]</p>-->
-                <!--<p class="w3-medium">Variability of residuals</p>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Longitudinal stability of HC volume: 1-Subject</h4>-->
-            <!--<table style="font-size: 22px">-->
-              <!--<tr>-->
-                <!--<th>Measure</th> <th>DF</th> <th>AIC</th> <th>BIC</th>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>HC</th> <td>5</td> <td>466.53</td> <td>479.194</td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>HC<sub>icv</sub></th> <td>5</td> <td><b>409.437</b></td> <td><b>422.100</b></td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>HC<sub>stx</sub></th> <td>5</td> <td>469.289</td> <td>481.952</td>-->
-              <!--</tr>-->
-              <!--<tr>-->
-                <!--<th>HVR</th> <td>5</td> <td>462.122</td> <td>474.785</td>-->
-              <!--</tr>-->
-            <!--</table>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h4>Longitudinal stability of HC volume: 1-Subject</h4>-->
-            <!--<figure>-->
-              <!--<img src="imgs/acm2_5/simon_residuals_comparison.png"-->
-                   <!--alt="Simon: hc by time"-->
-              <!--style="width:90%; max-width:900px">-->
-            <!--</figure>-->
-          <!--</section>-->
-        <!--</section>-->
-        <!--<section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h2>Future AIM</h2>-->
-            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
-              <!--<li>Obtain normative values of HC volume and HVR</li>-->
-            <!--</ul>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h2>Future AIM</h2>-->
-            <!--<h4>Progress:</h4>-->
-            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
-              <!--<li>-->
-                <!--UK Biobank: MRI data of 43K healthy subjects aged 40-69-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--39,677 preprocessed T1w images-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--35,351 passed automatic QC and were segmented using CNN from AIM2-->
-              <!--</li>-->
-            <!--</ul>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h3>GAMLSS: Normative data</h3>-->
-            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
-              <!--<li>Generalized additive models for location, scale and shape</li>-->
-              <!--<li>Model growth trajectories of the HC/HVR and estimate non-linear-->
-                <!--age-related trends stratified by sex.-->
-              <!--</li>-->
-              <!--<li>Create an integrated measure of normative deviation by-->
-                <!--computing the Mahalanobis distance across centile scores</li>-->
-            <!--</ul>-->
-            <!--<aside class="notes">-->
-              <!--robust and flexible framework for modelling non-linear growth-->
-              <!--trajectories recommended by the World Health Organization24-->
-              <!--Calculation of individualized centile information for any new-->
-              <!--observation.-->
-              <!--Assess with BIC and bootstrap resampling methods.-->
-            <!--</aside>-->
-          <!--</section>-->
-        <!--</section>-->
-        <!--<section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h2>Future AIM</h2>-->
-            <!--<p>Model the spatiotemporal curves of cognitive function and HVR-->
-            <!--at the stages preceding AD</p>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h2>Future AIM</h2>-->
-            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
-              <!--<li>Group-based trajectory model<br>-->
-                <!--<ol class="w3-ol w3-xlarge" style="padding: 0px 30px">-->
-                  <!--<li>Cognitive decline</li>-->
-                  <!--<li>HC atrophy</li>-->
-                <!--</ol>-->
-              <!--</li>-->
-              <!--<li>Multinomial logistic regression as a predictive model-->
-              <!--for trajectory subgroup assignment</li>-->
-            <!--</ul>-->
-            <!--<aside class="notes">-->
-              <!--Group-based trajectory models are a specialized application of finite mixture models.-->
-            <!--</aside>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h3>GBTM</h3>-->
-            <!--<hr>-->
-            <!--<div class="w3-row-padding w3-stretch">-->
-              <!--<div class="w3-half">-->
-              <!--<ol class="w3-ol w3-xxlarge" style="padding: 0px 30px">-->
-                <!--<li>HVR progression by time<br>-->
-                  <!--<span class="w3-xlarge">-->
-                    <!--general cognitive function and memory as covariates</span>-->
-                <!--</li>-->
-                <!--<li>Memory changes<br>-->
-                  <!--<span class="w3-xlarge">-->
-                    <!--HVR as covariate</span>-->
-                <!--</li>-->
-              <!--</ol>-->
-              <!--<hr>-->
-              <!--<p class="w3-xlarge">Both models will control for A&beta; APOE4,-->
-              <!--sociodemographic information and baseline metrics</p>-->
-              <!--</div>-->
-              <!--<div class="w3-half">-->
-                <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
-                  <!--<li>Cognitive function:<br>-->
-                    <!--<ul class="w3-ul w3-xlarge">-->
-                      <!--<li>Mini-mental State Examination (MMSE)</li>-->
-                      <!--<li>Clinical Dementia Rating (CDR)</li>-->
-                    <!--</ul>-->
-                  <!--</li>-->
-                  <!--<li>Memory:<br>-->
-                    <!--<span class="w3-xlarge">-->
-                      <!--Logical Memory I and II subsets-->
-                  <!--</li>-->
-                <!--</ul>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h3>GBTM</h3>-->
-            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
-              <!--<li>Number of subgroups:<br>-->
-                <!--<span class="w3-xlarge">-->
-                  <!--Bayesian Information Criterion (BIC) &amp;-->
-                  <!--Sample-size Adjusted BIC (SABIC).</span>-->
-              <!--</li>-->
-              <!--<li>Validation:<br>-->
-                <!--<span class="w3-xlarge">-->
-                  <!--Bootstrap resampling: 95% confidence intervals</span>-->
-              <!--</li>-->
-            <!--</ul>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h3>Predictive model</h3>-->
-            <!--<hr>-->
-            <!--<p>Fit multivariate multinomial logistic regression models to find-->
-            <!--the risk of a specific patient to belong to the different subgroups.</p>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--<h3>External validation</h3>-->
-            <!--<hr>-->
-            <!--<p>Both GBTM and predictive models will be validated on the 290 subjects-->
-            <!--from HABS as an independent dataset.</p>-->
-          <!--</section>-->
-        <!--</section>-->
-        <!--<section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h2>Future AIM</h2>-->
-            <!--<p>Evalute HVR's predicting performance for AD progression</p>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h2>Future AIM</h2>-->
-            <!--<p>Use group trajectories as input of ensemble classifier to-->
-            <!--predict categorical diagnosis at different timepoints:<br>-->
-              <!--<span class="w3-xlarge">2y, 3y &amp; 5y</span></p>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h2>RandomForest classifier</h2>-->
-            <!--<ul class="w3-ol w3-xxlarge" style="padding: 0px 30px">-->
-              <!--<li>-->
-                <!--Sociodemographic information<br>-->
-                <!--<span class="w3-xlarge">age, sex, education, and socioeconomic status</span>-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--Baseline measures<br>-->
-                <!--<span class="w3-xlarge">HVR, MMSE, Logical memory I &amp; II</span>-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--Predicted values by group trajectory<br>-->
-                <!--<span class="w3-xlarge">HVR, MMSE, Logical memory I &amp; II</span>-->
-              <!--</li>-->
-            <!--</ul>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h2>RandomForest classifier</h2>-->
-            <!--<p>-->
-              <!--Performance will be externally validated on the AIBL cohort-->
-              <!--using overall accuracy and Balanced Classification Accuracy (BCA)-->
-            <!--</p>-->
-          <!--</section>-->
-        <!--</section>-->
-        <!--<section>-->
-          <!--<h1 class="r-fit-text">Tentative Timeline</h1>-->
-          <!--<img src='imgs/comps/timeline.png' alt="Timeline">-->
-        <!--</section>-->
-        <!--<section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h1>Contributions</h1>-->
-          <!--</section>-->
-          <!--<section data-auto-animate>-->
-            <!--<h1 class="w3-jumbo">Contributions</h1>-->
-            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
-              <!--<li>Open-source Imaging QC software</li>-->
-              <!--<li class="fragment">-->
-                <!--Tool for automatic HVR calculation from MRI</li>-->
-              <!--<li class="fragment">-->
-                <!--Validation of HVR as proxy of HC atrophy</li>-->
-              <!--<li class="fragment">-->
-                <!--Normative Percentile Tables of HC volume and HVR</li>-->
-              <!--<li class="fragment">-->
-                <!--More effective identification of the early stages of AD</li>-->
-            <!--</ul>-->
-            <!--<aside class="notes">-->
-              <!--Qrater, an open-source web-application free to use and available-->
-              <!--to download to facilitate Quality Control evaluation of any kind-->
-              <!--of imaging task in a simple to use and collaborative way.-->
-              <!--A tool for the automatic tissue segmentation of the hippocampus-->
-              <!--and its surrounding temporal horn of the lateral ventricle.-->
-              <!--Given the role of the hippocampus in healthy and pathological-->
-              <!--aging, this tool will prove useful for the studies of other-->
-              <!--types of neurodegenerative diseases.-->
-              <!--A new standardized metric for hippocampal volume proved to be-->
-              <!--more capable of capturing its atrophy.-->
-              <!--Normative centile tables stratified by sex of raw hippocampal-->
-              <!--volume and HVR that will provide valuable information regarding-->
-              <!--normal variations of these measures.-->
-              <!--The finding of the distinct possible disease progression-->
-              <!--trajectories in AD and a set of prediction models able to-->
-              <!--identify the risk of a new patient belonging to one of these-->
-              <!--classes.-->
-            <!--</aside>-->
-          <!--</section>-->
-        <!--</section>-->
+        <section>
+          <section>
+            <h2>AIM 1</h2>
+            <p>Develop an open-source tool to facilitate quality control (QC)
+            of MRI</p>
+          </section>
+          <section>
+            <h2>Qrater</h2>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <img src="imgs/comps/qrater.png" alt="qrater"
+                style="width:100%; max-width:900px">
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li>Docker containerized</li>
+                  <li>Centralized and accessible by SSH</li>
+                  <li>MySQL database built-in</li>
+                  <li>Feature-rich</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Results</h2>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Raw MRI data (N=99; 9 raters)<br>
+                <span class="w3-xlarge">
+                  Agreement with experienced rater: 59-86% (mean 77%)
+                  <br>
+                  Qrater vs Traditional QC: comparable speeds
+                </span>
+              </li>
+              <li>Linear-registered MRI data (N=99; 8 raters)<br>
+                <span class="w3-xlarge">
+                  Agreement with experienced rater: 73-92% (mean 84.75%)
+                  <br>
+                  Qrater vs Traditional QC: 2-3x faster
+                </span>
+              </li>
+              <li>Skull extracted images (N=1,746; 2 raters)<br>
+                <span class="w3-xlarge">
+                  Kappa value of 0.83 as inter-rater agreement
+                  <br>
+                  Qrater vs Traditional QC: 20x faster
+                </span>
+              </li>
+            <aside class="notes">
+              Even with the high speeds, we got good consistency between raters
+              <br>Raw: expert - 99 v 90 in 63 min; trainee - 99 v 79 in 98 min
+              <br>Lreg: expert - 99 v 43 in 36 min; trainee - 99 v 30 in 37 min
+              <br>Skull: 1 min traditional vs 3 s qrater
+            </aside>
+          </section>
+          <section>
+            <h2>Currently in use...</h2>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>14 registered users</li>
+              <li>36 uploaded datasets</li>
+              <li>89,628 images</li>
+              <li>38,460 ratings</li>
+            </ul>
+            <aside class="notes">
+              Curated acquisition of almost all of ADNI3, and Manuscript on the
+              works, to be submitted in the summer.
+            </aside>
+          </section>
+          <section>
+            <h2>Manuscript</h2>
+            <p>Manuscript is submitted and under review in Aperture Neuro.</p>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h2>AIM 2</h2>
+            <p>Compare different segmentatation techniques and select the most
+            appropriate one for automatic calculation of HVR</p>
+          </section>
+          <section data-auto-animate>
+            <h2>AIM 2</h2>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Available  labels from
+                <a href="https://doi.org/10.1016/j.neuroimage.2019.116108"
+                   style="color: gray;">Schoemaker, et al.</a> N = 80.</li>
+              <li>
+                Compare the performance of different segmentation techniques:
+              </li>
+              <ul class="w3-ul w3-xlarge" style="padding: 0px 30px">
+                <li>Multi-atlas label fusion;
+                  <a href="https://doi.org/10.1016/j.neuroimage.2010.04.193"
+                     class="w3-large" style="color:gray">
+                    Collins &amp; Pruessner, 2010;
+                  </a></li>
+                <li>Non-local Patch-based segmentation;
+                  <a href="https://doi.org/10.1016/j.neuroimage.2010.09.018"
+                    class="w3-large" style="color:gray">
+                      Coup&eacute;, et al., 2011 </a></li>
+                <li>Convolutional Neural Network;
+                  <a href="https://doi.org/10.1007/978-3-031-08999-2_27"
+                    class="w3-medium" style="color:gray">
+                    Fonov, et al., 2022 </a></li>
+                <li>FreeSurfer v.4.3, v.5.1, and v.6.0;
+                  <a href="https://doi.org/10.1016/S0896-6273(02)00569-X"
+                    class="w3-medium" style="color:gray">
+                    Fischl, et al., 2002 </a></li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h2>Performance comparison</h2>
+          </section>
+          <section>
+            <h3>Dice Kappa on manual segmantations</h3>
+            <figure>
+              <img src="imgs/acm2_5/manual-labels_segm_kappa_figure.png"
+                   alt="Dice of segmentations"
+              style="width:100%; max-width:1000px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h3>Correlations of calculated HC volume</h3>
+            <figure>
+              <img src="imgs/acm2_5/manual-labels_segm-corr_hcvc.png"
+                   alt="Correlations of segmentations"
+              style="width:100%; max-width:1000px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h3>Bland-altman plots</h3>
+            <figure>
+              <img src="imgs/acm2_5/manual-labels_segm-bland-altman_hcvc.png"
+                   alt="Bland-altman plots of segmentations"
+              style="width:100%; max-width:1000px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h2>Application on ADNI data</h2>
+          </section>
+          <section>
+            <h3>ADNI: HC segmentations of ADNI Baseline data</h3>
+            <h4>Failures/Unreported data*</h4>
+            <table>
+              <tr>
+                <th></th>
+                <th>CN (N=501)</th>
+                <th>MCI (N=819)</th>
+                <th>AD (N=321)</th>
+              </tr>
+              <tr>
+                <th>CNN</th>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>NLPB</th>
+                <td>2</td>
+                <td>9</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th>MALF</th>
+                <td>3</td>
+                <td>8</td>
+                <td>13</td>
+              <tr>
+                <th>FS (v6)</th>
+                <td>8</td>
+                <td>9</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <th>FS (ADNI)*</th>
+                <td>47</td>
+                <td>122</td>
+                <td>58</td>
+              </tr>
+            </table>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Similarity & effect sizes</h3>
+            <h4>HCv</h4>
+            <figure>
+              <img src="imgs/acm2_5/adni-bl_similarity_sex.png"
+                   alt="Similarity between sex"
+              style="width:100%; max-width:1000px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Similarity & effect sizes</h3>
+            <h4>HVR</h4>
+            <figure>
+              <img src="imgs/acm2_5/adni-bl_similarity_sex.png"
+                   alt="Similarity between sex"
+              style="width:100%; max-width:1000px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Correlations with age, RAVLT & ADAS13</h3>
+            <figure>
+              <img src="imgs/acm2_5/adni-bl_similarity_sex.png"
+                   alt="Similarity between sex"
+              style="width:100%; max-width:1000px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h2>Manuscript</h2>
+            <p>Manuscript is (about to be) submitted to Brain.</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>AIM 3</h2>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Explore the complex relationship of AD biomakers' effect
+              on cognitive decline</li>
+              <ul class="w3-ul w3-large" style="list-style-type:none;">
+                <li>Beta-amyloid: PET [18F]AZD4694</li>
+                <li>Tau: PET [18F]MK6240</li>
+                <li>Neurodegeneration: HVR obtained from T1w MRI</li>
+                <li>Vascular disease: WMH obtained from FLAIR MRI</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h3>Mediation analysis</h3>
+            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+              <li>Sex differences and clinical HC degeneration</li>
+              <li>Disease modeling</li>
+              <li>Dementia conversion prediction</li>
+              <li>Healthy and clinical longitudinal stability</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Sex differences and clinical neurodegeneration</h4>
+            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+              <li>Amyloid+ subjects:<br>
+                <span class="w3-large">CN = 131; MCI = 348; AD = 185</span></li>
+              <li>Standardized effect size estimates and robust CIs</li>
+              <ul class="w3-ul w3-large" style="list-style-type:none;">
+                <li><b>CIs</b>:<br>bias-corrected and accelerated (BCa) bootstrap method<br>
+                2,000 resamples</li>
+                <li><b>Sex differences</b>:<br>Cohen's d (weighted comparison of means)</li>
+                <li><b>Neurodegeneration</b>:<br>Glass' &Delta;</li>
+              </ul>
+            </ul>
+            <aside class="notes">
+              Amyloid positivity:<br>
+              1) standardized uptake value ratio (SUVR) &gt; 1.11 on AV45 PET<br>
+              2) SUVR of &gt; 1.2 using Pittsburgh compound-B PET<br>
+              3) a CSF Aß1-42 &le; 980 pg/ml.
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h4>Sex differences</h4>
+            <p style="font-size: 65%">
+              \[\begin{aligned}
+              d &amp; = \frac{M_A-M_B}{s} \\
+              s &amp; = \sqrt{(SS_A + SS_B)/(n_A + n_B - 2)} \\
+              c &amp; = \sum_{j=1}^{n_j}\lambda_j M_j : \sum_{j=1}^{n_j} \lambda_j = 0 \\
+              d_c &amp; = \frac{c}{s} \\
+              \end{aligned} \]
+            </p>
+            <p style="font-size: 75%">
+              \[\lambda_{Males:CN}=\lambda_{Males:MCI}=\lambda_{Males:AD}=0.33 \\
+              \lambda_{Females:CN}=\lambda_{Females:MCI}=\lambda_{Females:AD}=-0.33\]
+            </p>
+          </section>
+          <section data-auto-animate>
+            <h4>Sex differences</h4>
+            <figure>
+              <img src="imgs/acm2_5/adni-bl_effect-sizes_sex.png"
+                   alt="Sex differences"
+              style="width:100%; max-width:1100px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h4>Clinical differences</h4>
+            <p style="font-size: 65%">
+            \[\begin{aligned}
+            d &amp; = \frac{M_A-M_B}{s} \\
+            c &amp; = \sum_{j=1}^{n_j}\lambda_j M_j : \sum_{j=1}^{n_j} \lambda_j = 0 \\
+            \Delta &amp; = \frac{c}{\sigma_{control}} \\
+            \end{aligned} \]
+            </p>
+            <p style="font-size: 75%">
+              \[\lambda_{CN}=1;\lambda_{MCI}=-0.33;\lambda_{AD}=-0.66\]
+            </p>
+          </section>
+          <section data-auto-animate>
+            <h4>Clinical differences</h4>
+            <figure>
+              <img src="imgs/acm2_5/adni-bl_effect-sizes_dx.png"
+                   alt="Clinical differences"
+              style="width:100%; max-width:1100px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h4>Disease modeling</h4>
+            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+              <li>Amyloid+ subjects:<br>
+                <span class="w3-large">CN = 131; MCI = 346; AD = 179</span></li>
+              <li>Modeling of Unnormalized/normalized HCvol</li>
+              <ul class="w3-ul w3-large" style="list-style-type:none;">
+                <li>Linear (OLS) and Nonlinear (GAM) models</li>
+                <li>Cognitive tests: MMSE, CDR-SB, ADAS13</li>
+                <li>Memory test: RAVLT - Immediate, Learning, Forgetting </li>
+                <li>80/20 train/test split; 3reps 5F-CV</li>
+                <li>HCvol: Z-scored with info from training set</li>
+              </ul>
+            </ul>
+            <p class="w3-large" style="font-size: 75%">
+              \[HC_{z} \sim Left|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
+            </p>
+            <aside class="notes">
+              Cog = MiniMentalStatusExamination,
+              Alzheimer'sDiseaseAssessmentScale13,
+              ClinicalDementiaRating-SumBoxes<br>
+              Mem = ReyAuditoryVerbalLearningTest: Immediate, learning, forgetting
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h4>Disease modeling</h4>
+            <p class="w3-large" style="font-size: 75%">
+              \[HC_{z} \sim Left|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
+            </p>
+            <table style="font-size: 21px">
+              <tr>
+                <th rowspan=2>Measure</th><th rowspan=2>Model</th><th colspan=3>5F-CV</th><th colspan=3>Testing dataset</th>
+              </tr>
+              <tr>
+                <th>R2</th> <th>RMSE</th> <th>MAE</th> <th>R2</th> <th>RMSE</th> <th>MAE</th>
+              </tr>
+              <tr>
+                <th rowspan=2>HC<sub>vol</sub></th> <th>OLS</th> <td>0.379</td> <td>0.789</td> <td>0.626</td> <td>0.359</td> <td>0.846</td> <td>0.666</td>
+              </tr>
+              <tr>
+                <th>GAM</th> <td>0.377</td> <td>0.791</td> <td>0.627</td> <td>0.359</td> <td>0.846</td> <td>0.664</td>
+              </tr>
+              <tr>
+                <th rowspan=2>HC<sub>icv</sub></th> <th>OLS</th> <td>0.389</td> <td>0.782</td> <td>0.621</td> <td>0.383</td> <td>0.818</td> <td>0.632</td>
+              </tr>
+              <tr>
+                <th>GAM</th> <td>0.400</td> <td>0.776</td> <td>0.616</td> <td>0.378</td> <td>0.822</td> <td>0.629</td>
+              </tr>
+              <tr>
+                <th rowspan=2>HC<sub>stx</sub></th> <th>OLS</th> <td>0.391</td> <td>0.782</td> <td>0.621</td> <td>0.413</td> <td>0.817</td> <td>0.631</td>
+              </tr>
+              <tr>
+                <th>GAM</th> <td>0.403</td> <td>0.773</td> <td>0.612</td> <td>0.406</td> <td>0.767</td> <td>0.604</td>
+              </tr>
+              <tr>
+                <th rowspan=2>HVR</th> <th>OLS</th> <td><b>0.441</b></td> <td><b>0.749</b></td> <td><b>0.601</b></td> <td>0.494</td> <td>0.767</td> <td>0.604</td>
+              </tr>
+              <tr>
+                <th>GAM</th> <td>0.438</td> <td>0.750</td> <td>0.602</td> <td><b>0.498</b></td> <td><b>0.763</b></td> <td><b>0.602</b></td>
+              </tr>
+            </table>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h4>Dementia conversion prediction</h4>
+            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+              <li>Amyloid+ subjects: sMCI = 134 &amp; pMCI = 237 (3 years)</li>
+                [><span class="w3-large">(3 years)</span><]
+              <li>Classification models:</li>
+              <ul class="w3-ul w3-large" style="list-style-type:none;">
+                <li>AdaBoost</li>
+                <li>Support Vector Machine</li>
+                <li>Naive Bayes</li>
+              </ul>
+              <li>80/20 train/test split; 3reps 5F-CV</li>
+            </ul>
+            <p class="w3-large" style="font-size: 75%">
+              \[Progression \sim HC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
+            </p>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h4>Dementia conversion prediction</h4>
+            <p class="w3-large" style="font-size: 75%">
+              \[Progression \sim HC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
+            </p>
+            <table style="font-size: 21px">
+              <tr>
+                <td rowspan=2></td> <th colspan=3>AdaBoost</th> <th colspan=3>NaiveBayes</th> <th colspan=3>SVM</th>
+              </tr>
+              <tr>
+                <th>ROC</th> <th>Sens</th> <th>Spec</th>
+                <th>ROC</th> <th>Sens</th> <th>Spec</th>
+                <th>ROC</th> <th>Sens</th> <th>Spec</th>
+              </tr>
+              <tr>
+                <th>Base</th> <td>0.897</td> <td>0.787</td> <td>0.885</td>
+                <td>0.920</td> <td>0.809</td> <td>0.808</td>
+                <td>0.934</td> <td>0.660</td> <td><b>0.962</b></td>
+              </tr>
+              <tr>
+                <th>HC<sub>vol</sub></th> <td><b>0.913</b></td> <td>0.809</td> <td>0.885</td>
+                <td><b>0.936</b></td> <td>0.851</td> <td>0.846</td>
+                <td>0.927</td> <td>0.702</td> <td><b>0.962</b></td>
+              </tr>
+              <tr>
+                <th>HC<sub>icv</sub></th> <td>0.900</td> <td><b>0.830</b></td> <td>0.885</td>
+                <td>0.931</td> <td>0.851</td> <td><b>0.885</b></td>
+                <td><b>0.946</b></td> <td>0.745</td> <td><b>0.962</b></td>
+              </tr>
+              <tr>
+                <th>HC<sub>stx</sub></th> <td>0.911</td> <td>0.809</td> <td><b>0.923</b></td>
+                <td>0.935</td> <td><b>0.872</b></td> <td>0.808</td>
+                <td>0.943</td> <td><b>0.787</b></td> <td><b>0.962</b></td>
+              </tr>
+              <tr>
+                <th>HVR</th> <td>0.897</td> <td><b>0.830</b></td> <td>0.846</td>
+                <td>0.931</td> <td><b>0.872</b></td> <td>0.808</td>
+                <td>0.945</td> <td>0.681</td> <td><b>0.962</b></td>
+              </tr>
+            </table>
+          </section>
+          <section data-auto-animate>
+            <h4>Longitudinal stability of HC volume</h4>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <h4>Clinical sample</h4>
+                <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+                  <li>ADNI:</li>
+                  <ul class="w3-ul w3-large" style="list-style-type:none;">
+                    <li>100 CN; 100 MCI; 100 AD</li>
+                    <li>Follow-up: 300-500 days later; same Teslage</li>
+                  </ul>
+                  <li>Standardized effect size estimates</li>
+                </ul>
+              </div>
+              <div class="w3-half">
+                <h4>1-Subject sample</h4>
+                <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+                  <li>SIMON dataset:</li>
+                  <ul class="w3-ul w3-large" style="list-style-type:none;">
+                    <li>93 MRI scans; 73 timepoints</li>
+                  </ul>
+                  <li>Mixed effect models</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h4>Longitudinal stability of HC volume: Clinical</h4>
+          </section>
+          <section data-auto-animate>
+            <h4>Longitudinal stability of HC volume: Clinical</h4>
+            <h4>Within-subject Effect size</h4>
+            <p style="font-size: 80%">
+            \[ d_{within,j} = \frac{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})}{\sqrt{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})^2/(n_j-1)}} \\
+            j = \{ CN, MCI, AD \} \]
+            [>\[d_{within,j} = \frac{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})}{\sqrt{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})^{2}/(n_{j}-1)}<]
+            [>j = \{CN, MCI, AD\} \]<]
+            </p>
+          </section>
+          <section data-auto-animate>
+            <h4>Longitudinal stability of HC volume: Clinical</h4>
+            <figure>
+              <img src="imgs/acm2_5/adni-s2_effsizes.png"
+                   alt="Effectsizes 1-year"
+              style="width:100%; max-width:1100px">
+            </figure>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h4>Longitudinal stability of HC volume: 1-Subject</h4>
+          </section>
+          <section data-auto-animate>
+            <h4>Longitudinal stability of HC volume: 1-Subject</h4>
+            <figure>
+              <img src="imgs/acm2_5/simon_hc-measures_time.png"
+                   alt="Simon: hc by time"
+              style="width:90%; max-width:900px">
+            </figure>
+          </section>
+          <section data-auto-animate>
+            <h4>Longitudinal stability of HC volume: 1-Subject</h4>
+            <h4>Mixed effect models</h4>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <p class="w3-large">\[Time \sim HC_l+HC_r+(1|Scanner)\]</p>
+                <p class="w3-medium">Akaike Information Criterio (AIC) &amp; Bayesian Information Criterio (BIC)</p>
+              </div>
+              <div class="w3-half">
+                <p class="w3-large">\[HC_z \sim Time+(1|Scanner)+(1|Session)\]</p>
+                <p class="w3-medium">Variability of residuals</p>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h4>Longitudinal stability of HC volume: 1-Subject</h4>
+            <table style="font-size: 22px">
+              <tr>
+                <th>Measure</th> <th>DF</th> <th>AIC</th> <th>BIC</th>
+              </tr>
+              <tr>
+                <th>HC</th> <td>5</td> <td>466.53</td> <td>479.194</td>
+              </tr>
+              <tr>
+                <th>HC<sub>icv</sub></th> <td>5</td> <td><b>409.437</b></td> <td><b>422.100</b></td>
+              </tr>
+              <tr>
+                <th>HC<sub>stx</sub></th> <td>5</td> <td>469.289</td> <td>481.952</td>
+              </tr>
+              <tr>
+                <th>HVR</th> <td>5</td> <td>462.122</td> <td>474.785</td>
+              </tr>
+            </table>
+          </section>
+          <section data-auto-animate>
+            <h4>Longitudinal stability of HC volume: 1-Subject</h4>
+            <figure>
+              <img src="imgs/acm2_5/simon_residuals_comparison.png"
+                   alt="Simon: hc by time"
+              style="width:90%; max-width:900px">
+            </figure>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h2>Future AIM</h2>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Obtain normative values of HC volume and HVR</li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h2>Future AIM</h2>
+            <h4>Progress:</h4>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>
+                UK Biobank: MRI data of 43K healthy subjects aged 40-69
+              </li>
+              <li>
+                39,677 preprocessed T1w images
+              </li>
+              <li>
+                35,351 passed automatic QC and were segmented using CNN from AIM2
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>GAMLSS: Normative data</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Generalized additive models for location, scale and shape</li>
+              <li>Model growth trajectories of the HC/HVR and estimate non-linear
+                age-related trends stratified by sex.
+              </li>
+              <li>Create an integrated measure of normative deviation by
+                computing the Mahalanobis distance across centile scores</li>
+            </ul>
+            <aside class="notes">
+              robust and flexible framework for modelling non-linear growth
+              trajectories recommended by the World Health Organization24
+              Calculation of individualized centile information for any new
+              observation.
+              Assess with BIC and bootstrap resampling methods.
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h2>Future AIM</h2>
+            <p>Model the spatiotemporal curves of cognitive function and HVR
+            at the stages preceding AD</p>
+          </section>
+          <section data-auto-animate>
+            <h2>Future AIM</h2>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Group-based trajectory model<br>
+                <ol class="w3-ol w3-xlarge" style="padding: 0px 30px">
+                  <li>Cognitive decline</li>
+                  <li>HC atrophy</li>
+                </ol>
+              </li>
+              <li>Multinomial logistic regression as a predictive model
+              for trajectory subgroup assignment</li>
+            </ul>
+            <aside class="notes">
+              Group-based trajectory models are a specialized application of finite mixture models.
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>GBTM</h3>
+            <hr>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+              <ol class="w3-ol w3-xxlarge" style="padding: 0px 30px">
+                <li>HVR progression by time<br>
+                  <span class="w3-xlarge">
+                    general cognitive function and memory as covariates</span>
+                </li>
+                <li>Memory changes<br>
+                  <span class="w3-xlarge">
+                    HVR as covariate</span>
+                </li>
+              </ol>
+              <hr>
+              <p class="w3-xlarge">Both models will control for A&beta; APOE4,
+              sociodemographic information and baseline metrics</p>
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+                  <li>Cognitive function:<br>
+                    <ul class="w3-ul w3-xlarge">
+                      <li>Mini-mental State Examination (MMSE)</li>
+                      <li>Clinical Dementia Rating (CDR)</li>
+                    </ul>
+                  </li>
+                  <li>Memory:<br>
+                    <span class="w3-xlarge">
+                      Logical Memory I and II subsets
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h3>GBTM</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Number of subgroups:<br>
+                <span class="w3-xlarge">
+                  Bayesian Information Criterion (BIC) &amp;
+                  Sample-size Adjusted BIC (SABIC).</span>
+              </li>
+              <li>Validation:<br>
+                <span class="w3-xlarge">
+                  Bootstrap resampling: 95% confidence intervals</span>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Predictive model</h3>
+            <hr>
+            <p>Fit multivariate multinomial logistic regression models to find
+            the risk of a specific patient to belong to the different subgroups.</p>
+          </section>
+          <section>
+            <h3>External validation</h3>
+            <hr>
+            <p>Both GBTM and predictive models will be validated on the 290 subjects
+            from HABS as an independent dataset.</p>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h2>Future AIM</h2>
+            <p>Evalute HVR's predicting performance for AD progression</p>
+          </section>
+          <section data-auto-animate>
+            <h2>Future AIM</h2>
+            <p>Use group trajectories as input of ensemble classifier to
+            predict categorical diagnosis at different timepoints:<br>
+              <span class="w3-xlarge">2y, 3y &amp; 5y</span></p>
+          </section>
+          <section data-auto-animate>
+            <h2>RandomForest classifier</h2>
+            <ul class="w3-ol w3-xxlarge" style="padding: 0px 30px">
+              <li>
+                Sociodemographic information<br>
+                <span class="w3-xlarge">age, sex, education, and socioeconomic status</span>
+              </li>
+              <li>
+                Baseline measures<br>
+                <span class="w3-xlarge">HVR, MMSE, Logical memory I &amp; II</span>
+              </li>
+              <li>
+                Predicted values by group trajectory<br>
+                <span class="w3-xlarge">HVR, MMSE, Logical memory I &amp; II</span>
+              </li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h2>RandomForest classifier</h2>
+            <p>
+              Performance will be externally validated on the AIBL cohort
+              using overall accuracy and Balanced Classification Accuracy (BCA)
+            </p>
+          </section>
+        </section>
+        <section>
+          <h1 class="r-fit-text">Tentative Timeline</h1>
+          <img src='imgs/comps/timeline.png' alt="Timeline">
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h1>Contributions</h1>
+          </section>
+          <section data-auto-animate>
+            <h1 class="w3-jumbo">Contributions</h1>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Open-source Imaging QC software</li>
+              <li class="fragment">
+                Tool for automatic HVR calculation from MRI</li>
+              <li class="fragment">
+                Validation of HVR as proxy of HC atrophy</li>
+              <li class="fragment">
+                Normative Percentile Tables of HC volume and HVR</li>
+              <li class="fragment">
+                More effective identification of the early stages of AD</li>
+            </ul>
+            <aside class="notes">
+              Qrater, an open-source web-application free to use and available
+              to download to facilitate Quality Control evaluation of any kind
+              of imaging task in a simple to use and collaborative way.
+              A tool for the automatic tissue segmentation of the hippocampus
+              and its surrounding temporal horn of the lateral ventricle.
+              Given the role of the hippocampus in healthy and pathological
+              aging, this tool will prove useful for the studies of other
+              types of neurodegenerative diseases.
+              A new standardized metric for hippocampal volume proved to be
+              more capable of capturing its atrophy.
+              Normative centile tables stratified by sex of raw hippocampal
+              volume and HVR that will provide valuable information regarding
+              normal variations of these measures.
+              The finding of the distinct possible disease progression
+              trajectories in AD and a set of prediction models able to
+              identify the risk of a new patient belonging to one of these
+              classes.
+            </aside>
+          </section>
+        </section>
       </div>
     </div>
 
