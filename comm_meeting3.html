@@ -630,13 +630,12 @@
           </section>
         </section>
         <section>
-          <section data-auto-animate>
+          <section>
             <h2>AIM 2</h2>
             <p>Compare different segmentation techniques for the automatic
                 calculation of HVR</p>
           </section>
-          <section data-auto-animate>
-            <h2>AIM 2</h2>
+          <section>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>Available  labels from
                 <a href="https://doi.org/10.1016/j.neuroimage.2019.116108"
@@ -772,7 +771,7 @@
             <figure>
               <img src="imgs/acm3/adni-bl_hcv-hvr_corrs.png"
                    alt="Similarity between sex"
-              style="width:100%; max-width:750px">
+              style="width:100%; max-width:500px">
             </figure>
             <aside class="notes">
             </aside>
@@ -785,16 +784,82 @@
         <section>
           <section>
             <h2>AIM 3</h2>
+              <p>Explore the complex relationship of AD biomakers' effect
+              on cognitive decline</p>
+          </section>
+          <section>
+            <h3>TRIAD cohort</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>Explore the complex relationship of AD biomakers' effect
-              on cognitive decline</li>
-              <ul class="w3-ul w3-large" style="list-style-type:none;">
-                <li>Beta-amyloid: PET [18F]AZD4694</li>
-                <li>Tau: PET [18F]MK6240</li>
-                <li>Neurodegeneration: HVR obtained from T1w MRI</li>
-                <li>Vascular disease: WMH obtained from FLAIR MRI</li>
+              <li>General cognition: Mini-Mental State Examination</li>
+              <li>&beta;-amyloid: PET [18F]AZD4694</li>
+              <li>Tau: PET [18F]MK6240</li>
+              <li>Neurodegeneration: HVR obtained from T1w MRI</li>
+              <li>Vascular disease: WMH obtained from FLAIR MRI</li>
+            </ul>
+            <a href="https://doi.org/10.1002/alz.067924"
+              class="w3-medium" style="color:gray">
+              Stevenson, et al., 2022 </a>
+          </section>
+          <section data-auto-animate>
+            <h3>Disease progression staging</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li><a href="https://doi.org/10.3389/fdata.2020.00024"
+                     style="color:gray"
+                     >Raket's </a>statistical disease progression modeling</li>
+              <li>Use nonlinear mixed effect models to map observed time
+                (e.g. time since baseline) to disease time.</li>
+              <li>Participants (A&beta;+ only)
+                were separated into three groups based on MMSE &amd; ADAS13:</li>
+              <ul class="w3-ul w3-xlarge" style="padding: 0px 30px">
+                <li><b>Healthy:</b> before disease onset</li>
+                <li><b>Early:</b> between 0-3 years after disease onset</li>
+                <li><b>Late:</b> 3 years or more after disease onset</li>
               </ul>
             </ul>
+          </section>
+          <section data-auto-animate>
+            <h3>Disease progression staging</h3>
+            <table class="w3-xxlarge">
+              <tr>
+                <th></th>
+                <th>Healthy (N=77)</th>
+                <th>Early (N=40)</th>
+                <th>Late (N=51)</th>
+              </tr>
+              <tr>
+                <th>Age</th>
+                <td>72 (8)</td>
+                <td>72 (7)</td>
+                <td>67 (10)</td>
+              </tr>
+              <tr>
+                <th>Sex (F/M)</th>
+                <td>49/28</td>
+                <td>25/15</td>
+                <td>27/24</td>
+              </tr>
+            </table>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>A&beta; &amp; Tau: ROI selection</h3>
+            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+              <li>A&beta; &amp; Tau PET parcellated into 101 rois from
+              <a href="https://doi.org/10.1038/s41597-020-0557-9"
+                 style="color:gray"> CerebrA atlas</a></li>
+              <li>With the <a href="https://doi.org/10.18637/jss.v036.i11"
+                              style="color:gray">
+                  Boruta algorithm</a>, we identified the most important ROIs
+                by group to predict the estimated diseaste timepoint<li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h3>A&beta; &amp; Tau: ROI selection</h3>
+            <figure>
+              <img src="imgs/acm3/boruta-rois_raket.png" alt="boruta rois"
+              style="width:100%; max-width:1000px">
+            </figure>
           </section>
           <section>
             <h3>Mediation analysis</h3>
@@ -804,302 +869,6 @@
               <li>Dementia conversion prediction</li>
               <li>Healthy and clinical longitudinal stability</li>
             </ul>
-          </section>
-          <section>
-            <h4>Sex differences and clinical neurodegeneration</h4>
-            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-              <li>Amyloid+ subjects:<br>
-                <span class="w3-large">CN = 131; MCI = 348; AD = 185</span></li>
-              <li>Standardized effect size estimates and robust CIs</li>
-              <ul class="w3-ul w3-large" style="list-style-type:none;">
-                <li><b>CIs</b>:<br>bias-corrected and accelerated (BCa) bootstrap method<br>
-                2,000 resamples</li>
-                <li><b>Sex differences</b>:<br>Cohen's d (weighted comparison of means)</li>
-                <li><b>Neurodegeneration</b>:<br>Glass' &Delta;</li>
-              </ul>
-            </ul>
-            <aside class="notes">
-              Amyloid positivity:<br>
-              1) standardized uptake value ratio (SUVR) &gt; 1.11 on AV45 PET<br>
-              2) SUVR of &gt; 1.2 using Pittsburgh compound-B PET<br>
-              3) a CSF Aß1-42 &le; 980 pg/ml.
-            </aside>
-          </section>
-          <section data-auto-animate>
-            <h4>Sex differences</h4>
-            <p style="font-size: 65%">
-              \[\begin{aligned}
-              d &amp; = \frac{M_A-M_B}{s} \\
-              s &amp; = \sqrt{(SS_A + SS_B)/(n_A + n_B - 2)} \\
-              c &amp; = \sum_{j=1}^{n_j}\lambda_j M_j : \sum_{j=1}^{n_j} \lambda_j = 0 \\
-              d_c &amp; = \frac{c}{s} \\
-              \end{aligned} \]
-            </p>
-            <p style="font-size: 75%">
-              \[\lambda_{Males:CN}=\lambda_{Males:MCI}=\lambda_{Males:AD}=0.33 \\
-              \lambda_{Females:CN}=\lambda_{Females:MCI}=\lambda_{Females:AD}=-0.33\]
-            </p>
-          </section>
-          <section data-auto-animate>
-            <h4>Sex differences</h4>
-            <figure>
-              <img src="imgs/acm2_5/adni-bl_effect-sizes_sex.png"
-                   alt="Sex differences"
-              style="width:100%; max-width:1100px">
-            </figure>
-            <aside class="notes">
-            </aside>
-          </section>
-          <section data-auto-animate>
-            <h4>Clinical differences</h4>
-            <p style="font-size: 65%">
-            \[\begin{aligned}
-            d &amp; = \frac{M_A-M_B}{s} \\
-            c &amp; = \sum_{j=1}^{n_j}\lambda_j M_j : \sum_{j=1}^{n_j} \lambda_j = 0 \\
-            \Delta &amp; = \frac{c}{\sigma_{control}} \\
-            \end{aligned} \]
-            </p>
-            <p style="font-size: 75%">
-              \[\lambda_{CN}=1;\lambda_{MCI}=-0.33;\lambda_{AD}=-0.66\]
-            </p>
-          </section>
-          <section data-auto-animate>
-            <h4>Clinical differences</h4>
-            <figure>
-              <img src="imgs/acm2_5/adni-bl_effect-sizes_dx.png"
-                   alt="Clinical differences"
-              style="width:100%; max-width:1100px">
-            </figure>
-            <aside class="notes">
-            </aside>
-          </section>
-          <section data-auto-animate>
-            <h4>Disease modeling</h4>
-            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-              <li>Amyloid+ subjects:<br>
-                <span class="w3-large">CN = 131; MCI = 346; AD = 179</span></li>
-              <li>Modeling of Unnormalized/normalized HCvol</li>
-              <ul class="w3-ul w3-large" style="list-style-type:none;">
-                <li>Linear (OLS) and Nonlinear (GAM) models</li>
-                <li>Cognitive tests: MMSE, CDR-SB, ADAS13</li>
-                <li>Memory test: RAVLT - Immediate, Learning, Forgetting </li>
-                <li>80/20 train/test split; 3reps 5F-CV</li>
-                <li>HCvol: Z-scored with info from training set</li>
-              </ul>
-            </ul>
-            <p class="w3-large" style="font-size: 75%">
-              \[HC_{z} \sim Left|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
-            </p>
-            <aside class="notes">
-              Cog = MiniMentalStatusExamination,
-              Alzheimer'sDiseaseAssessmentScale13,
-              ClinicalDementiaRating-SumBoxes<br>
-              Mem = ReyAuditoryVerbalLearningTest: Immediate, learning, forgetting
-            </aside>
-          </section>
-          <section data-auto-animate>
-            <h4>Disease modeling</h4>
-            <p class="w3-large" style="font-size: 75%">
-              \[HC_{z} \sim Left|Right+Dx+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
-            </p>
-            <table style="font-size: 21px">
-              <tr>
-                <th rowspan=2>Measure</th><th rowspan=2>Model</th><th colspan=3>5F-CV</th><th colspan=3>Testing dataset</th>
-              </tr>
-              <tr>
-                <th>R2</th> <th>RMSE</th> <th>MAE</th> <th>R2</th> <th>RMSE</th> <th>MAE</th>
-              </tr>
-              <tr>
-                <th rowspan=2>HC<sub>vol</sub></th> <th>OLS</th> <td>0.379</td> <td>0.789</td> <td>0.626</td> <td>0.359</td> <td>0.846</td> <td>0.666</td>
-              </tr>
-              <tr>
-                <th>GAM</th> <td>0.377</td> <td>0.791</td> <td>0.627</td> <td>0.359</td> <td>0.846</td> <td>0.664</td>
-              </tr>
-              <tr>
-                <th rowspan=2>HC<sub>icv</sub></th> <th>OLS</th> <td>0.389</td> <td>0.782</td> <td>0.621</td> <td>0.383</td> <td>0.818</td> <td>0.632</td>
-              </tr>
-              <tr>
-                <th>GAM</th> <td>0.400</td> <td>0.776</td> <td>0.616</td> <td>0.378</td> <td>0.822</td> <td>0.629</td>
-              </tr>
-              <tr>
-                <th rowspan=2>HC<sub>stx</sub></th> <th>OLS</th> <td>0.391</td> <td>0.782</td> <td>0.621</td> <td>0.413</td> <td>0.817</td> <td>0.631</td>
-              </tr>
-              <tr>
-                <th>GAM</th> <td>0.403</td> <td>0.773</td> <td>0.612</td> <td>0.406</td> <td>0.767</td> <td>0.604</td>
-              </tr>
-              <tr>
-                <th rowspan=2>HVR</th> <th>OLS</th> <td><b>0.441</b></td> <td><b>0.749</b></td> <td><b>0.601</b></td> <td>0.494</td> <td>0.767</td> <td>0.604</td>
-              </tr>
-              <tr>
-                <th>GAM</th> <td>0.438</td> <td>0.750</td> <td>0.602</td> <td><b>0.498</b></td> <td><b>0.763</b></td> <td><b>0.602</b></td>
-              </tr>
-            </table>
-            <aside class="notes">
-            </aside>
-          </section>
-          <section data-auto-animate>
-            <h4>Dementia conversion prediction</h4>
-            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-              <li>Amyloid+ subjects: sMCI = 134 &amp; pMCI = 237 (3 years)</li>
-                [><span class="w3-large">(3 years)</span><]
-              <li>Classification models:</li>
-              <ul class="w3-ul w3-large" style="list-style-type:none;">
-                <li>AdaBoost</li>
-                <li>Support Vector Machine</li>
-                <li>Naive Bayes</li>
-              </ul>
-              <li>80/20 train/test split; 3reps 5F-CV</li>
-            </ul>
-            <p class="w3-large" style="font-size: 75%">
-              \[Progression \sim HC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
-            </p>
-            <aside class="notes">
-            </aside>
-          </section>
-          <section>
-            <h4>Dementia conversion prediction</h4>
-            <p class="w3-large" style="font-size: 75%">
-              \[Progression \sim HC_{l}+HC_{r}+Age+Sex+Educ+Cog.PC1+Mem.PC1+APOE_4\]
-            </p>
-            <table style="font-size: 21px">
-              <tr>
-                <td rowspan=2></td> <th colspan=3>AdaBoost</th> <th colspan=3>NaiveBayes</th> <th colspan=3>SVM</th>
-              </tr>
-              <tr>
-                <th>ROC</th> <th>Sens</th> <th>Spec</th>
-                <th>ROC</th> <th>Sens</th> <th>Spec</th>
-                <th>ROC</th> <th>Sens</th> <th>Spec</th>
-              </tr>
-              <tr>
-                <th>Base</th> <td>0.897</td> <td>0.787</td> <td>0.885</td>
-                <td>0.920</td> <td>0.809</td> <td>0.808</td>
-                <td>0.934</td> <td>0.660</td> <td><b>0.962</b></td>
-              </tr>
-              <tr>
-                <th>HC<sub>vol</sub></th> <td><b>0.913</b></td> <td>0.809</td> <td>0.885</td>
-                <td><b>0.936</b></td> <td>0.851</td> <td>0.846</td>
-                <td>0.927</td> <td>0.702</td> <td><b>0.962</b></td>
-              </tr>
-              <tr>
-                <th>HC<sub>icv</sub></th> <td>0.900</td> <td><b>0.830</b></td> <td>0.885</td>
-                <td>0.931</td> <td>0.851</td> <td><b>0.885</b></td>
-                <td><b>0.946</b></td> <td>0.745</td> <td><b>0.962</b></td>
-              </tr>
-              <tr>
-                <th>HC<sub>stx</sub></th> <td>0.911</td> <td>0.809</td> <td><b>0.923</b></td>
-                <td>0.935</td> <td><b>0.872</b></td> <td>0.808</td>
-                <td>0.943</td> <td><b>0.787</b></td> <td><b>0.962</b></td>
-              </tr>
-              <tr>
-                <th>HVR</th> <td>0.897</td> <td><b>0.830</b></td> <td>0.846</td>
-                <td>0.931</td> <td><b>0.872</b></td> <td>0.808</td>
-                <td>0.945</td> <td>0.681</td> <td><b>0.962</b></td>
-              </tr>
-            </table>
-          </section>
-          <section data-auto-animate>
-            <h4>Longitudinal stability of HC volume</h4>
-            <div class="w3-row-padding w3-stretch">
-              <div class="w3-half">
-                <h4>Clinical sample</h4>
-                <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-                  <li>ADNI:</li>
-                  <ul class="w3-ul w3-large" style="list-style-type:none;">
-                    <li>100 CN; 100 MCI; 100 AD</li>
-                    <li>Follow-up: 300-500 days later; same Teslage</li>
-                  </ul>
-                  <li>Standardized effect size estimates</li>
-                </ul>
-              </div>
-              <div class="w3-half">
-                <h4>1-Subject sample</h4>
-                <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-                  <li>SIMON dataset:</li>
-                  <ul class="w3-ul w3-large" style="list-style-type:none;">
-                    <li>93 MRI scans; 73 timepoints</li>
-                  </ul>
-                  <li>Mixed effect models</li>
-                </ul>
-              </div>
-            </div>
-            <aside class="notes">
-            </aside>
-          </section>
-          <section data-auto-animate>
-            <h4>Longitudinal stability of HC volume: Clinical</h4>
-          </section>
-          <section data-auto-animate>
-            <h4>Longitudinal stability of HC volume: Clinical</h4>
-            <h4>Within-subject Effect size</h4>
-            <p style="font-size: 80%">
-            \[ d_{within,j} = \frac{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})}{\sqrt{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})^2/(n_j-1)}} \\
-            j = \{ CN, MCI, AD \} \]
-            [>\[d_{within,j} = \frac{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})}{\sqrt{\sum_{i=1}^{n_j}(HC_{1,i}-HC_{2,i})^{2}/(n_{j}-1)}<]
-            [>j = \{CN, MCI, AD\} \]<]
-            </p>
-          </section>
-          <section data-auto-animate>
-            <h4>Longitudinal stability of HC volume: Clinical</h4>
-            <figure>
-              <img src="imgs/acm2_5/adni-s2_effsizes.png"
-                   alt="Effectsizes 1-year"
-              style="width:100%; max-width:1100px">
-            </figure>
-            <aside class="notes">
-            </aside>
-          </section>
-          <section data-auto-animate>
-            <h4>Longitudinal stability of HC volume: 1-Subject</h4>
-          </section>
-          <section data-auto-animate>
-            <h4>Longitudinal stability of HC volume: 1-Subject</h4>
-            <figure>
-              <img src="imgs/acm2_5/simon_hc-measures_time.png"
-                   alt="Simon: hc by time"
-              style="width:90%; max-width:900px">
-            </figure>
-          </section>
-          <section data-auto-animate>
-            <h4>Longitudinal stability of HC volume: 1-Subject</h4>
-            <h4>Mixed effect models</h4>
-            <div class="w3-row-padding w3-stretch">
-              <div class="w3-half">
-                <p class="w3-large">\[Time \sim HC_l+HC_r+(1|Scanner)\]</p>
-                <p class="w3-medium">Akaike Information Criterio (AIC) &amp; Bayesian Information Criterio (BIC)</p>
-              </div>
-              <div class="w3-half">
-                <p class="w3-large">\[HC_z \sim Time+(1|Scanner)+(1|Session)\]</p>
-                <p class="w3-medium">Variability of residuals</p>
-              </div>
-            </div>
-          </section>
-          <section data-auto-animate>
-            <h4>Longitudinal stability of HC volume: 1-Subject</h4>
-            <table style="font-size: 22px">
-              <tr>
-                <th>Measure</th> <th>DF</th> <th>AIC</th> <th>BIC</th>
-              </tr>
-              <tr>
-                <th>HC</th> <td>5</td> <td>466.53</td> <td>479.194</td>
-              </tr>
-              <tr>
-                <th>HC<sub>icv</sub></th> <td>5</td> <td><b>409.437</b></td> <td><b>422.100</b></td>
-              </tr>
-              <tr>
-                <th>HC<sub>stx</sub></th> <td>5</td> <td>469.289</td> <td>481.952</td>
-              </tr>
-              <tr>
-                <th>HVR</th> <td>5</td> <td>462.122</td> <td>474.785</td>
-              </tr>
-            </table>
-          </section>
-          <section data-auto-animate>
-            <h4>Longitudinal stability of HC volume: 1-Subject</h4>
-            <figure>
-              <img src="imgs/acm2_5/simon_residuals_comparison.png"
-                   alt="Simon: hc by time"
-              style="width:90%; max-width:900px">
-            </figure>
           </section>
         </section>
         <section>
