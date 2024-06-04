@@ -704,7 +704,7 @@
           </section>
           <section>
             <h3>Failures on HC segmentations</h3>
-            <table class="w3-xxlarge">
+            <table class="w3-xlarge">
               <tr>
                 <th></th>
                 <th>CN (N=501)</th>
@@ -790,15 +790,19 @@
           <section>
             <h3>TRIAD cohort</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>General cognition: Mini-Mental State Examination</li>
-              <li>&beta;-amyloid: PET [18F]AZD4694</li>
-              <li>Tau: PET [18F]MK6240</li>
-              <li>Neurodegeneration: HVR obtained from T1w MRI</li>
-              <li>Vascular disease: WMH obtained from FLAIR MRI</li>
+              <li>Dataset of Healthy, MCI and AD participants</li>
+              <ul class="w3-ul w3-xlarge" style="padding: 0px 30px">
+                <li>General cognition: Mini-Mental State Examination</li>
+                <li>&beta;-amyloid: PET [18F]AZD4694</li>
+                <li>Tau: PET [18F]MK6240</li>
+                <li>Neurodegeneration: HVR obtained from T1w MRI</li>
+                <li>Vascular disease: WMH obtained from FLAIR MRI</li>
+              </ul>
+              <li> <a href="https://doi.org/10.1002/alz.067924"
+                  class="w3-xlarge" style="color:gray">
+                  Stevenson, et al., 2022 </a>
+              </li>
             </ul>
-            <a href="https://doi.org/10.1002/alz.067924"
-              class="w3-medium" style="color:gray">
-              Stevenson, et al., 2022 </a>
           </section>
           <section data-auto-animate>
             <h3>Disease progression staging</h3>
@@ -807,9 +811,10 @@
                      style="color:gray"
                      >Raket's </a>statistical disease progression modeling</li>
               <li>Use nonlinear mixed effect models to map observed time
-                (e.g. time since baseline) to disease time.</li>
+                (e.g. time since baseline) to disease time</li>
               <li>Participants (A&beta;+ only)
-                were separated into three groups based on MMSE &amd; ADAS13:</li>
+                were separated into three groups based on MMSE &amp; ADAS13
+                scores:</li>
               <ul class="w3-ul w3-xlarge" style="padding: 0px 30px">
                 <li><b>Healthy:</b> before disease onset</li>
                 <li><b>Early:</b> between 0-3 years after disease onset</li>
@@ -819,7 +824,7 @@
           </section>
           <section data-auto-animate>
             <h3>Disease progression staging</h3>
-            <table class="w3-xxlarge">
+            <table class="w3-xlarge">
               <tr>
                 <th></th>
                 <th>Healthy (N=77)</th>
@@ -848,10 +853,11 @@
               <li>A&beta; &amp; Tau PET parcellated into 101 rois from
               <a href="https://doi.org/10.1038/s41597-020-0557-9"
                  style="color:gray"> CerebrA atlas</a></li>
-              <li>With the <a href="https://doi.org/10.18637/jss.v036.i11"
-                              style="color:gray">
-                  Boruta algorithm</a>, we identified the most important ROIs
-                by group to predict the estimated diseaste timepoint<li>
+              <li>Feature selection:
+                <a href="https://doi.org/10.18637/jss.v036.i11"
+                   style="color:gray"> Boruta algorithm</a></li>
+              <li>Identify the most important ROIs in the prediction of
+                estimated disease timepoint<li>
             </ul>
           </section>
           <section data-auto-animate>
