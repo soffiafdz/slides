@@ -475,8 +475,8 @@
                 on cognitive impairment</u>
               </li>
               <li class="w3-xxlarge">
-                Compare the effect of different volume normalization
-                strategies <u>&amp;</u>
+                <u>Compare the effect of different volume normalization
+                  strategies</u> &amp;
                 obtain normative values of HC volume and HVR
               </li>
               <li class="w3-xxlarge">
@@ -977,26 +977,118 @@
           </section>
         </section>
         <section>
-          <section data-auto-animate>
-            <h2>Future AIM</h2>
+          <section>
+            <h2>AIM 4</h2>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Compare the effect of different volume normalization
+                strategies</li>
               <li>Obtain normative values of HC volume and HVR</li>
             </ul>
           </section>
-          <section data-auto-animate>
-            <h2>Future AIM</h2>
-            <h4>Progress:</h4>
+          <section>
+            <h3>UK Biobank</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>
-                UK Biobank: MRI data of 43K healthy subjects aged 40-69
-              </li>
-              <li>
-                39,677 preprocessed T1w images
-              </li>
-              <li>
-                35,351 passed automatic QC and were segmented using CNN from AIM2
-              </li>
+              <li>UK Biobank: MRI data of healthy subjects aged 44-82</li>
+              <ul class="w3-ul w3-large" style="list-style-type:none;">
+                <li>39,677 preprocessed T1w images</li>
+                <li>35,351 passed automatic QC and
+                  were segmented using CNN from AIM2</li>
+              </ul>
+              <li>33,219 have memory scores</li>
+              <ul class="w3-ul w3-large" style="list-style-type:none;">
+                <li>Numeric memory</li>
+                <li>Prospective memory</li>
+                <li>Pair matching</li>
+              </ul>
             </ul>
+          </section>
+          <section>
+            <h3>Compare TIV adjustment methods</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Explore the effect of TIV adjustment on
+                HCvol (CNN &amp; FreeSurfer) and HVR</li>
+              <li>Adjustment methods described in
+                <a href="https://doi.org/10.1186/s13293-019-0245-7"
+                  style="color:gray">Sanchis-Segura, et al. (2019) </a></li>
+              <ul class="w3-ul w3-large" style="list-style-type:none;">
+                <li>Scaling from registration (STX)</li>
+                <li>Proportion (Vol/TIV; Prop)</li>
+                <li>Power-corrected proportion (PCP)</li>
+                <li>Residuals adjustment (Res)</li>
+              </ul>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h3>Sex differences</h3>
+          </section>
+          <section data-auto-animate>
+            <h3>Sex differences</h3>
+            <table class="w3-xlarge">
+              <tr>
+                <th></th>
+                <th>Males</th>
+                <th>Females</th>
+              </tr>
+              <tr>
+                <th>N</th>
+                <td>15,876</td>
+                <td>19,468</td>
+              </tr>
+              <tr>
+                <th>Age</th>
+                <td>64 (7.7)</td>
+                <td>63 (7.4)</td>
+              </tr>
+            </table>
+          </section>
+          <section data-auto-animate>
+            <h3>Sex differences</h3>
+            <figure>
+              <img src="imgs/acm3/effsizes-sex_hc-dl.png"
+              alt="EffSizes-CNN" style="width:100%; max-width:1000px">
+              <figcaption>
+              </figcaption>
+            </figure>
+          </section>
+          <section data-auto-animate>
+            <h3>Sex differences</h3>
+            <figure>
+              <img src="imgs/acm3/effsizes-sex_hc-fs.png"
+              alt="EffSizes-FS" style="width:100%; max-width:1000px">
+              <figcaption>
+              </figcaption>
+            </figure>
+          </section>
+          <section data-auto-animate>
+            <h3>Sex differences</h3>
+            <figure>
+              <img src="imgs/acm3/effsizes-sex_hvr.png"
+              alt="EffSizes-HVR" style="width:100%; max-width:1000px">
+              <figcaption>
+              </figcaption>
+            </figure>
+          </section>
+          <section data-auto-animate>
+            <h3>Relationship with Age, Memory</h3>
+          </section>
+          <section data-auto-animate>
+            <h3>Relationship with Age, <u>Memory</u></h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Confirmatory factor analysis</li>
+              <ul class="w3-ul w3-large" style="list-style-type:none;">
+                <li>Factor comprising all three instances of Pairs matching</li>
+                <li>Global factor of memory from all three memory scores</li>
+              </ul>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h3>Relationship with Age, Memory</h3>
+            <figure>
+              <img src="imgs/acm3/corrs.png"
+              alt="Correlations" style="width:100%; max-width:1000px">
+              <figcaption>
+              </figcaption>
+            </figure>
           </section>
           <section>
             <h3>GAMLSS: Normative data</h3>
@@ -1024,13 +1116,19 @@
             at the stages preceding AD</p>
           </section>
           <section data-auto-animate>
-            <h2>Future AIM</h2>
+            <h3>PREVENT-AD</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>Group-based trajectory model<br>
-                <ol class="w3-ol w3-xlarge" style="padding: 0px 30px">
+                <ul class="w3-ul w3-xlarge" style="padding: 0px 30px">
                   <li>Cognitive decline</li>
                   <li>HC atrophy</li>
-                </ol>
+                  <li>CSF biomarkers</li>
+                  <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+                    Amyloid-beta (A&beta;1-42)
+                    Total tau (t-Tau)
+                    Phosphorylated tau(p-Tau)
+                  </ul>
+                </ul>
               </li>
               <li>Multinomial logistic regression as a predictive model
               for trajectory subgroup assignment</li>
@@ -1061,15 +1159,9 @@
               <div class="w3-half">
                 <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
                   <li>Cognitive function:<br>
-                    <ul class="w3-ul w3-xlarge">
-                      <li>Mini-mental State Examination (MMSE)</li>
-                      <li>Clinical Dementia Rating (CDR)</li>
-                    </ul>
-                  </li>
-                  <li>Memory:<br>
-                    <span class="w3-xlarge">
-                      Logical Memory I and II subsets
-                  </li>
+                  <ul class="w3-ul w3-xlarge">
+                    <li>RBANS</li>
+                  </ul>
                 </ul>
               </div>
             </div>
@@ -1082,64 +1174,8 @@
                   Bayesian Information Criterion (BIC) &amp;
                   Sample-size Adjusted BIC (SABIC).</span>
               </li>
-              <li>Validation:<br>
-                <span class="w3-xlarge">
-                  Bootstrap resampling: 95% confidence intervals</span>
-              </li>
             </ul>
           </section>
-          <section>
-            <h3>Predictive model</h3>
-            <hr>
-            <p>Fit multivariate multinomial logistic regression models to find
-            the risk of a specific patient to belong to the different subgroups.</p>
-          </section>
-          <section>
-            <h3>External validation</h3>
-            <hr>
-            <p>Both GBTM and predictive models will be validated on the 290 subjects
-            from HABS as an independent dataset.</p>
-          </section>
-        </section>
-        <section>
-          <section data-auto-animate>
-            <h2>Future AIM</h2>
-            <p>Evalute HVR's predicting performance for AD progression</p>
-          </section>
-          <section data-auto-animate>
-            <h2>Future AIM</h2>
-            <p>Use group trajectories as input of ensemble classifier to
-            predict categorical diagnosis at different timepoints:<br>
-              <span class="w3-xlarge">2y, 3y &amp; 5y</span></p>
-          </section>
-          <section data-auto-animate>
-            <h2>RandomForest classifier</h2>
-            <ul class="w3-ol w3-xxlarge" style="padding: 0px 30px">
-              <li>
-                Sociodemographic information<br>
-                <span class="w3-xlarge">age, sex, education, and socioeconomic status</span>
-              </li>
-              <li>
-                Baseline measures<br>
-                <span class="w3-xlarge">HVR, MMSE, Logical memory I &amp; II</span>
-              </li>
-              <li>
-                Predicted values by group trajectory<br>
-                <span class="w3-xlarge">HVR, MMSE, Logical memory I &amp; II</span>
-              </li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h2>RandomForest classifier</h2>
-            <p>
-              Performance will be externally validated on the AIBL cohort
-              using overall accuracy and Balanced Classification Accuracy (BCA)
-            </p>
-          </section>
-        </section>
-        <section>
-          <h1 class="r-fit-text">Tentative Timeline</h1>
-          <img src='imgs/comps/timeline.png' alt="Timeline">
         </section>
         <section>
           <section data-auto-animate>
