@@ -717,7 +717,7 @@
           <section data-auto-animate>
             <h3>Chapter 1 Summary — Qrater in Use</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>Build to solve a bottleneck in large-scale neuroimaging QC</li>
+              <li>Built to solve a bottleneck in large-scale neuroimaging QC</li>
               <li>Adopted beyond this project and my own use</li>
             </ul>
             <aside class="notes">
@@ -800,9 +800,9 @@
               <li>Train different segmentation techniques</li>
               <ul class="w3-ul w3-xlarge" style="padding: 0px 30px">
                 <li>
-                  Multi-atlas label fusion;
-                  <a href="https://doi.org/10.1016/j.neuroimage.2010.04.193" class="w3-large" style="color:gray">
-                    Collins &amp; Pruessner, 2010;
+                  Convolutional Neural Network;
+                  <a href="https://doi.org/10.1007/978-3-031-08999-2_27" class="w3-medium" style="color:gray">
+                    Fonov, et al., 2022
                   </a>
                 </li>
                 <li>
@@ -812,9 +812,9 @@
                   </a>
                 </li>
                 <li>
-                  Convolutional Neural Network;
-                  <a href="https://doi.org/10.1007/978-3-031-08999-2_27" class="w3-medium" style="color:gray">
-                    Fonov, et al., 2022
+                  Multi-atlas label fusion;
+                  <a href="https://doi.org/10.1016/j.neuroimage.2010.04.193" class="w3-large" style="color:gray">
+                    Collins &amp; Pruessner, 2010;
                   </a>
                 </li>
               </ul>
@@ -835,8 +835,8 @@
               <li>Train different segmentation techniques</li>
               <li>Validate on an out-of-sample clinical dataset</li>
               <ul class="w3-ul w3-xlarge" style="padding: 0px 30px">
-                <li>The CNN network was also validated on the segmentation of independet dataset.</li>
-                <li>60 manually segmented ADNI images: 20/20/20 CH, MCI &amp; AD.</li>
+                <li>The CNN network was also validated on the segmentation of an independet dataset:</li>
+                <li>60 manually segmented ADNI images: 20/20/20 CH, MCI &amp; AD</li>
               </ul>
               <li>Compare with widely used FreeSurfer </li>
             </ul>
@@ -872,6 +872,7 @@
               <img src="imgs/ts/hvr_valid_f1.png" alt="Segmentation performance violin plots" style="width:100%; max-width:1000px">
             </figure>
             <aside class="notes">
+              The CNN network showed significant differences in overlap/accuracy metrics with the two older methods.
             </aside>
           </section>
           <section>
@@ -887,6 +888,8 @@
               </div>
             </div>
             <aside class="notes">
+              It also showed higher correlations of its volumes compared with those from the manual segmentations.
+              The correlation were almost 1 (.97-.988)
             </aside>
           </section>
           <section>
@@ -894,6 +897,7 @@
               <img src="imgs/ts/hvr_valid_f3.png" alt="Bland-altman plots of segmentations" style="width:100%; max-width:1000px">
             </figure>
             <aside class="notes">
+              Lastly, showed the least amount of bias in both HC and LV segmentations
             </aside>
           </section>
           <section>
@@ -914,10 +918,10 @@
           </section>
           <section>
             <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
-              <div class="w3-container" style="width: 33.3333%; display: flex; align-items: center; justify-content: center;">
+              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
                 <h3 class="w3-center">Demographics</h3>
               </div>
-              <div class="w3-container" style="width: 66.6667%;">
+              <div class="w3-container" style="width: 70%;">
                 <iframe src="tbls/ts/hvr_valid_t1.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
               </div>
             </div>
@@ -949,6 +953,9 @@
                 style="width:100%; max-width:700px">
             </figure>
             <aside class="notes">
+              CNN had the greatest CH-AD separation with 1.85 d of effect size.
+              Followed by the different versions of FreeSurfer who were almost 1:1 correlated.
+              The lowest effect size was found on MALF, who was also the most dissimilar to the rest of the methods.
             </aside>
           </section>
           <section>
@@ -958,6 +965,9 @@
                 style="width:100%; max-width:700px">
             </figure>
             <aside class="notes">
+              HVR increased the effect size across all segmentation methods.
+              This time FreeSurfer had the most CH-AD separation.
+              It also made MALF more similar to the other segmentation methods.
             </aside>
           </section>
           <section>
@@ -969,6 +979,12 @@
               <img src="imgs/ts/hvr_valid_f6.png" alt="Correlations HCv-HVR" style="width:100%; max-width:1200px">
               </div>
             </div>
+            <aside class="notes">
+              HVR showed significantly higher correlation in age than HC on all but the FreeSurfer segmentations.
+              Particularly on MALF, whose HC correlations were the lowest,
+              the correlations of HVR with both age and cognition were brought up to the same levels as the other
+              methods.
+            </aside>
           </section>
           <section data-auto-animate>
             <h3>Chapter 2 Summary — HVR Validated</h3>
@@ -1040,14 +1056,19 @@
               </div>
             </div>
             <aside class="notes">
+             Males had +1 SD bigger heads. ~1 SD larger HC. ~1 SD larger
+             ventricles.  They also showed slightly better performance on all
+             three cognitive domains.
+
               INPUT: 42,776 first visits (BL) & 4,261 follow-ups (FU) In-house
-              pre-processing pipeline Hippocampus & lateral ventricle
-              segmentation In-house CNN (Hippocampus & Ventricles) & AssemblyNet
-              (replication analyses) Quality Control Automatic QC (AssemblyNet,
-              DARQ) & outlier removal [vols lower than 3 Z-scores] Clinical
-              filtering Psychiatric or Central Nervous System Diagnoses — F, G
-              or Q0 Dx in ICD 10 For cross-sectional analysis used first of
-              either BL/FU that passed QC
+              Pre-processing pipeline
+              In-house CNN (Hippocampus & Ventricles) & AssemblyNet
+              (replication analyses)
+              Quality Control Automatic QC (AssemblyNet, DARQ)
+              outlier removal [vols lower than 3 Z-scores]
+              Clinical filtering Psychiatric or Central Nervous System Diagnoses
+              — F, G or Q0 Dx in ICD 10
+              For cross-sectional analysis used first of either BL/FU that passed QC
             </aside>
           </section>
           <section>
@@ -1056,9 +1077,9 @@
           <section data-auto-animate>
             <h3>HC, HVR, and lateral ventricles</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>We used GAMLSS to model the non-linear aging trajectories of
+              <li>I used GAMLSS to model the non-linear aging trajectories of
                 HC, HVR and the temporal horns of the lateral ventricles</li>
-              <li>From these models, we derived:</li>
+              <li>From these models, I derived:</li>
               <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
                 <li>Z-scores to assess individual deviations.</li>
                 <li>Normative tables across the later lifespan.</li>
@@ -1107,12 +1128,13 @@
               Interpretation: HVR shows reduced mid-life variability → suggests
               it is less influenced by residual anatomical confounds (e.g., head
               size, segmentation biases).
-
             </aside>
           </section>
           <section data-auto-animate>
             <h3>HC, HVR, and <b>lateral ventricles</b></h3>
             <img src="imgs/ts/ukbb_f3.png" alt="qrater" style="width:100%; max-width:800px">
+            Higher age-effects than HC.
+            Males had higher variability and steeper increase particularly after 70.
           </section>
           <section>
             <h3>Age-related patterns <b>vary by marker</b></h3>
@@ -1154,7 +1176,7 @@
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>Head-size correction impacts the direction and size of sex differences</li>
               <li>It's unclear if these are true biological differences or artifacts of brain-size</li>
-              <li class="fragment">To assess this, we compared <b>Male-Female</b> effect sizes in a matched subsample</li>
+              <li class="fragment">To assess this, I compared <b>Male-Female</b> differences in a matched subsample</li>
             </ul>
           </section>
           <section>
@@ -1164,6 +1186,10 @@
               Subsample of age and head-size matched males and females
               Age: matched with a tolerance of ±1 year
               Head size: matched based on TIV proximity, tolerance of ±25 voxels
+              - Males were slightly better educated.
+              - HC difference disappeared.
+              - LV difference remained, but decreased in magnitude.
+              - Cognitive sex-differences changed direction.
             </aside>
           </section>
           <section data-auto-animate>
@@ -1226,12 +1252,16 @@
               <ul class="w3-ul w3-large" style="list-style-type:none;">
                 <li>HVR quantifies the proportion of hippocampal volume relative to the combined volume of the hippocampus and temporal horns of the lateral ventricles.</li>
                 <li>${HVR} = HC / (HC + LV)$</li>
-                <li>
-                  In this project, we are calculating HVR using HC &amp; LV volumes adjusted with
-                  the residuals method.
-                </li>
+                <!--<li>-->
+                  <!--In this project, we are calculating HVR using HC &amp; LV volumes adjusted with-->
+                  <!--the residuals method.-->
+                <!--</li>-->
               </ul>
             </ul>
+            <aside class="notes">
+              In this project, I used HVR using HC &amp; LV volumes adjusted with
+              the residuals method.
+            </aside>
           </section>
           <section>
             <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
@@ -1242,6 +1272,12 @@
                 <img src="imgs/ts/ukbb_f5.png" alt="qrater" style="width:100%; max-width:700px">
               </div>
             </div>
+            <aside class="notes">
+              - Even in the matched sample, HC were correlated with head-size (.37).
+              - " " ", Proportions method had a negative association with TIV (overcompensation?)
+              - Residuals and HVR showed no correlation whatsoever.
+              - There was still a slight but significant sex difference in HVR.
+            </aside>
           </section>
           <section>
             <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
@@ -1252,6 +1288,8 @@
                 <img src="imgs/ts/ukbb_f7.png" alt="qrater" style="width:100%; max-width:700px">
               </div>
             </div>
+            - Ventricles unadjusted were slightly correlated with head-size.
+            - Independently of segmentation method, the sex-effect was consistent among all measures.
           </section>
           <section data-auto-animate>
             <h3>Persistent sex differences</h3>
@@ -1268,10 +1306,10 @@
           <section>
             <h3>What about cognition?</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>We used the derived Z-scores to quantify the individual
+              <li>First, I used the derived Z-scores to quantify the individual
               deviations from age-normed HC and HVR trajectories</li>
               <li class="fragment">
-                We tested how HC &amp; HVR related differently to cognition
+                I compared how HC &amp; HVR related differently to cognition
               </li>
             </ul>
           </section>
@@ -1286,7 +1324,7 @@
               <li>Structural model</li>
               <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
                 <li>Endogenous variables: Cognitive domains</li>
-                <li>Exogenous variables: HC or HVR Z-scores</li>
+                <li>Exogenous variables: Z-scores for HC or HVR</li>
               </ul>
             </ul>
             <aside class="notes">
@@ -1330,6 +1368,11 @@
                 <iframe src="tbls/ts/ukbb_t3.html" style="width:100%; height:600px; border:none; overflow:auto;"></iframe>
               </div>
             </div>
+            <aside class="notes">
+              - Left is a reference CFA calculated on the full sample outside the modelling.
+              - Right is the range of parameters from the measurement models of the two SEM models.
+              - They are very similar; almost the same.
+            </aside>
           </section>
           <section>
             <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
@@ -1340,6 +1383,9 @@
                 <iframe src="tbls/ts/ukbb_t4.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
               </div>
             </div>
+            1SD change in HC, means .15 SD change in Memory.
+            The HC models showed higher relationship with cognition across all domains
+            From 33%, to 2x (Memory) and ~3x (executive function) than HVR.
           </section>
           <section>
             <h3>What lies beyond the Z-scores?</h3>
@@ -1352,7 +1398,7 @@
                   Z-scores inherently control for covariates; which <b>may mask relevant variance</b>
               </li>
               <li class="fragment">
-                We decided to explore how covariates &amp; head-size
+                I decided to explore how the covariates &amp; head-size
                 adjustment affected the MTL-cognition associations
               </li>
             </ul>
@@ -1369,8 +1415,8 @@
                 <li>Endogenous variables: Cognitive domains</li>
                 <li>Exogenous variables:
                   <ul class="w3-ul w3-large" style="list-style-type:none;">
-                    <li>Hippocampal &amp; Ventricular volumetrics</li>
-                    <li>TIV, Age, Sex, &amp; Education as covariates</li>
+                    <li>Hippocampal (&amp; Ventricular) volumetrics</li>
+                    <li>(TIV,) Age, Sex, &amp; Education as covariates</li>
                   </ul>
                 </ul>
               </ul>
@@ -1384,21 +1430,48 @@
                 <iframe src="tbls/ts/ukbb_t5.html" style="width:100%; height:600px; border:none; overflow:auto;"></iframe>
               </div>
             </div>
+            Larger variability in the measurement models;
+            but still the reference parameters were mostly within the 95% CI
+            Except on Processing Speed.
           </section>
           <section data-auto-animate>
             <h3>Structural model</h3>
             <h4>Memory</h4>
             <iframe src="tbls/ts/ukbb_t6-mem.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
+            <aside class="notes">
+              For space and time, I'll show the results of memory only (the highest association with HC/HVR)
+              but all three CogDoms showed the same pattern of results.
+              - At first I only included TIV on the unadjusted HC model.
+              Proportions model was the most unstable (higher variance in CI.)
+              HVR showed a higher association than Unadjusted and Residuals.
+              - TIV effects were 2x as large as HC.
+              - Age had a consistent high association.
+              - Sex effects had opposite directions: Females had higher performance when controlling for head-size.
+              - On the head-size adjusted HC metrics, Males showed better performance.
+            </aside>
           </section>
           <section data-auto-animate>
             <h3>Structural model</h3>
             <h4>Memory</h4>
             <iframe src="tbls/ts/ukbb_t7-mem.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
+            <aside class="notes">
+              Due to the large effect of TIV, I decided to include it in the rest of the models:
+              - HC (Proportions became more stable). Residuals and HVR HC effects remained unchanged.
+              - TIV had a significantly large association with Cognition.
+              - Age effect remained the same.
+              - Sex-effects changed directions following the pattern of HC-unadjusted.
+              - Education remained unassociated.
+            </aside>
           </section>
           <section data-auto-animate>
             <h3>Structural model</h3>
             <h4>Memory</h4>
             <iframe src="tbls/ts/ukbb_t8-mem.html" style="width:100%; height:500px; border:none; overflow:auto;"></iframe>
+            Lastly, I checked how the models changed when including Ventricular volumes.
+            - HC effects on unadjusted and Residuals remained the same.
+            - Proportions had very large HC &amp; LV effects, but with very large CI.
+            Ventricular effect remained consistend between Unadjusted and Residuals methods.
+            - Age and sex effects remained consistent.
           </section>
           <!--<section data-auto-animate>-->
             <!--<h3>Structural model</h3>-->
@@ -1436,10 +1509,19 @@
                 <h3 class="w3-center">Models' Fit</h3>
               </div>
               <div class="w3-container" style="width: 70%;">
-              <iframe src="tbls/ts/ukbb_t9.html" style="width:100%; height:650px; border:none; overflow:auto;"></iframe>
+              <iframe src="tbls/ts/ukbb_t9.html" style="width:120%; height:750px; border:none; overflow:auto;"></iframe>
               </div>
             </div>
             <aside class="notes">
+              Looking at model fit measures:
+              AIC &amp; BIC show adding TIV and Ventricles does improve model fit.
+              CFI/TLI, with +.9 showing a good fit, and .95 excellent fit,
+              showed that Proportions and HVR were the better models.
+              Nonetheless, when looking at the error measures: while
+              Root Mean Square Error of Approx showed acceptable values on all models
+              Standardized Root Mean Square Residual (values lower than .8)
+              showed the Proportions-models were highly unreliable.
+
               “Here we compare several adjustment strategies. The HVR model, with
               or without additional TIV adjustment, achieves fit indices
               comparable to traditional covariate and residuals approaches,
@@ -1529,7 +1611,7 @@
                 QC.</li>
                 <li><b>HVR Docker Tool:</b> User-friendly container for the
                   automatic segmentation and calculation of the HVR.</li>
-                <li><b>Normative Percentile Tables:</b> Generated and released
+                <li><b>Normative Percentile Tables:</b> Generated (and will release)
                   normative percentile tables for HC, HVR and lateral
                   ventricular volumes.</li>
               </ol>
@@ -1547,7 +1629,7 @@
                 </li>
                 <li>
                   <b>Evidence for residual sex effects:</b> showed that sex differences
-                  persist in HVR aven after TIV-matching.
+                  persist in HVR even after TIV-matching.
                 </li>
                 <li>
                   Found that <b>Z-scores derived from normative models</b> supress
