@@ -63,17 +63,60 @@
           <section>
             <h1>Background and Related Work</h1>
           </section>
-          <section>
-            <h2>Alzheimer's Disease</h2>
+          <section data-auto-animate>
+            <h2>The hippocampus</h2>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <figure>
+                  <img src="imgs/ts/hc_anatomy.png" alt="hc_anatomy" style="width:100%; max-width:500px">
+                  <figcaption>
+                    <a href="https://en.wikipedia.org/wiki/Hippocampus_anatomy#/media/File:Gray739-emphasizing-hippocampus.png" class="w3-medium" style="color:gray">
+                      Gray, 1918
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type: none;">
+                  <li>Located in medial temporal lobe</li>
+                  <li>
+                    Critical for memory and spatial navigation<br>
+                    <a href="https://doi.org/10.1093/acprof:oso/9780195100273.003.0012" class="w3-medium" style="color:gray;">
+                      Andersen et al., 2009
+                    </a>
+                  </li>
+                  <li>Vulnerable to aging and pathology</li>
+              </div>
             <aside class="notes">
-              Cognitive decline in this project relates specifically to MCI as in the context of it being a preliminary
-              stage of AD.<br> Alzheimer’s disease (AD) is a chronic, progressive and ultimately fatal neurological
-              disorder in which the brain progressively and irreversibly deteriorates, affecting the quality of life of
-              both the patient their close family members and caregivers.
+              Essential brain structure located in the medial temporal lobe.
+              Key roles: Memory consolidation, spatial navigation, learning.
+              Highly susceptible to aging and neurodegeneration.
+              Structural MRI measures its volume, shape, and integrity.
+              Used as biomarker for structural integrity and cognitive health
             </aside>
           </section>
           <section>
-            <h2 class="w3-xxxlarge">Pathological Nature</h2>
+            <h3>Hippocampal atrophy across aging</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type: none;">
+              <li>Gradual volume loss during normal aging
+                <a href="https://doi.org/10.1515/revneuro.2010.21.3.187" class="w3-medium" style="color:gray;">
+                  Fjell et al., 2010
+                </a>
+              </li>
+              <li>
+                Accelerated atrophy → pathological aging
+                <a href="https://doi.org/10.1016/j.jalz.2018.02.018" class="w3-medium" style="color:gray;">
+                  Jack et al., 2018
+                </a>
+              </li>
+            </ul>
+            <aside class="notes">
+              Early detection of pathological decline requires clear normative data.
+              Wide variation even in normal aging complicates clinical assessment.
+            </aside>
+          </section>
+          <section>
+            <h2>Alzheimer's disease</h2>
             <figure>
               <img src="imgs/comps/pathologicalEvolution.png" alt="pathologyEvolution" style="width:100%; max-width:1000px">
               <figcaption>
@@ -97,7 +140,7 @@
             </aside>
           </section>
           <section>
-            <h2 class="w3-xxxlarge">Biological affliction precedes symptoms by decades</h2>
+            <h3 class="w3-xxxlarge">Biological affliction precedes symptoms by decades</h3>
             <figure>
               <img src="imgs/acm1/nature1.png" alt="biomarkers" style="width:100%; max-width:900px">
               <figcaption>
@@ -107,6 +150,7 @@
               </figcaption>
             </figure>
             <aside class="notes">
+              Hippocampal volume is one of the late but crucial MRI markers in this cascade!
               The first accumulation of Aꞵ in the brain can occur one to two decades before the first appearance of
               clinical symptoms (Pluta et al., 2020).  Both CSF/PET amyloid and postmortem studies suggest that a
               substantial proportion of cognitively normal subjects present evidence of Aβ accumulation.  The exact
@@ -124,102 +168,8 @@
               <br>7) Astrocytic biomarkers: YKL-40 and glial fibrillary acidic protein [GFAP].
             </aside>
           </section>
-          <section data-auto-animate>
-            <h2 class="w3-xxxlarge">A&beta; plaques accelerate tau spreading and cognitive decline in human AD</h2>
-            <figure>
-              <img src="imgs/acm3/ab_tau_spread.png" alt="ab&tau spread" style="width:100%; max-width:900px">
-              <figcaption>
-                <a href="https://doi.org/10.1038/s41593-020-0687-6" class="w3-medium" style="color:gray">
-                  Busch &amp; Hyman, 2020
-                </a>
-              </figcaption>
-            </figure>
-            <aside class="notes">
-              Top: Tau tangles (red) in absence of cortical plaques are present in brain stem nuclei (for example, locus
-              coeruleus) and parahippocampal gyrus of many cognitively normal aged individuals (i.e., those with primary
-              age-related tauopathy).  In AD, the presence of cortical plaques (blue) correlates with neuronal tau
-              propagation from the parahippocampal gyrus into neocortical areas, including medial parietal and medial
-              prefrontal cortex.  Bottom: human AD cases with plaques and tangles show a dramatically enhanced formation
-              and propagation of bioactive, high-molecular weight forms of tau (right) relative to human cases with
-              tangles alone (left).
-            </aside>
-          </section>
-          <section data-auto-animate>
-            <h2 class="w3-xxxlarge">A&beta; and tau: cause and effect, or pathogenic interaction?</h2>
-            <div class="w3-row-padding w3-stretch">
-              <div class="w3-half">
-                <figure>
-                  <img src="imgs/acm3/ab_tau_spread.png" alt="ab&tau spread" style="width:100%; max-width:900px">
-                  <figcaption>
-                    <a href="https://doi.org/10.1038/s41593-020-0687-6" class="w3-medium" style="color:gray">
-                      Busch &amp; Hyman, 2020
-                    </a>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="w3-half">
-                <ul class="w3-ul" style="list-style-type: none;">
-                  <li class="w3-xlarge">
-                    Changes of A&beta; promote the progression of AD and trigger harmful cascade reactions, including
-                    tau pathology and neurodegeneration.
-                  </li>
-                  <li class="w3-xlarge">
-                    Except this triggering function, A&beta; and tau act independently without a specific interaction.
-                  </li>
-              </div>
-            <aside class="notes">
-            </aside>
-          </section>
-          <section data-auto-animate>
-            <h2 class="w3-xxxlarge">A&beta; and tau: cause and effect, or pathogenic interaction?</h2>
-            <div class="w3-row-padding w3-stretch">
-              <div class="w3-half">
-                <figure>
-                  <img src="imgs/acm3/ab_tau_spread.png" alt="ab&tau spread" style="width:100%; max-width:600px">
-                  <figcaption>
-                    <a href="https://doi.org/10.1038/s41593-020-0687-6" class="w3-medium" style="color:gray">
-                      Busch &amp; Hyman, 2020
-                    </a>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="w3-half">
-                <ul class="w3-ul" style="list-style-type: none;">
-                  <li class="w3-xlarge">
-                    Changes of A&beta; promote the progression of AD and trigger harmful cascade reactions, including
-                    tau pathology and neurodegeneration.
-                  </li>
-                  <li class="w3-xlarge">
-                    <s>Except this triggering function, A&beta; and tau act independently without a specific interaction.</s>
-                  </li>
-                  <li class="w3-xlarge">
-                    AD may be caused not only by the pathology of A&beta; and tau, but also by the synergy and
-                    interaction among various pathological processes, which subsequently lead to cognitive decline.
-                  </li>
-              </div>
-            <aside class="notes">
-            </aside>
-          </section>
           <section>
-            <h2 class="w3-xxxlarge">Causal mediation analyses in MCI (ADNI; N = 623)</h2>
-            <figure>
-              <img src="imgs/acm3/ma_2021_long.png" alt="ma_2021" style="width:100%; max-width:1000px">
-              <figcaption>
-                <a href="https://doi.org/10.1186/s13195-021-00943-z" class="w3-medium" style="color:gray">
-                  Ma, et al., 2021
-                </a>
-              </figcaption>
-            </figure>
-            <aside class="notes">
-              MEM: Memory, EF: executive, LAN: language, VS: visuospatial; No evidence that CSF A&beta;42 contributes to
-              cognitive impairment via modulating other AD pathology in CN.  A&beta; pathology and cognitive impairment
-              was partially mediated by bl tau (CSF p-tau), and neurodegeneration (CSF t-tau, brain, HC, Entorhinal, and
-              mid-temporal volumes).  Axonal injury (neurofilament), Synaptic dysfunction (neurogranin), and
-              neuroinflammation (sTREM2 &amp; YKL-40) were not significant mediators.
-            </aside>
-          </section>
-          <section data-auto-animate>
-            <h2>Hippocampus</h2>
+            <h3>Structural MRI in AD</h3>
             <div class="w3-row-padding w3-stretch">
               <div class="w3-half">
                 <figure>
@@ -232,12 +182,15 @@
                 </figure>
               </div>
               <div class="w3-half">
-                <ul class="w3-ul" style="list-style-type: none;">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type: none;">
                   <li>
-                    Viable proxy for structural and functional integrity
+                    Non-invasive biomarkers for AD progression
                   </li>
-                  <li class="fragment">
-                    High variability in volume across populations
+                  <li>
+                    <b>HC volume reduction:</b><br>early marker of disease
+                  </li>
+                  <li>
+                    <b>Ventricular enlargement:</b><br>generalized atrophy &amp; disease progression
                   </li>
                 </ul>
               </div>
@@ -248,124 +201,175 @@
               (Adler et al., 2018),
             </aside>
           </section>
-          <section data-auto-animate>
-            <h2>Hippocampus</h2>
+          <section>
+            <h3>Measurement challenges</h3>
             <div class="w3-row-padding w3-stretch">
               <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type: none;">
+                  <li>Segmentation and methodological variability </li>
+                  <li>Influence of intracranial volume (ICV) </li>
+                  <li>Methodological bias in sex differences<br>
+                    <a href="https://doi.org/10.1016/j.jalz.2018.02.018" class="w3-medium" style="color:gray;">
+                      Sanchis-segura, et al., 2019
+                    </a></li>
+                </ul>
+              </div>
+              <div class="w3-half">
                 <figure>
-                  <img src="imgs/comps/alz-brain.png" alt="AD_brain">
+                  <img src="imgs/ts/hcvol_diff.png" alt="AD_brain">
                   <figcaption>
-                    <a href="https://www.alz.org/" class="w3-medium" style="color:gray;">
-                      Alzheimer's Association
+                    <a href="https://doi.org/10.1016/j.neuroimage.2008.12.033" class="w3-medium" style="color:gray;">
+                      Morey, et al., 2009
                     </a>
                   </figcaption>
                 </figure>
               </div>
-              <div class="w3-half">
-                <ul class="w3-ul" style="list-style-type: none;">
-                  <li>
-                    Viable proxy for structural and functional integrity
-                  </li>
-                  <li>
-                    25% of youth present hippocampi as small as an average older adult (60-75y)
-                    <a href="https://doi.org/10.1016/j.neuroimage.2006.09.041" class="w3-medium" style="color:gray;">
-                      Lupien et al., 2007
-                    </a>
-                  </li>
+            </div>
+            <aside class="notes">
+              Segmentation variability across software and raters. Influence of
+              head size (intracranial volume) complicates interpretation. Sex
+              differences influenced by methodology rather than biological
+              difference alone. Need for stable, robust, and reproducible
+              methods of HC assessment.
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Are all ICV-adjustment methods the same?</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type: none;">
+              <li>
+                ICV adjustment methods →
+                number, size and direction of sex differences in GM volume;
+                <a href="https://doi.org/10.1016/j.jalz.2018.02.018" class="w3-medium" style="color:gray;">
+                  Sanchis-segura, et al., 2019
+                </a>
+              </li>
+              <li class="fragment">
+                Sex differences on HC volume <b>changes direction</b>
+                <ul class="w3-ul" style="list-style-type:none;">
+                  <li class="w3-xlarge">Proportions method</li>
                 </ul>
+              </li>
+            </ul>
+            <aside class="notes">
+              Raw: +M-F; d=1.14 (left) & d=0.91 (right)
+              Proportion: -M+F d=-0.5 (left) & d=-0.45 (right)
+              This method explicitly assumes that the relationship between the
+              TIV and a VOI is not proportional, but instead follows a power
+              law. Thus, corrected volumes are estimated through a VOI/TIV ratio
+              that includes an exponential correcting parameter, leading to the
+              generic formula:
+              The b parameter of this formula was obtained by calculating the
+              slope value of the regression line between LOG(VOI) and LOG(TIV).
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Are all ICV-adjustment methods the same?</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type: none;">
+              <li>
+                ICV adjustment methods →
+                number, size and direction of sex differences in GM volume;
+                <a href="https://doi.org/10.1016/j.jalz.2018.02.018" class="w3-medium" style="color:gray;">
+                  Sanchis-segura, et al., 2019
+                </a>
+              </li>
+              <li>
+                Sex differences on HC volume <b>disappears entirely</b>
+                <ul class="w3-ul" style="list-style-type:none;">
+                  <li class="w3-xlarge">Covariate regression</li>
+                  <li class="w3-xlarge">Power-corrected proportion</li>
+                  <li class="w3-xlarge">Residuals adjustment</li>
+                  <li class="w3-xlarge">Subject matching</li>
+                </ul>
+              </li>
+            </ul>
+            <aside class="notes">
+              Raw: +M-F; d=1.14 (left) & d=0.91 (right)
+              Proportion: -M+F d=-0.5 (left) & d=-0.45 (right)
+              This method explicitly assumes that the relationship between the
+              TIV and a VOI is not proportional, but instead follows a power
+              law. Thus, corrected volumes are estimated through a VOI/TIV ratio
+              that includes an exponential correcting parameter, leading to the
+              generic formula:
+              The b parameter of this formula was obtained by calculating the
+              slope value of the regression line between LOG(VOI) and LOG(TIV).
+            </aside>
+          </section>
+          <section>
+            <h2>Normative modeling</h2>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type: none;">
+                  <li>Helps interpret individual atrophy in reference to population norms</li>
+                  <li>Captures nonlinear and age-related trends</li>
+                  <li>Enables Z-scores relative to age and sex norms</li>
+                </ul>
+              </div>
+              <div class="w3-half">
+                <figure>
+                  <img src="imgs/ts/norm_modeling.png" alt="Normative models"
+                    style="width:120%; max-width:600px">
+                  <figcaption>
+                    <a href="https://doi.org/10.1038/s41380-019-0441-1" class="w3-medium" style="color:gray">
+                      Marquand et al., 2019
+                    </a>
+                  </figcaption>
+                </figure>
               </div>
             </div>
             <aside class="notes">
-              25% of 18-24y subjects presented hippocampi as small as the average older adult (60-75y)
+              "Normative modeling offers an alternative: instead of controlling
+              for ICV, it learns expected trajectories based on age and sex
+              [Marquand et al., 2019]." "Deviation from this model gives us
+              Z-scores — individual-level indices of abnormality."
+            </aside>
           </section>
-          <section data-auto-animate>
-            <h3 class="w3-xxxlarge">Hippocampal normative values</h3>
+          <section>
+            <h3>Hippocampal normative values</h3>
             <figure>
-              <img src="imgs/comps/nomogramsHC.png" alt="Hc-variability" style="width:100%; max-width:700px">
+              <img src="imgs/comps/nomogramsHC.png" alt="Hc-trajectories1"
+              style="width:100%; max-width:600px">
               <figcaption>
-                <a href="https://doi.org/10.1016/j.nicl.2019.101904" class="w3-medium" style="color:gray">
+                <a href="https://doi.org/10.1016/j.nicl.2019.101904"
+                  class="w3-medium" style="color:gray">
                   Nobis, et al., 2019
                 </a>
               </figcaption>
             </figure>
             <aside class="notes">
+              "Nobis et al. (2019) created hippocampal percentile charts,
+              showing how volume varies with age and sex."
+              <br>
+              "They found high inter-individual variability, with some youth
+              having HC volumes similar to older adults."
+              <br>
+              Using the data of 19,793 participants in the UK Biobank to
+              extract normative values for hippocampal and total gray matter
+              volume as a function of age (Nobis et al., 2019)
+              Trajectory of hippocampal volume with age.
             </aside>
           </section>
           <section>
-            <h3 class="w3-xxxlarge">Hippocampal measures</h3>
-            <ul class="w3-ul" style="list-style-type: none;">
-              <li class="w3-xlarge">
-                Unnormalized hippocampal volume
-              </li>
-              <li class="w3-xlarge">
-                Hippocampal volume adjusted by intracranial volume
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h3 class="w3-xxxlarge">Are all IV-adjustment methods the same?</h3>
-            <ul class="w3-ul" style="list-style-type: none;">
-              <li class="w3-xlarge">
-                <a href="https://doi.org/10.1186/s13293-019-0245-7" style="color:gray">
-                  Sanchis-Segura, et al. (2019)
-                </a>
-                assessed how number, size and direction of sex differences in GMv vary depending on how intracranial
-                volume variation is statistically handled
-              </li>
-              <li class="w3-xlarge">
-                Sex difference on hippocampal volume changes direction when correcting using the proportion method:
-              </li>
-              <ul class="w3-ul" style="list-style-type:none;">
-                <li class="w3-large">Raw: M&gt;F; <i>d</i>=1.14 (left) &amp; <i>d</i>=0.91 (right)</li>
-                <li class="w3-large">Proportion: M&lt;F <i>d</i>=-0.5 (left) &amp; <i>d</i>=-0.45 (right)</li>
-              </ul>
-              <li class="w3-xlarge">
-                Sex differences on hippocampal volume disappears entirely when adjusting using other size correction
-                methods:
-              </li>
-              <ul class="w3-ul" style="list-style-type:none;">
-                <li class="w3-large">Covariate regression</li>
-                <li class="w3-large">Power-corrected proportion</li>
-                <li class="w3-large">Residuals adjustment</li>
-                <li class="w3-large">Subject matching</li>
-              </ul>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h3 class="w3-xxxlarge">Other hippocampal measures</h3>
-            <ul class="w3-ul" style="list-style-type: none;">
-              <li class="w3-xlarge">
-                Hippocampal occupancy
-                <a href="https://doi.org/10.1212/WNL.0b013e3182343314" class="w3-medium" style="color:gray">
-                  Heister et al. (2011)
-                </a>
-              </li>
-              <li class="w3-xlarge">
-                Hippocampal (volumetric) integrity
-                <a href="https://doi.org/10.3233/JAD-150780" class="w3-medium" style="color:gray">
-                  Ardekani et al. (2016)
-                </a>
-              </li>
-              <li class="w3-xlarge">
-                Hippocampal-to-ventricle ratio
-                <a href="https://doi.org/10.1016/j.neuroimage.2019.116108" class="w3-medium" style="color:gray">
-                  Schoemaker, et al (2019)
-                </a>
-              </li>
-              <li class="w3-xlarge">
-                Hippocampal-amygdalo-ventricular atrophy score
-                <a href="https://doi.org/10.1002/hbm.25850" class="w3-medium" style="color:gray">
-                  Coup&eacute; et al. (2022)
-                </a>
-              </li>
+            <h3>Limitations of normative Z-scores</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type: none;">
+              <li>Z-scores rely on accurate, unbiased population norms</li>
+              <li>Can still reflect residual confounds (e.g., ICV, sex)</li>
+              <li>May not generalize across samples or segmentation pipelines</li>
             </ul>
             <aside class="notes">
-              Defined as the fraction of tissue found in the region expected to encompass a normal HC<br>
-              Probabilistic algorithm based on registrations to a priori training data
+              Z-scores are valuable but depend on the assumption that the
+              normative model is properly specified.
+
+              Even well-modeled Z-scores can retain bias if variables like ICV
+              or sex were inadequately modeled or if the segmentation pipeline
+              skews volume estimates.
+
+              Additionally, applying normative models to other datasets may
+              reduce validity due to scanner effects, site differences, or
+              demographic shifts.
             </aside>
           </section>
-          <section data-auto-animate>
-            <h3 class="w3-xxxlarge">Other hippocampal measures</h3>
+          <section>
+            <h3>Hippocampal-to-Ventricle Ratio</h3>
             <div class="w3-row-padding w3-stretch">
               <div class="w3-half">
                 <figure>
@@ -378,100 +382,73 @@
                 </figure>
               </div>
               <div class="w3-half">
-                <ul class="w3-ul" style="list-style-type: none;">
-                  <li class="w3-xlarge">
-                    Hippocampal occupancy
-                    <a href="https://doi.org/10.1212/WNL.0b013e3182343314" class="w3-medium" style="color:gray">
-                      Heister et al. (2011)
-                    </a>
-                  </li>
-                  <li class="w3-xlarge">
-                    Hippocampal (volumetric) integrity
-                    <a href="https://doi.org/10.3233/JAD-150780" class="w3-medium" style="color:gray">
-                      Ardekani et al. (2016)
-                    </a>
-                  </li>
-                  <li class="w3-xlarge">
-                    <b>Hippocampal-to-ventricle ratio</b>
-                    <a href="https://doi.org/10.1016/j.neuroimage.2019.116108" class="w3-medium" style="color:gray">
-                      Schoemaker, et al (2019)
-                    </a>
-                  </li>
-                  <li class="w3-xlarge">
-                    Hippocampal-amygdalo-ventricular atrophy score
-                    <a href="https://doi.org/10.1002/hbm.25850" class="w3-medium" style="color:gray">
-                      Coup&eacute; et al. (2022)
-                    </a>
-                  </li>
+                <ul class="w3-ul w3-xxlarge" style="list-style-type: none;">
+                  <li>Captures relative MTL integrity accounting for surrounding atrophy</li>
+                  <li>Reduces dependence on head-size normalization</li>
+                  <li>Enhances sensitivity to age-related neurodegeneration</li>
                 </ul>
               </div>
             </div>
             <aside class="notes">
-              Ventricular enlargement is a marker of brain atrophy <br>
-              Used manual segmentation to compute the ratio between prehippocampal CSF and hippocampal volume<br>
+              "But even biologically motivated indices like HVR benefit from being embedded in
+              models that account for complex multivariate structure — such as
+              latent cognition and indirect effects." <br>
+              <br>
+              The HVR offers a simple yet biologically grounded alternative —
+              contextualizing hippocampal atrophy with its surrounding
+              ventricular space.
+              <br>
+              Because both structures are affected by neurodegeneration, the
+              ratio can offer a more stable and sensitive index of MTL
+              integrity.
+              <br>
               HVR showed significantly stronger negative associations with age and was a better predictor of memory
               compared to standard hippocampal volume<br>
               50+88 CN people 66/65 +/- 4.96/6.42yo <br>Memory: Cue Recall Procedure / Rey Auditory Verbal Learning Task
             </aside>
           </section>
-        </section>
-        <section>
           <section>
-            <h1>Context</h1>
+            <h3>Structural Equation Modeling (SEM)</h3>
+            <div class="w3-row-padding w3-stretch">
+              <div class="w3-half">
+                <ul class="w3-ul w3-xxlarge" style="list-style-type: none;">
+                  <li>
+                    Cognitive function:<br>
+                    multidimensional &amp; highly intercorrelated
+                  </li>
+                  <li>Simple regression may fail to account for these complexities</li>
+                  <li>(SEM) allows:
+                    <ul class="w3-ul w3-xlarge" style="list-style-type: none;">
+                      <li>Latent variable modeling</li>
+                      <li>Simultaneous estimations</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="w3-half">
+                <figure>
+                  <img src="imgs/ts/sem_neuroimage.png" alt="SEM">
+                  <figcaption>
+                    <a href="https://doi.org/10.1016/j.intell.2015.05.001" class="w3-medium" style="color:gray">
+                      Ritchie, et al (2015)
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <aside class="notes">
+              Cognitive functioning is complex — domains like memory, executive
+              function, and processing speed overlap.
+
+              Instead of treating each measure separately, SEM lets us model
+              latent constructs that capture shared variance.
+
+              Crucially, SEM allows us to evaluate associations with imaging
+              metrics like HVR while accounting for intercorrelations across
+              cognitive domains — something simple regressions can’t handle
+              well.
+            </aside>
           </section>
-          <section data-auto-animate>
-            <h3>Aging, Cognition, and Brain Imaging</h3>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>
-                Cognitive aging is a major area of concern in neuroscience and public health.
-              </li>
-              <li>
-                Brain atrophy—especially in the hippocampus—is linked to memory loss and dementia.
-              </li>
-              <li>
-                Structural MRI allows non-invasive tracking of brain changes.
-              </li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h3>Aging, Cognition, and Brain Imaging</h3>
-            <ul class="w3-ul" style="list-style-type:none;">
-              <li class="w3-xlarge">
-                Cognitive aging is a major area of concern in neuroscience and public health.
-              </li>
-              <li class="w3-xlarge">
-                Brain atrophy—especially in the hippocampus—is linked to memory loss and dementia.
-              </li>
-              <li class="w3-xlarge">
-                Structural MRI allows non-invasive tracking of brain changes.
-              </li>
-              <li class="w3-xxlarge">
-                <b>But raw hippocampal volume has limitations</b>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h3>HC biomarkers: Limitations</h3>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>
-                Sex differences in HC volume may be inflated or masked by total brain size.
-              </li>
-              <li>
-                Adjusting for head-size is not standardized.
-              </li>
-              <li>
-                Ventricular enlargement also marks neurodegeneration but is rarely modeled jointly.
-              </li>
-              <li>
-                Most models ignore nonlinear age effects and individual variability.
-              </li>
-            </ul>
-          </section>
-          <!--This is how to introduce tables-->
-          <!--<section>-->
-            <!--<iframe src="table-1_demog.html" style="width:100%; height:700px; border:none; overflow:auto;"></iframe>-->
-          <!--</section>-->
-          <!--That was how to introduce tables-->
         </section>
         <section>
           <section>
@@ -481,16 +458,16 @@
             <h3>Research Problem</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>
-                The hippocampus (HC) is a widely used structural MRI biomarker for aging and neurodegeneration.
+                The hippocampus (HC) is a widely used structural MRI biomarker for aging and neurodegeneration
               </li>
-              <li>
-                Yet, HC volume shows high variability even in healthy populations.
+              <li class="fragment">
+                Yet, <b>HC volume shows high variability</b> even in healthy populations
               </li>
-              <li>
-                Sex differences in HC are debated, often confounded by head-size normalization strategy.
+              <li class="fragment">
+                <b>Sex differences in HC are debated</b>, often confounded by head-size normalization strategy
               </li>
-              <li>
-                Interpretation of HC volume alone can be ambiguous across the lifespan or clinical groups.
+              <li class="fragment">
+                Interpretation of HC volume alone can be <b>ambiguous across the lifespan</b> or clinical groups
               </li>
             </ul>
           </section>
@@ -498,72 +475,21 @@
             <h3>Research Problem</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>
-                The hippocampus (HC) is a widely used structural MRI biomarker for aging and neurodegeneration.
-              </li>
-              <li>
-                Yet, <b>HC volume shows high variability</b> even in healthy populations.
-              </li>
-              <li>
-                <b>Sex differences in HC are debated</b>, often confounded by head-size normalization strategy.
-              </li>
-              <li>
-                Interpretation of HC volume alone can be <b>ambiguous across the lifespan</b> or clinical groups.
-              </li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h3>Research Problem</h3>
-            <ul class="w3-ul" style="list-style-type:none;">
-              <li class="w3-xlarge">
-                The hippocampus (HC) is a widely used structural MRI biomarker for aging and neurodegeneration.
-              </li>
-              <li class="w3-xlarge">
-                Yet, <b>HC volume shows high variability</b> even in healthy populations.
-              </li>
-              <li class="w3-xlarge">
-                <b>Sex differences in HC are debated</b>, often confounded by head-size normalization strategy.
-              </li>
-              <li class="w3-xlarge">
-                Interpretation of HC volume alone can be <b>ambiguous across the lifespan</b> or clinical groups.
-              </li>
-              <li class="w3-xxlarge">
                 The hippocampal-to-ventricle ratio (HVR) was proposed as an alternative biomarker
               </li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h3>Research Problem</h3>
-            <ul class="w3-ul" style="list-style-type:none;">
-              <li class="w3-xlarge">
-                The hippocampus (HC) is a widely used structural MRI biomarker for aging and neurodegeneration.
-              </li>
-              <li class="w3-xlarge">
-                Yet, <b>HC volume shows high variability</b> even in healthy populations.
-              </li>
-              <li class="w3-xlarge">
-                <b>Sex differences in HC are debated</b>, often confounded by head-size normalization strategy.
-              </li>
-              <li class="w3-xlarge">
-                Interpretation of HC volume alone can be <b>ambiguous across the lifespan</b> or clinical groups.
-              </li>
-              <li class="w3-xxlarge">
-                The hippocampal-to-ventricle ratio (HVR) was proposed as an alternative biomarker
-              </li>
-              <ul class="w3-ul">
+              <ul class="w3-ul fragment">
                 <li class="w3-xlarge">
-                  It was proposed on a relatively small sample of healthy older adults.
+                  It was proposed on a relatively <b>small sample</b> of <b>healthy</b> older adults
                 </li>
                 <li class="w3-xlarge">
-                  It's manual calculation prohibits its use on large samples.
+                  It's <b>manual calculation</b> prohibits its use on large samples
                 </li>
               </ul>
             </ul>
           </section>
           <section data-auto-animate>
             <h2>Overall Research Aim</h2>
-          </section>
-          <section data-auto-animate>
-            <p>To ease, validate, and characterize the use of
+            <p class="fragment">To ease, validate, and characterize the use of
               hippocampal and ventricular biomarkers—particularly <b>the
                 hippocampal-to-ventricle ratio (HVR)</b>—for improved understanding
               of sex differences and cognitive decline in both aging and
@@ -572,54 +498,28 @@
         </section>
         <section>
           <section>
-            <h1 class="r-fit-text">Objectives, Questions<br>&amp; Hypotheses</h1>
+            <h1>Objectives<br>&amp; Hypotheses</h1>
           </section>
           <section>
             <h2>General Objectives</h2>
             <ul class="w3-ul w3-xlarge">
               <li>
-                Develop tools to ease the application and quality control of the
-                segmentations needed for the calculation of the HVR
+                Develop tools to <b>ease the application</b> and <b>quality control</b> of the
+                segmentations needed for the <b>calculation of the HVR</b>
               </li>
-              <li>
-                Validate and expand the preliminary results of HVR on a larger and clinical sample.
+              <li class="fragment">
+                Validate and expand the preliminary results of HVR on a <b>larger and clinical sample</b>
               </li>
-              <li>
-                Build normative models of HVR for its use in the clinic.
+              <li class="fragment">
+                Build <b>normative models</b> of HVR for its use in the clinic
               </li>
-              <li>
-                Explore and compare HVR with other ways of controlling for
-                head-size in medio-temporal volumetrics.
+              <li class="fragment">
+                Explore and compare HVR with <b>other ways of controlling for
+                  head-size</b> in medio-temporal volumetrics
               </li>
-              <li>
-                Test whether including ventricular data improves models linking
-                brain structure to cognitive performance.
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h2>Research questions</h2>
-            <ul class="w3-ul w3-xlarge">
-              <li>
-                Can collaborative QC tools make the assessment and curation of
-                data faster and more consistent?
-              </li>
-              <li>
-                Which segmentation method yields the most robust and accurate
-                HVR estimates?
-              </li>
-              <li>
-                Does HVR outperform conventional HC volumes in detecting group
-                (age, sex, clinical) differences and predicting cognitive
-                scores?
-              </li>
-              <li>
-                Does HVR-based models better explain cognitive performance and
-                sex differences than other head-size adjustment methods for the
-                HC?
-              </li>
-              <li>
-                Does ventricular volume help explain difference in cognition?
+              <li class="fragment">
+                Test whether including <b>ventricular data</b> improves models
+                linking brain structure to cognitive performance
               </li>
             </ul>
           </section>
@@ -628,24 +528,24 @@
             <ul class="w3-ul w3-xlarge">
               <li>
                 The process of data curation and inspection can be
-                made faster and more robust with the use of collaborative
-                software.
+                made <b>faster</b> and <b>more robust</b> with the use of
+                collaborative software
               </li>
-              <li>
-                Novel CNN-based segmentations yield more accurate and robust HVR
-                estimates than older methods.
+              <li class="fragment">
+                Novel CNN-based segmentations yield <b>more accurate and
+                  robust</b> HVR estimates than older methods
               </li>
-              <li>
-                HVR shows stronger associations with aging and cognition than
-                conventional HC volume.
+              <li class="fragment">
+                HVR shows <b>stronger associations</b> with <b>aging and cognition</b> than
+                conventional HC volume
               </li>
-              <li>
-                Normative models using HVR are more sensitive to age effects
-                than those using conventional HC volume.
+              <li class="fragment">
+                Normative models using HVR are <b>more sensitive to age effects</b>
+                than those using conventional HC volume
               </li>
-              <li>
-                Models including both HC and ventricular volumes better predict
-                cognition than those with HC alone.
+              <li class="fragment">
+                Models including both <b>HC and ventricular volumes</b> better
+                <b>predict cognition</b> than those with HC alone
               </li>
             </ul>
           </section>
@@ -662,30 +562,29 @@
               </span>
             </h2>
           </section>
-          <section data-auto-animate>
+          <section>
             <h2>Why we needed it?</h2>
-          </section>
-          <section data-auto-animate>
-            <h2>Why we needed it?</h2>
-            <ul class="w3-ul w3-xlarge">
+            <ul class="w3-ul w3-xxlarge fragment" style="list-style-type:none;">
               <li>QC was a bottleneck: thousands of MRI segmentations needed checking</li>
               <li>Existing tools were slow, non-collaborative, and hard to scale</li>
-              <li>Needed: A fast, shared tool to view and rate images across raters</li>
+              <li class="fragment">
+                We needed a fast tool to view and rate images across raters
+              </li>
             </ul>
           </section>
           <section>
-            <p>So I built <b>Qrater</b></p>
+            <p class="w3-jumbo">So I built <b>Qrater</b></p>
           </section>
           <section data-auto-animate>
-            <h3>Qrater</h3>
+            <h2>Qrater</h2>
             <div class="w3-row-padding w3-stretch">
               <div class="w3-half">
                 <img src="imgs/ts/qrater.png" alt="qrater" style="width:100%; max-width:900px">
               </div>
               <div class="w3-half">
                 <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-                  <li>Web-based. Works with any 2D image.</li>
-                  <li>Multiple users can work on the same data simultaneously.</li>
+                  <li>Web-based. Works with any 2D image</li>
+                  <li>Multiple users can work on the same data simultaneously</li>
                   <li>Feature-rich:</li>
                   <ul class="w3-ul w3-xlarge">
                     <li>Brightness/contrast controls</li>
@@ -712,7 +611,7 @@
               <div class="w3-half">
                 <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
                   <li><b>Raw unprocessed T1w brain images</b></li>
-                  <li>T1w brain images non-linearly registered to standard template</li>
+                  <li>T1w brain images linearly registered to standard template</li>
                   <li>Output of experimental skull extraction pipeline</li>
                 </ul>
               </div>
@@ -728,7 +627,7 @@
               <div class="w3-half">
                 <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
                   <li>Raw unprocessed T1w brain images</li>
-                  <li><b>T1w brain images non-linearly registered to standard template</b></li>
+                  <li><b>T1w brain images linearly registered to standard template</b></li>
                   <li>Output of experimental skull extraction pipeline</li>
                 </ul>
               </div>
@@ -744,16 +643,14 @@
               <div class="w3-half">
                 <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
                   <li>Raw unprocessed T1w brain images</li>
-                  <li>T1w brain images non-linearly registered to standard template</li>
+                  <li>T1w brain images linearly registered to standard template</li>
                   <li><b>Output of experimental skull extraction pipeline</b></li>
                 </ul>
               </div>
             </div>
           </section>
-          <section>
-            <h2>Does it work?</h2>
-          </section>
           <section data-auto-animate>
+            <h2>Does it work?</h2>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>Collaboration features are useful for training </li>
               <li>Faster QC </li>
@@ -766,6 +663,7 @@
             </aside>
           </section>
           <section data-auto-animate>
+            <h2>Does it work?</h2>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>Collaboration features are useful for training<br>
                 <span class="w3-xlarge">
@@ -785,9 +683,11 @@
             </aside>
           </section>
           <section data-auto-animate>
+            <h2>Does it work?</h2>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>Collaboration features are useful for training </li>
-              <li>Faster QC </li>
+              <li>Collaboration features are useful for training</li>
+              <li>Faster QC
+              </li>
             </ul>
             <aside class="notes">
               Even with the high speeds, we got good consistency between raters
@@ -797,6 +697,7 @@
             </aside>
           </section>
           <section data-auto-animate>
+            <h2>Does it work?</h2>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>Collaboration features are useful for training</li>
               <li>Faster QC<br>
@@ -828,9 +729,9 @@
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>Build to solve a bottleneck in large-scale neuroimaging QC</li>
               <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-                <li>Enables faster and more consisten image rating.</li>
+                <li>Enables faster and more consisten image rating</li>
                 <li>Versatile enough for raw MRI, registration, segmentation tasks,
-                  and many more.</li>
+                  and many more</li>
               </ul>
               <li>Adopted beyond this project and my own use</li>
             </ul>
@@ -844,21 +745,10 @@
               <li>Build to solve a bottleneck in large-scale neuroimaging QC</li>
               <li>Adopted beyond this project and my own use</li>
               <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-                <li>Available on DockerHub and used by other labs.</li>
-                <li>50+ datasets uploaded in our own instance.</li>
-                <li>250K+ images loaded and rated by our team.</li>
+                <li>Available on DockerHub and used by other labs</li>
+                <li>
+                  <b>250K+ images</b> loaded and rated by our team</li>
               </ul>
-            </ul>
-            <aside class="notes">
-              Curated acquisition of almost all of ADNI3
-            </aside>
-          </section>
-          <section data-auto-animate>
-            <h3>Chapter 1 Summary — Qrater in Use</h3>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>Build to solve a bottleneck in large-scale neuroimaging QC</li>
-              <li>Adopted beyond this project and my own use</li>
-              <li>Enabled reliable QC for segmentation validation and HVR estimation</li>
             </ul>
             <aside class="notes">
               Curated acquisition of almost all of ADNI3
@@ -875,56 +765,12 @@
               Automated HVR in AD patients
             </h2>
           </section>
-          <section data-auto-animate>
+          <section>
             <h2>From Potential to Practice</h2>
-          </section>
-          <section data-auto-animate>
-            <h2>From Potential to Practice</h2>
-            <ul class="w3-ul w3-xxlarge">
-              <li>HVR had shown promise, but only in a small, controlled sample.</li>
-              <li>We needed a way to compute it efficiently, reliably, and at
-                scale.</li>
-              <li>And we needed to know if it actually hel up in clinical
-                populations.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h2>Goals</h2>
-            <ul class="w3-ul w3-xxlarge">
-              <li>Automatize the calculation of HVR</li>
-              <li>Confirm its preliminary results on a larger clinical sample</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h2>Goals</h2>
-            <ul class="w3-ul w3-xxlarge">
-              <li>Automatize the calculation of HVR</li>
-              <ul class="w3-ul w3-xlarge">
-                <li>Compare the performance of different segmentation methods</li>
-                <li>Build a Docker tool for easy implementability by other users</li>
-              </ul>
-              <li>Confirm its preliminary results on a larger clinical sample</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h2>Goals</h2>
-            <ul class="w3-ul w3-xxlarge">
-              <li>Automatize the calculation of HVR</li>
-              <li>Confirm its preliminary results on a larger clinical sample</li>
-              <ul class="w3-ul w3-xlarge">
-                <li>
-                  Calculate HVR on ADNI data of:<br>
-                  <span class="w3-large">
-                    cognitively healthy (CH), mild cognitively-impaired (MCI), and AD patients
-                  </span>
-                </li>
-                <li>
-                  Compare it to conventional HC volume on:<br>
-                  <span class="w3-large">
-                    Patient—Control effect sizes &amp; age, memory and general cognition correlation
-                  </span>
-                </li>
-              </ul>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>HVR had shown promise<span class="fragment">, in a small healthy sample</span></li>
+              <li class="fragment">A way to compute it efficiently, reliably, and at scale</li>
+              <li class="fragment">Know if it held up in clinical populations</li>
             </ul>
           </section>
           <section data-auto-animate>
@@ -1020,7 +866,9 @@
             </ul>
           </section>
           <section>
-            <h3>Automatic segmentation performance</h3>
+            <h2>Automatic segmentation performance</h2>
+          </section>
+          <section>
             <figure>
               <img src="imgs/ts/hvr_valid_f1.png" alt="Segmentation performance violin plots" style="width:100%; max-width:1000px">
             </figure>
@@ -1030,7 +878,7 @@
           <section>
             <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
               <div class="w3-container" style="width: 33.3333%; display: flex; align-items: center; justify-content: center;">
-                <h3 class="w3-center">Manual-Computed volume relationships</h3>
+                <h4 class="w3-center">Manual-Computed volume relationship</h4>
               </div>
               <div class="w3-container" style="width: 66.6667%;">
                 <figure>
@@ -1043,7 +891,6 @@
             </aside>
           </section>
           <section>
-            <h3>Bland-altman plots</h3>
             <figure>
               <img src="imgs/ts/hvr_valid_f3.png" alt="Bland-altman plots of segmentations" style="width:100%; max-width:1000px">
             </figure>
@@ -1060,18 +907,23 @@
               <li>Strong Manual-Computed correlations:<br>
                 <span class="w3-xlarge">0.94 for CH; 0.93-0.96 for MCI; 0.9-0.96 for AD.</span>
               </li>
-              <li>Minimal bias in volume estimates across the groups.</li>
+              <li>Minimal bias in volume estimates across the groups</li>
             </ul>
           </section>
           <section>
             <h2>Application on ADNI data</h2>
           </section>
           <section>
-            <h3>Demographics</h3>
-            <iframe src="tbls/ts/hvr_valid_t1.html" style="width:100%; height:400px; border:none; overflow:auto;"></iframe>
+            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
+              <div class="w3-container" style="width: 33.3333%; display: flex; align-items: center; justify-content: center;">
+                <h3 class="w3-center">Demographics</h3>
+              </div>
+              <div class="w3-container" style="width: 66.6667%;">
+                <iframe src="tbls/ts/hvr_valid_t1.html" style="width:100%; height:400px; border:none; overflow:auto;"></iframe>
+              </div>
+            </div>
           </section>
           <section>
-            <h3>Difference in HC &amp; HVR across methods</h3>
             <figure>
               <iframe src="tbls/ts/hvr_valid_t2_1.html" style="width:100%; height:350px; border:none; overflow:auto;"></iframe>
             </figure>
@@ -1081,7 +933,7 @@
           <section>
             <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
               <div class="w3-container" style="width: 33.3333%; display: flex; align-items: center; justify-content: center;">
-                <h3 class="w3-center">Number of failures across methods</h3>
+                <h4 class="w3-center">Number of failures methods</h4>
               </div>
               <div class="w3-container" style="width: 66.6667%;">
                 <iframe src="tbls/ts/hvr_valid_t2_2.html" style="width:100%;
@@ -1091,8 +943,8 @@
             <aside class="notes">
             </aside>
           </section>
-          <section>
-            <h3>Similarity &amp; effect sizes: Hippocampus</h3>
+          <section >
+            <h4>Similarity &amp; effect sizes: Hippocampus</h4>
             <figure>
               <img src="imgs/ts/hvr_valid_f4.png" alt="Similarity HCv"
                 style="width:100%; max-width:700px">
@@ -1101,7 +953,7 @@
             </aside>
           </section>
           <section>
-            <h3>Similarity &amp; effect sizes: HVR</h3>
+            <h4>Similarity &amp; effect sizes: HVR</h4>
             <figure>
               <img src="imgs/ts/hvr_valid_f5.png" alt="Similarity HVR"
                 style="width:100%; max-width:700px">
@@ -1112,14 +964,23 @@
           <section>
             <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
               <div class="w3-container" style="width: 33.3333%; display: flex; align-items: center; justify-content: center;">
-                <h3 class="w3-center">Correlations with age, RAVLT &amp; ADAS13</h3>
+                <h4 class="w3-center">Correlations:<br>Age,<br>RAVLT<br>&amp; ADAS13</h4>
               </div>
               <div class="w3-container" style="width: 66.6667%;">
               <img src="imgs/ts/hvr_valid_f6.png" alt="Correlations HCv-HVR" style="width:100%; max-width:1200px">
               </div>
             </div>
           </section>
-          <section>
+          <section data-auto-animate>
+            <h3>Chapter 2 Summary — HVR Validated</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>HVR can be computed automatically and reliably:</li>
+              <li>HVR caputres clinically relevant changes:</li>
+            </ul>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
             <h3>Chapter 2 Summary — HVR Validated</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>HVR can be computed automatically and reliably:</li>
@@ -1129,6 +990,15 @@
                 <li>Dockerized tool enables fast, reproducible HVR estimation in
                 large datasets.</li>
               </ul>
+              <li>HVR caputres clinically relevant changes:</li>
+            </ul>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Chapter 2 Summary — HVR Validated</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>HVR can be computed automatically and reliably:</li>
               <li>HVR caputres clinically relevant changes:</li>
               <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
                 <li>Efect sizes for CH-AD were stronger than HC volume alone.</li>
@@ -1150,23 +1020,15 @@
               Sex, Head Size, and Brain Structure: Modeling Cognition in Aging Adults
             </h2>
           </section>
-          <section data-auto-animate>
+          <section>
             <h2>Scaling up what we found</h2>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>In the ADNI sample, HVR showed stronger associations with age
-                than HC.</li>
-              <li>We hypothesized that HVR's sensitivity to age-related
-                neurodegeneration was driven by its ventricular component.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h2>Scaling up what we found</h2>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>In the ADNI sample, HVR showed stronger associations with age
-                than HC.</li>
-              <li>We hypothesized that HVR's sensitivity to age-related
-                neurodegeneration was driven by its ventricular component.</li>
-              <li><b>So we decided to explore this in a much larger sample.</b></li>
+              <li>ADNI: HVR showed stronger associations with age</li>
+              <li class="fragment">Our hypothesis:<br>
+                HVR's sensitivity to age-related neurodegeneration is driven
+                by its ventricular component</li>
+              <li class="fragment">So we decided to explore this in
+                <b>a much larger sample</b></li>
             </ul>
           </section>
           <section>
@@ -1178,105 +1040,114 @@
                 <iframe src="tbls/ts/ukbb_t1.html" style="width:120%; height:600px; border:none; overflow:auto;"></iframe>
               </div>
             </div>
+            <aside class="notes">
+              INPUT: 42,776 first visits (BL) & 4,261 follow-ups (FU) In-house
+              pre-processing pipeline Hippocampus & lateral ventricle
+              segmentation In-house CNN (Hippocampus & Ventricles) & AssemblyNet
+              (replication analyses) Quality Control Automatic QC (AssemblyNet,
+              DARQ) & outlier removal [vols lower than 3 Z-scores] Clinical
+              filtering Psychiatric or Central Nervous System Diagnoses — F, G
+              or Q0 Dx in ICD 10 For cross-sectional analysis used first of
+              either BL/FU that passed QC
+            </aside>
           </section>
           <section>
-            <h2>Non-linear Aging Trajectories of HC, HVR, and lateral ventricles</h2>
+            <h2>Non-linear Aging Trajectories</h2>
           </section>
           <section data-auto-animate>
-            <h3>Aging Trajectories of<br>HC, HVR, and lateral ventricles</h3>
+            <h3>HC, HVR, and lateral ventricles</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>We used GAMLSS to model the non-linear aging trajectories of
-                HC, HVR and the lateral ventricles.</li>
+                HC, HVR and the temporal horns of the lateral ventricles</li>
               <li>From these models, we derived:</li>
               <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
                 <li>Z-scores to assess individual deviations.</li>
                 <li>Normative tables across the later lifespan.</li>
               </ul>
             </ul>
+            <aside class="notes">
+              Generalized Additive Models for Location, Scale, and Shape (GAMLSS):
+              Chosen for flexibility in modelling nonlinear age effects and
+              non-normal distributions. Box-Cox Cole & Green (BCCG) were selected
+              over Normal distributions by comparing AIC/BIC. Measures modeled:
+              Hippocampal volume (Unadjusted, Proportions method, and Residuals
+              method) Lateral ventricular volume  (Unadjusted, Proportions method,
+              and Residuals method) HVR (Residuals method) Stratified by Sex.
+              Predictors: Age (modeled as smooth, nonlinear effect); Sex &
+              Education as covariates. TIV was also added as covariate only on the
+              unadjusted volumes. Outcomes: Age- and sex-adjusted normative
+              centiles (10th to 90th, intervals of 5) Individualized Z-scores
+              using model-derived parameters
+            </aside>
           </section>
           <section data-auto-animate>
-            <h3>Aging Trajectories of<br><b>HC</b>, HVR, and lateral ventricles</h3>
+            <h3><b>HC</b>, HVR, and lateral ventricles</h3>
             <img src="imgs/ts/ukbb_f1.png" alt="qrater" style="width:100%; max-width:800px">
           </section>
           <section data-auto-animate>
-            <h3>Aging Trajectories of<br> HC, <b>HVR</b>, and lateral ventricles</h3>
+            <h3>HC, <b>HVR</b>, and lateral ventricles</h3>
             <img src="imgs/ts/ukbb_f2.png" alt="qrater" style="width:100%; max-width:800px">
           </section>
           <section data-auto-animate>
-            <h3>Aging Trajectories of<br> HC, HVR, and <b>lateral ventricles</b></h3>
+            <h3>HC, HVR, and <b>lateral ventricles</b></h3>
             <img src="imgs/ts/ukbb_f3.png" alt="qrater" style="width:100%; max-width:800px">
           </section>
           <section>
-            <h3>Age-related patterns vary by marker</h3>
+            <h3>Age-related patterns <b>vary by marker</b></h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>HC shows a shallow decline with age.</li>
-              <li>The lateral ventricles increase more strongly across the lifespan.</li>
-              <li>HVR, besides showing less variability in early adulthood,
-                captures both effects, showing a steeper non-linear aging
-                pattern.</li>
+            <li><b>HC:</b> modest age related decline; roughly linear</li>
+              <li><b>Lateral ventricles:</b> clear increase with age</li>
+              <li>
+                <b>HVR:</b>narrower percentiles in early age<br>
+                Captures imabalance between HC loss and ventricular expansion
+              </li>
             </ul>
+            <aside class="notes">
+              Hippocampal Volume (HC) plot: The centile bands (p10–p90) remain
+              fairly consistently wide across the lifespan.
+
+              Variability is already present in mid-adulthood (~50s–60s).
+
+              Suggests early inter-individual differences that may reflect both
+              brain size and segmentation noise—even after ICV correction.
+
+              HVR plot: Noticeably narrower centile spread (especially in the
+              50–65 age range).
+
+              Tighter clustering around the median (p50), especially in females.
+
+              Variability increases more sharply after age 70, especially in
+              males.
+
+              Interpretation: HVR shows reduced mid-life variability → suggests
+              it is less influenced by residual anatomical confounds (e.g., head
+              size, segmentation biases).
+
+              The increase in variability in older age likely reflects
+              pathological divergence, not early noise.
+
+              This supports the idea that HVR "normalizes" anatomical
+              variability and enhances sensitivity to deviation that truly
+              reflects neurodegeneration—rather than background anatomical
+              variation.
+            </aside>
           </section>
           <section>
-            <h3>Do these structural changes relate to cognition?</h3>
+            <h3>Age-related patterns <b>vary by sex</b></h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>We used the GAMLSS model's derived Z-scores to quantify the individual
-              deviations from age-normed HC and HVR trajectories.</li>
-              <li>We tested how HC and HVR Z-scores relate to three cognitive domains. </li>
-            </ul>
-          </section>
-          <section>
-            <h3>Structural Equation Modeling</h3>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>Measurement model</li>
-              <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-                <li>Cognitive domains built as a latent variable from relevant observed cognitive scores.</li>
-                <li>Memory, Executive Function, Processing Speed</li>
-              </ul>
-              <li>Structural model</li>
-              <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-                <li>Endogenous variables: Cognitive domains</li>
-                <li>Exogenous variables: HC & HVR Z-scores</li>
-              </ul>
-            </ul>
-          </section>
-          <!--<section>-->
-            <!--<h3>SEM: Model fit</h3>-->
-            <!--<iframe src="tbls/ts/ukbb_t2.html" style="width:100%; height:200px; border:none; overflow:auto;"></iframe>-->
-          <!--</section>-->
-          <section>
-            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
-              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
-                <h3 class="w3-center">SEM: Measurement model</h3>
-              </div>
-              <div class="w3-container" style="width: 70%;">
-                <iframe src="tbls/ts/ukbb_t3.html" style="width:100%; height:600px; border:none; overflow:auto;"></iframe>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
-              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
-                <h3 class="w3-center">SEM: Structural model</h3>
-              </div>
-              <div class="w3-container" style="width: 70%;">
-                <iframe src="tbls/ts/ukbb_t4.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
-              </div>
-            </div>
-          </section>
-          <section data-auto-animate>
-            <h3>What lies beyond the Z-scores?</h3>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>HC &amp; HVR Z-scores showed modest but significant associations
-                with cognition, with HVR consistently lower in magnitude.</li>
-              <li>Z-scores inherently control for covariates; which may mask relevant variance.</li>
+              <li>Residual sex effects remain even after covariate adjustment</li>
+              <li class="fragment">Males consistently show larger ventricular volumes, with wider
+                centiles</li>
+              <li class="fragment">Males have more pronounced divergence in both lateral
+                ventricles &amp; HVR</li>
             </ul>
           </section>
           <section data-auto-animate>
-            <h3>What lies beyond the Z-scores?</h3>
+            <h3>Are sex differences real or just a by-product of head-size?</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>To further probe structural-cognitive associations, we
-                directly compared different head-size adjustment strategies.</li>
-              <li>This next section evaluates raw vs adjusted vs ratio-based approaches using SEM model fit and effect size metrics.</li>
+              <li>Head-size correction impacts the direction and size of sex differences</li>
+              <li>It's unclear if these are true biological differences or artifacts of brain-size</li>
+              <li class="fragment">To assess this, we compared <b>Male-Female</b> effect sizes in a matched subsample</li>
             </ul>
           </section>
           <section data-auto-animate>
@@ -1347,6 +1218,159 @@
             </ul>
           </section>
           <section>
+            <h3>Matched subsample</h3>
+              <iframe src="tbls/ts/ukbb_t10.html" style="width:100%; height:650px; border:none; overflow:auto;"></iframe>
+            <aside class="notes">
+              Subsample of age and head-size matched males and females
+              Age: matched with a tolerance of ±1 year
+              Head size: matched based on TIV proximity, tolerance of ±25 voxels
+            </aside>
+          </section>
+          <section>
+            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
+              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
+                <h3 class="w3-center">Complete sample</h3>
+              </div>
+              <div class="w3-container" style="width: 70%;">
+                <img src="imgs/ts/ukbb_f4.png" alt="qrater" style="width:100%; max-width:700px">
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
+              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
+                <h3 class="w3-center">Matched sample</h3>
+              </div>
+              <div class="w3-container" style="width: 70%;">
+                <img src="imgs/ts/ukbb_f5.png" alt="qrater" style="width:100%; max-width:700px">
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
+              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
+                <h3 class="w3-center">Complete sample<br>(Ventricles)</h3>
+              </div>
+              <div class="w3-container" style="width: 70%;">
+                <img src="imgs/ts/ukbb_f6.png" alt="qrater" style="width:100%; max-width:700px">
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
+              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
+                <h3 class="w3-center">Matched sample<br>(Ventricles)</h3>
+              </div>
+              <div class="w3-container" style="width: 70%;">
+                <img src="imgs/ts/ukbb_f7.png" alt="qrater" style="width:100%; max-width:700px">
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h3>Persistent sex differences</h3>
+            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+              <li>Matching males and females on ICV <b>minimized volume differences in raw HC</b></li>
+              <li>Proportional and residual adjustments <b>reduced or reversed sex effects</b></li>
+              <li>HVR consistently preserved <b>modest but meaningful sex differences</b></li>
+              <li>Ventricular volume retained sex effects, <b>independently of adjustment</b></li>
+              <li class="fragment">Suggests that some sex differences in brain structure are not explained by head size.</li>
+              <li class="fragment"><b>HVR may capture these residual biological differences more
+                faithfully than conventional corrections</b></li>
+            </ul>
+          </section>
+          <section>
+            <h3>What about cognition?</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>We used the derived Z-scores to quantify the individual
+              deviations from age-normed HC and HVR trajectories</li>
+              <li class="fragment">
+                We tested how HC &amp; HVR related differently to cognition
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Structural Equation Modeling</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Measurement model</li>
+              <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+                <li>Cognitive domains built as latent variables</li>
+                <li>Memory, Executive Function &amp; Processing Speed</li>
+              </ul>
+              <li>Structural model</li>
+              <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
+                <li>Endogenous variables: Cognitive domains</li>
+                <li>Exogenous variables: HC or HVR Z-scores</li>
+              </ul>
+            </ul>
+            <aside class="notes">
+              Maximum Likelihood (ML) estimation
+              Standard errors and 95% confidence intervals calculated with
+              bootstrap 10k iterations
+              OLS Regression estimates the relationship between a set of predictors
+              (independent variables) and a single outcome (dependent variable)
+              by minimizing the sum of squared differences between observed and
+              predicted values (least squares).
+
+              It’s a single equation, all variables are observed, and assumes
+              predictors are measured without error.
+
+              SEM can:
+
+              Handle Multiple Equations: Model several dependent variables at
+              once.
+
+              Incorporate Latent Variables: Include factors not directly
+              measured (e.g., “cognition” as a latent variable measured by
+              several cognitive tests).
+
+              Account for Measurement Error: Estimates relationships taking into
+              account error in observed variables.
+
+              Model Indirect Effects and Mediation: SEM can estimate direct and
+              indirect (mediated) pathways, something not possible in a single
+              OLS regression.
+
+              Use Full Covariance Matrix: SEM uses all relationships
+              (variances/covariances) among variables, not just means.
+            </aside>
+          </section>
+          <section>
+            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
+              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
+                <h3 class="w3-center">Measurement model</h3>
+              </div>
+              <div class="w3-container" style="width: 70%;">
+                <iframe src="tbls/ts/ukbb_t3.html" style="width:100%; height:600px; border:none; overflow:auto;"></iframe>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
+              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
+                <h3 class="w3-center">Structural model</h3>
+              </div>
+              <div class="w3-container" style="width: 70%;">
+                <iframe src="tbls/ts/ukbb_t4.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>What lies beyond the Z-scores?</h3>
+            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
+              <li>Z-scores showed modest, but significant associations
+                with cognition</li>
+              <li>HVR associations were consistently lower in
+                magnitude</li>
+              <li class="fragment">
+                  Z-scores inherently control for covariates; which <b>may mask relevant variance</b>
+              </li>
+              <li class="fragment">
+                We decided to explore how covariates &amp; head-size
+                adjustment affected the MTL-cognition associations
+              </li>
+            </ul>
+          </section>
+          <section>
             <h3>Structural Equation Modeling</h3>
             <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
               <li>Measurement model</li>
@@ -1359,7 +1383,7 @@
                 <li>Exogenous variables:
                   <ul class="w3-ul w3-large" style="list-style-type:none;">
                     <li>Hippocampal &amp; Ventricular volumetrics</li>
-                    <li>TIV, Age, Sex, &amp; Education as covariates.</li>
+                    <li>TIV, Age, Sex, &amp; Education as covariates</li>
                   </ul>
                 </ul>
               </ul>
@@ -1367,188 +1391,102 @@
           <section>
             <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
               <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
-                <h3 class="w3-center">SEM: Measurement model</h3>
+                <h3 class="w3-center">Measurement model</h3>
               </div>
               <div class="w3-container" style="width: 70%;">
                 <iframe src="tbls/ts/ukbb_t5.html" style="width:100%; height:600px; border:none; overflow:auto;"></iframe>
               </div>
             </div>
           </section>
-          <section>
-            <h3>SEM: Structural model</h3>
+          <section data-auto-animate>
+            <h3>Structural model</h3>
             <h4>Memory</h4>
             <iframe src="tbls/ts/ukbb_t6-mem.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
           </section>
-          <section>
-            <h3>SEM: Structural model</h3>
-            <h4>Executive Function</h4>
-            <iframe src="tbls/ts/ukbb_t6-exec.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
-          </section>
-          <section>
-            <h3>SEM: Structural modelProcessing Speed</h3>
-            <h4>Processing Speed</h4>
-            <iframe src="tbls/ts/ukbb_t6-prsp.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
-          </section>
-          <section>
-            <h3>SEM: Structural model</h3>
+          <section data-auto-animate>
+            <h3>Structural model</h3>
             <h4>Memory</h4>
             <iframe src="tbls/ts/ukbb_t7-mem.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
           </section>
-          <section>
-            <h3>SEM: Structural model</h3>
-            <h4>Executive Function</h4>
-            <iframe src="tbls/ts/ukbb_t7-exec.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
-          </section>
-          <section>
-            <h3>SEM: Structural modelProcessing Speed</h3>
-            <h4>Processing Speed</h4>
-            <iframe src="tbls/ts/ukbb_t7-prsp.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
-          </section>
-          <section>
-            <h3>SEM: Structural model</h3>
+          <section data-auto-animate>
+            <h3>Structural model</h3>
             <h4>Memory</h4>
             <iframe src="tbls/ts/ukbb_t8-mem.html" style="width:100%; height:500px; border:none; overflow:auto;"></iframe>
           </section>
-          <section>
-            <h3>SEM: Structural model</h3>
+          <section data-auto-animate>
+            <h3>Structural model</h3>
+            <h4>Executive Function</h4>
+            <iframe src="tbls/ts/ukbb_t6-exec.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
+          </section>
+          <section data-auto-animate>
+            <h3>Structural model</h3>
+            <h4>Executive Function</h4>
+            <iframe src="tbls/ts/ukbb_t7-exec.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
+          </section>
+          <section data-auto-animate>
+            <h3>Structural model</h3>
             <h4>Executive Function</h4>
             <iframe src="tbls/ts/ukbb_t8-exec.html" style="width:100%; height:500px; border:none; overflow:auto;"></iframe>
           </section>
-          <section>
-            <h3>SEM: Structural modelProcessing Speed</h3>
+          <section data-auto-animate>
+            <h3>Structural model</h3>
+            <h4>Processing Speed</h4>
+            <iframe src="tbls/ts/ukbb_t6-prsp.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
+          </section>
+          <section data-auto-animate>
+            <h3>Structural model</h3>
+            <h4>Processing Speed</h4>
+            <iframe src="tbls/ts/ukbb_t7-prsp.html" style="width:100%; height:450px; border:none; overflow:auto;"></iframe>
+          </section>
+          <section data-auto-animate>
+            <h3>Structural model Speed</h3>
             <h4>Processing Speed</h4>
             <iframe src="tbls/ts/ukbb_t8-prsp.html" style="width:100%; height:500px; border:none; overflow:auto;"></iframe>
           </section>
           <section>
             <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
               <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
-                <h3 class="w3-center">SEM: Models' Fit</h3>
+                <h3 class="w3-center">Models' Fit</h3>
               </div>
               <div class="w3-container" style="width: 70%;">
               <iframe src="tbls/ts/ukbb_t9.html" style="width:100%; height:650px; border:none; overflow:auto;"></iframe>
               </div>
             </div>
+            <aside class="notes">
+              “Here we compare several adjustment strategies. The HVR model, with
+              or without additional TIV adjustment, achieves fit indices
+              comparable to traditional covariate and residuals approaches,
+              suggesting it’s a robust alternative for capturing disease-related
+              brain changes. The proportions method, though strong in some
+              indices, may introduce model misfit. Overall, these findings
+              highlight the value of including both hippocampal and ventricular
+              information—either as covariates or through their ratio—to model
+              neurodegeneration more accurately.”
+            </aside>
           </section>
           <section>
             <h3>SEM: Summary of findings</h3>
             <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-              <li>All model were structurally identical; only the HC input differed.</li>
-              <li>HC Proportions-adjusted models were the less reliable.</li>
-              <li>HVR consistently showed stronger associations with cognition.</li>
-              <li>Adding TIV as a covariate flipped the Sex-effects on cognition.</li>
-              <li>AIC/BIC favoured the full models (HC + TIV + LV), but CFI/TLI favoured HVR models.</li>
-            </ul>
-          </section>
-          <section data-auto-animate><h3 class="r-rit-text">Are sex differences
-            real<br>or<br> just a by-product of head-size?</h3></section>
-          <section data-auto-animate>
-            <h3>Are sex differences real or just a by-product of head-size?</h3>
-            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-              <li>Head-size correction methods impacted the direction and size of observed sex differences.</li>
-              <li>But it's unclear whether these are true biological differences or artifacts of brain-size variation.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h3>Are sex differences real or just a by-product of head-size?</h3>
-            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-              <li>Head-size correction methods impacted the direction and size of observed sex differences.</li>
-              <li>But it's unclear whether these are true biological differences or artifacts of brain-size variation.</li>
-              <li>To assess this, we compared <b>Male-Female</b> effect sizes in a subsample matched on TIV.</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Matched subsample</h3>
-              <iframe src="tbls/ts/ukbb_t10.html" style="width:100%; height:650px; border:none; overflow:auto;"></iframe>
-          </section>
-          <section>
-            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
-              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
-                <h3 class="w3-center">Sex effects: Complete sample</h3>
-              </div>
-              <div class="w3-container" style="width: 70%;">
-                <img src="imgs/ts/ukbb_f4.png" alt="qrater" style="width:100%; max-width:700px">
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
-              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
-                <h3 class="w3-center">Sex effects: Matched sample</h3>
-              </div>
-              <div class="w3-container" style="width: 70%;">
-                <img src="imgs/ts/ukbb_f5.png" alt="qrater" style="width:100%; max-width:700px">
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
-              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
-                <h3 class="w3-center">Sex effects: Complete sample<br>(Ventricles)</h3>
-              </div>
-              <div class="w3-container" style="width: 70%;">
-                <img src="imgs/ts/ukbb_f6.png" alt="qrater" style="width:100%; max-width:700px">
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
-              <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
-                <h3 class="w3-center">Sex effects: Matched sample<br>(Ventricles)</h3>
-              </div>
-              <div class="w3-container" style="width: 70%;">
-                <img src="imgs/ts/ukbb_f7.png" alt="qrater" style="width:100%; max-width:700px">
-              </div>
-            </div>
-          </section>
-          <section data-auto-animate>
-            <h3>Sex Differences After Matching for Head Size</h3>
-            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-              <li>Matching males and females on ICV minimized volume differences in raw HC.</li>
-              <li>Proportional and residual adjustments reduced or reversed sex effects.</li>
-              <li>HVR consistently preserved modest but meaningful sex differences.</li>
-              <li>Ventricular volume also retained sex effects, even after adjustment.</li>
-              <li>Suggests that some sex differences in brain structure are not explained by head size.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h3>Sex Differences After Matching for Head Size</h3>
-            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-              <li>Matching males and females on ICV minimized volume differences in raw HC.</li>
-              <li>Proportional and residual adjustments reduced or reversed sex effects.</li>
-              <li>HVR consistently preserved modest but meaningful sex differences.</li>
-              <li>Ventricular volume also retained sex effects, even after adjustment.</li>
-              <li>Suggests that some sex differences in brain structure are not explained by head size.</li>
-              <li><b>HVR may captures these residual biological differences more
-                faithfully than conventional corrections</b></li>
+              <li>All models were structurally identical—only HC input differed</li>
+              <li>Proportions-adjusted models were the less reliable</li>
+              <li>HVR consistently showed stronger associations with cognition</li>
+              <li>Adding TIV as a covariate flipped the sex-effects</li>
+              <li>AIC/BIC favoured the full models (HC + TIV + LV)</li>
+              <li>CFI/TLI favoured HVR models.</li>
             </ul>
           </section>
           <section data-auto-animate>
             <h3>Chapter 3 Summary — Structure, Adjustment &amp; Interpretation</h3>
             <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
               <li>Normative modeling showed HVR &amp; LV better captured
-                age-related structural change than HC</li>
-              <li>Z-scores analyses showed stronger cognitive associations for
-                HC; yet they were largely driven by head-size.</li>
-              <li>SEM comparisons showed head-size correction strategy alters
-                interpretability.</li>
+                age-related structural changes than HC</li>
               <li>Matched-sample results confirmed that HVR preserves sex effects
-                not explained by head-size.</li>
-            </ul>
-            <aside class="notes">
-            </aside>
-          </section>
-          <section data-auto-animate>
-            <h3>Chapter 3 Summary — Structure, Adjustment &amp; Interpretation</h3>
-            <ul class="w3-ul w3-xlarge" style="list-style-type:none;">
-              <li>Normative modeling showed HVR &amp; LV better captured
-                age-related structural change than HC</li>
+                not explained by head-size</li>
               <li>Z-scores analyses showed stronger cognitive associations for
-                HC; yet they were largely driven by head-size.</li>
+                HC; yet they were largely driven by head-size</li>
               <li>SEM comparisons showed head-size correction strategy alters
-                interpretability.</li>
-              <li>Matched-sample results confirmed that HVR preserves sex effects
-                not explained by head-size.</li>
-              <li><b>Across analyses, HVR proved sensitive to age, sex-effects,
+                interpretability</li>
+              <li class="fragment"><b>Across analyses, HVR proved sensitive to age, sex-effects,
                 structurally meaningful and less confounded by head-size.</b></li>
             </ul>
             <aside class="notes">
@@ -1563,7 +1501,7 @@
             <h2>Methodological Contributions</h2>
               <ol class="w3-ul w3-xlarge">
                 <li><b>Qrater:</b> Open-source web platform for collaborative
-                QC</li>
+                QC.</li>
                 <li><b>HVR Docker Tool:</b> User-friendly container for the
                   automatic segmentation and calculation of the HVR.</li>
                 <li><b>Normative Percentile Tables:</b> Generated and released
@@ -1614,31 +1552,20 @@
           </section>
         </section>
         <section>
-          <section>
+          <section data-auto-animate>
           <h1 class="r-fit-text">Thesis Completion Timeline</h1>
           </section>
-          <section data-auto-animate>
+          <section>
             <ul class="w3-ul w3-left-align w3-xlarge" style="max-width:800px; margin:auto;">
-              <li><strong>Chapter 1: Introduction</strong> (3–5pp) – 0% → ~3–4 days</li>
+              <li><strong>Chapter 1: Introduction</strong> (3–5pp) – Not started → ~3–4 days</li>
               <li><strong>Chapter 2: Background</strong> (25–35pp) – 15–20% → ~2–2.5 weeks</li>
               <li><strong>Chapter 3: Qrater</strong> – Published (formatting only) → ~2–3 days</li>
               <li><strong>Chapter 4: HVR Validation</strong> – Submitted (revisions) → ~5–14 days</li>
-              <li><strong>Chapter 5: Normative Models + Sex Effects</strong> – 40% → ~2.5–3 weeks</li>
+              <li><strong>Chapter 5: Normative Models + Sex Effects</strong> – In progress → ~2.5–3 weeks</li>
               <li><strong>Chapter 6: General Discussion</strong> – Not started → ~3 weeks</li>
               <li><strong>Formatting and front matter</strong> → ~1 week</li>
             </ul>
-          </section>
-          <section data-auto-animate>
-            <ul class="w3-ul w3-left-align w3-xlarge" style="max-width:800px; margin:auto;">
-              <li><strong>Chapter 1: Introduction</strong> (3–5pp) – 0% → ~3–4 days</li>
-              <li><strong>Chapter 2: Background</strong> (25–35pp) – 15–20% → ~2–2.5 weeks</li>
-              <li><strong>Chapter 3: Qrater</strong> – Published (formatting only) → ~2–3 days</li>
-              <li><strong>Chapter 4: HVR Validation</strong> – Submitted (revisions) → ~5–14 days</li>
-              <li><strong>Chapter 5: Normative Models + Sex Effects</strong> – 40% → ~2.5–3 weeks</li>
-              <li><strong>Chapter 6: General Discussion</strong> – Not started → ~3 weeks</li>
-              <li><strong>Formatting and front matter</strong> → ~1 week</li>
-            </ul>
-            <p class="w3-xlarge w3-padding-16"><strong>➡ Expected submission:</strong> <em>End of August, 2025</em></p>
+            <p class="w3-xxlarge w3-padding-16 fragment"><strong>➡ Expected submission:</strong> <em>End of August, 2025</em></p>
           </section>
         </section>
       </div>
