@@ -1194,77 +1194,77 @@
               - Cognitive sex-differences changed direction.
             </aside>
           </section>
-          <section data-auto-animate>
-            <h3>Different ways of doing the same thing</h3>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>As a covariate</li>
-              <li>Proportion</li>
-              <li>Residuals</li>
-              <li>Hippocampal-to-Ventricle Ratio</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h3>Different ways of doing the same thing</h3>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>As a covariate</li>
-                <ul class="w3-ul w3-large" style="list-style-type:none;">
-                <li>Using raw volumes and adding TIV as a covariate in the
-                  model.</li>
-                </ul>
-              <li>Proportion</li>
-              <li>Residuals</li>
-              <li>Hippocampal-to-Ventricle Ratio</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h3>Different ways of doing the same thing</h3>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>As a covariate</li>
-              <li>Proportion</li>
-              <ul class="w3-ul w3-large" style="list-style-type:none;">
-                <li>Assumes a proportional relationship between TIV and the volume of interest.</li>
-                <li>$VOL_{adj} = VOL / TIV$</li>
-              </ul>
-              <li>Residuals</li>
-              <li>Hippocampal-to-Ventricle Ratio</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h3>Different ways of doing the same thing</h3>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>As a covariate</li>
-              <li>Proportion</li>
-              <li>Residuals</li>
-              <ul class="w3-ul w3-large" style="list-style-type:none;">
-                <li>Removes an implicitly assumed linear TIV-VOI relationship:</li>
-                <li>$VOL_{adj} = VOL - b * (TIV - TIV_{avg})$</li>
-                <li>$b$ is the slope of the $VOL ~ TIV$ regression line, and
-                  $TIV_{avg}$ is the mean of the TIV of the control group.</li>
-              </ul>
-              <li>Hippocampal-to-Ventricle Ratio</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h3>Different ways of doing the same thing</h3>
-            <ul class="w3-ul w3-xxlarge" style="list-style-type:none;">
-              <li>As a covariate</li>
-              <li>Proportion</li>
-              <li>Residuals</li>
-              <li>Hippocampal-to-Ventricle Ratio</li>
-              <ul class="w3-ul w3-large" style="list-style-type:none;">
-                <li>HVR quantifies the proportion of hippocampal volume relative to the combined volume of the hippocampus and temporal horns of the lateral ventricles.</li>
-                <li>${HVR} = HC / (HC + LV)$</li>
-                <!--<li>-->
-                  <!--In this project, we are calculating HVR using HC &amp; LV volumes adjusted with-->
-                  <!--the residuals method.-->
-                <!--</li>-->
-              </ul>
-            </ul>
-            <aside class="notes">
-              In this project, I used HVR using HC &amp; LV volumes adjusted with
-              the residuals method.
-            </aside>
-          </section>
+          <!--<section data-auto-animate>-->
+            <!--<h3>Different ways of doing the same thing</h3>-->
+            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
+              <!--<li>As a covariate</li>-->
+              <!--<li>Proportion</li>-->
+              <!--<li>Residuals</li>-->
+              <!--<li>Hippocampal-to-Ventricle Ratio</li>-->
+            <!--</ul>-->
+          <!--</section>-->
+          <!--<section data-auto-animate>-->
+            <!--<h3>Different ways of doing the same thing</h3>-->
+            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
+              <!--<li>As a covariate</li>-->
+                <!--<ul class="w3-ul w3-large" style="list-style-type:none;">-->
+                <!--<li>Using raw volumes and adding TIV as a covariate in the-->
+                  <!--model.</li>-->
+                <!--</ul>-->
+              <!--<li>Proportion</li>-->
+              <!--<li>Residuals</li>-->
+              <!--<li>Hippocampal-to-Ventricle Ratio</li>-->
+            <!--</ul>-->
+          <!--</section>-->
+          <!--<section data-auto-animate>-->
+            <!--<h3>Different ways of doing the same thing</h3>-->
+            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
+              <!--<li>As a covariate</li>-->
+              <!--<li>Proportion</li>-->
+              <!--<ul class="w3-ul w3-large" style="list-style-type:none;">-->
+                <!--<li>Assumes a proportional relationship between TIV and the volume of interest.</li>-->
+                <!--<li>$VOL_{adj} = VOL / TIV$</li>-->
+              <!--</ul>-->
+              <!--<li>Residuals</li>-->
+              <!--<li>Hippocampal-to-Ventricle Ratio</li>-->
+            <!--</ul>-->
+          <!--</section>-->
+          <!--<section data-auto-animate>-->
+            <!--<h3>Different ways of doing the same thing</h3>-->
+            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
+              <!--<li>As a covariate</li>-->
+              <!--<li>Proportion</li>-->
+              <!--<li>Residuals</li>-->
+              <!--<ul class="w3-ul w3-large" style="list-style-type:none;">-->
+                <!--<li>Removes an implicitly assumed linear TIV-VOI relationship:</li>-->
+                <!--<li>$VOL_{adj} = VOL - b * (TIV - TIV_{avg})$</li>-->
+                <!--<li>$b$ is the slope of the $VOL ~ TIV$ regression line, and-->
+                  <!--$TIV_{avg}$ is the mean of the TIV of the control group.</li>-->
+              <!--</ul>-->
+              <!--<li>Hippocampal-to-Ventricle Ratio</li>-->
+            <!--</ul>-->
+          <!--</section>-->
+          <!--<section data-auto-animate>-->
+            <!--<h3>Different ways of doing the same thing</h3>-->
+            <!--<ul class="w3-ul w3-xxlarge" style="list-style-type:none;">-->
+              <!--<li>As a covariate</li>-->
+              <!--<li>Proportion</li>-->
+              <!--<li>Residuals</li>-->
+              <!--<li>Hippocampal-to-Ventricle Ratio</li>-->
+              <!--<ul class="w3-ul w3-large" style="list-style-type:none;">-->
+                <!--<li>HVR quantifies the proportion of hippocampal volume relative to the combined volume of the hippocampus and temporal horns of the lateral ventricles.</li>-->
+                <!--<li>${HVR} = HC / (HC + LV)$</li>-->
+                <!--[><li><]-->
+                  <!--[>In this project, we are calculating HVR using HC &amp; LV volumes adjusted with<]-->
+                  <!--[>the residuals method.<]-->
+                <!--[></li><]-->
+              <!--</ul>-->
+            <!--</ul>-->
+            <!--<aside class="notes">-->
+              <!--In this project, I used HVR using HC &amp; LV volumes adjusted with-->
+              <!--the residuals method.-->
+            <!--</aside>-->
+          <!--</section>-->
           <section>
             <div class="w3-row-padding" style="display: flex; height: 100%; align-items: center;">
               <div class="w3-container" style="width: 30%; display: flex; align-items: center; justify-content: center;">
